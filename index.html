@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="de" class="bg-black">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Preisliste Schneiderei</title>
+
+  <!-- Tailwind -->
+<!-- w <head> -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="./style.css">
+<script defer src="./script.js"></script>
+
+
+</head>
+<body class="min-h-screen p-4 sm:p-6 lg:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-8">
+            <header class="text-left">
+                <h1 class="text-4xl sm:text-5xl font-bold mb-2 gradient-text">Preisliste</h1>
+                <p class="text-lg" style="color: #ED4EB8;">Änderungsschneiderei & Neuanfertigungen</p>
+            </header>
+            <div id="search-container" class="relative z-10 h-12 flex items-center justify-end">
+                <input type="text" id="search-input" placeholder="Suche..." class="w-0 p-3 rounded-lg opacity-0 transition-all duration-500 ease-in-out">
+                <button id="search-toggle-button" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-lg text-white hover:bg-pink-500 transition-all duration-300">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <div id="no-results" class="text-center text-gray-400 my-8 hidden">
+            <p>Keine Dienstleistungen für Ihre Suche gefunden.</p>
+        </div>
+
+        <div class="space-y-5 mt-8" id="accordion-container">
+
+            <!-- Massanfertigung & Neuanfertigungen -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Massanfertigung & Neuanfertigungen</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        
+                        <h3 class="subsection-header">Damen</h3>
+                        <div>
+                            <div class="price-item"><span class="description">Kostüm (Jupe oder Hose)</span><span class="price">ab 1300 CHF</span></div>
+                            <div class="price-item"><span class="description">Blazer nach Mass</span><span class="price">ab 900 CHF</span></div>
+                            <div class="price-item"><span class="description">Cocktailkleid nach Mass</span><span class="price">ab 950 CHF</span></div>
+                            <div class="price-item"><span class="description">Bluse nach Mass</span><span class="price">ab 380 CHF</span></div>
+                             <div class="price-item"><span class="description">Rock</span> <span class="price">ab 380 CHF</span></div>
+                            <div class="price-item"><span class="description">Hose</span> <span class="price">ab 430 CHF</span></div>
+                            <div class="price-item"><span class="description">Kleid</span> <span class="price">ab 450 CHF</span></div>
+                        </div>
+
+                        <h3 class="subsection-header">Herren</h3>
+                        <div>
+                            <div class="price-item"><span class="description">Massanzug 2-teilig</span><span class="price">ab 1200 CHF</span></div>
+                            <div class="price-item"><span class="description">Massanzug 3-teilig</span><span class="price">ab 1500 CHF</span></div>
+                            <div class="price-item"><span class="description">Veston / Sakko nach Mass</span><span class="price">ab 850 CHF</span></div>
+                            <div class="price-item"><span class="description">Hose nach Mass</span><span class="price">ab 450 CHF</span></div>
+                            <div class="price-item"><span class="description">Masshemd</span><span class="price">ab 250 CHF</span></div>
+                        </div>
+                        
+                        <h3 class="subsection-header">Hochzeit & Abendmode</h3>
+                        <div>
+                            <div class="price-item"><span class="description">Brautkleid nach Mass</span><span class="price">ab 2500 CHF</span></div>
+                            <div class="price-item"><span class="description">Abendkleid nach Mass</span><span class="price">ab 1200 CHF</span></div>
+                        </div>
+
+                        <div class="text-sm text-gray-400 mt-4">Preise variieren je nach Stoff- und Designwahl. Inklusive Erstberatung.</div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Jacken, Mäntel & Blazer -->
+<div class="accordion-item animated-item">
+  <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+    <h2 class="text-xl font-semibold main-header">Jacken, Mäntel & Blazer</h2>
+    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+
+  <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+    <div class="p-5 border-t border-gray-700 content-wrapper">
+      <div>
+
+        <!-- 1) Länge kürzen -->
+        <div class="price-item">
+          <div class="description-wrapper">
+            <span class="description">Länge kürzen</span>
+
+            <span class="sub-description flex items-center gap-2">
+              Standardkürzung ohne Schlitz oder Futter.
+              <div class="tooltip-container">
+                <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-jmb-1">
+                  <!-- ikona "i" -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  </svg>
+                </button>
+
+                <span id="tipp-jmb-1" role="tooltip" class="tooltip-text">
+                  <b class="text-pink-400">Preisdetails:</b><br>
+                  Der Grundpreis gilt fuer eine einfache Kuerzung.
+                  Aufpreise fuer Futter, einen oder mehrere Schlitze werden je nach Aufwand separat berechnet.
+                </span>
+              </div>
+            </span>
+          </div>
+          <span class="price">ab 90 CHF</span>
+        </div>
+
+        <!-- 2) Ärmel kürzen -->
+        <div class="price-item">
+          <div class="description-wrapper">
+            <span class="description">Ärmel kürzen</span>
+
+            <span class="sub-description flex items-center gap-2">
+              Standardkürzung.
+              <div class="tooltip-container">
+                <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-jmb-2">
+                  <!-- ikona "i" -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                  </svg>
+                </button>
+
+                <span id="tipp-jmb-2" role="tooltip" class="tooltip-text">
+                  <b class="text-pink-400">Preisdetails:</b><br>
+                  Der Grundpreis gilt fuer eine einfache Kuerzung.
+                  Aufpreise fuer Aenderungen an Knoepfen oder eine Kuerzung an der Schulter werden je nach Aufwand separat berechnet.
+                </span>
+              </div>
+            </span>
+          </div>
+          <span class="price">ab 55 CHF</span>
+        </div>
+
+        <!-- kolejne pozycje bez zmian -->
+        <div class="price-item"><span class="description">Verengung der Ärmel</span><span class="price">ab 40 CHF</span></div>
+        <div class="price-item"><span class="description">Rücken enger / weiter</span><span class="price">ab 55 CHF</span></div>
+        <div class="price-item"><span class="description">Rücken enger / weiter (mit Schlitz)</span><span class="price">ab 75 CHF</span></div>
+        <div class="price-item"><span class="description">Seiten verengen (ohne Armloch)</span><span class="price">ab 60 CHF</span></div>
+        <div class="price-item"><span class="description">Seiten verengen (mit Armloch)</span><span class="price">ab 120 CHF</span></div>
+        <div class="price-item"><span class="description">Schulter schmälern</span><span class="price">ab 90 CHF</span></div>
+        <div class="price-item"><span class="description">Nackenfalte heben</span><span class="price">ab 70 CHF</span></div>
+        <div class="price-item"><span class="description">Reissverschluss erneuern (inkl. RV)</span><span class="price">ab 125 CHF</span></div>
+        <div class="price-item"><span class="description">Schulterpolster einnähen (inkl. Material)</span><span class="price">ab 35 CHF</span></div>
+        <div class="price-item"><span class="description">Jacke / Mantel neu einfüttern (inkl. Material)</span><span class="price">ab 250 CHF</span></div>
+
+      </div>
+
+      <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700">
+        <i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            <!-- Kleider & Röcke -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Kleider & Röcke</h2>
+                     <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div>
+                            <div class="price-item"><span class="description">Länge kürzen (einfach)</span><span class="price">ab 40 CHF</span></div>
+                            <div class="price-item"><span class="description">Länge kürzen (mit Futter)</span><span class="price">ab 50 CHF</span></div>
+                            <div class="price-item"><span class="description">Länge kürzen (mit Schlitz)</span><span class="price">ab 55 CHF</span></div>
+                            <div class="price-item"><span class="description">Rock verlängern</span><span class="price">ab 60 CHF</span></div>
+                            <div class="price-item"><span class="description">Ärmellänge kürzen (einfach)</span><span class="price">ab 30 CHF</span></div>
+                            <div class="price-item"><span class="description">Ärmellänge kürzen (mit Schlitz)</span><span class="price">ab 55 CHF</span></div>
+                            <div class="price-item"><span class="description">Träger kürzen</span><span class="price">ab 10 CHF</span></div>
+                            <div class="price-item"><span class="description">Seiten enger/weiter (ohne Armloch)</span><span class="price">ab 60 CHF</span></div>
+                            <div class="price-item"><span class="description">Seiten enger/weiter (mit Armloch)</span><span class="price">ab 110 CHF</span></div>
+                            <div class="price-item"><span class="description">Achsel einnehmen</span><span class="price">ab 40 CHF</span></div>
+                            <div class="price-item"><span class="description">Reissverschluss erneuern</span><span class="price">ab 30 CHF</span></div>
+                            <div class="price-item"><span class="description">Rock neu einfüttern (inkl. Material)</span><span class="price">ab 80 CHF</span></div>
+                        </div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hochzeits- & Abendmode -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Hochzeits- & Abendmode</h2>
+                     <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div class="price-item"><span class="description">Änderungen an Braut- & Abendkleidern (pro Stunde)</span><span class="price">ab 90 CHF</span></div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hosen -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Hosen</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 pt-10 border-t border-gray-700 content-wrapper">
+                         <div id="hosen-instruction" class="text-center text-gray-400 mb-4 pb-4 border-b border-gray-700">
+                            <p>Wähle eine Hosenart aus, um die Preise zu sehen.</p>
+                        </div>
+                        <div id="hosen-buttons" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 mb-6">
+                            <button class="option-button" data-target="stoffhosen-content">Stoffhose</button>
+                            <button class="option-button" data-target="anzughose-content">Anzughose</button>
+                            <button class="option-button" data-target="jeanshose-content">Jeanshose</button>
+                            <button class="option-button" data-target="lederhose-content">Lederhose</button>
+                            <button class="option-button" data-target="skihose-content">Skihose</button>
+                        </div>
+                        
+                        <div id="hosen-content-area">
+                            <!-- Stoffhosen Content -->
+                            <div id="stoffhosen-content" class="hosen-panel hidden">
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen</span></span><span class="price">ab 27 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen mit Band</span></span><span class="price">ab 30 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen mit Stossband / Umschlag</span></span><span class="price">ab 45 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Länger / falscher Saum</span></span><span class="price">ab 35 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Enger / auslassen hinten</span></span><span class="price">ab 30 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Hosenbeine enger</span></span><span class="price">ab 45 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Bund enger/weiter</span></span><span class="price">ab 30 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Bund tiefer setzen</span></span><span class="price">ab 70 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Tasche ansetzen mit Stoff</span></span><span class="price">ab 35 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Reissverschluss neu einsetzen (inkl. RV)</span></span><span class="price">ab 40 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Neu einfüttern (ohne Tasche, inkl. Material)</span></span><span class="price">ab 80 CHF</span></div>
+                            </div>
+                            <!-- Anzughose Content -->
+                            <div id="anzughose-content" class="hosen-panel hidden">
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen</span></span><span class="price">ab 25 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen mit Band</span></span><span class="price">ab 30 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen Umschlag</span></span><span class="price">ab 40 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Länger / falscher Saum</span></span><span class="price">ab 30 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Enger / auslassen hinten</span></span><span class="price">ab 25 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Hosenbeine enger</span></span><span class="price">ab 45 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Tasche ansetzen mit Stoff</span></span><span class="price">ab 35 CHF</span></div>
+                                <div class="price-item"><span class="description-wrapper"><span class="description">Reissverschluss neu einsetzen (inkl. RV)</span></span><span class="price">ab 35 CHF</span></div>
+                            </div>
+                            <!-- Jeanshose Content -->
+                            <div id="jeanshose-content" class="hosen-panel hidden">
+
+
+
+
+                               <div class="price-item">
+  <div class="description-wrapper">
+    <span class="description">Kürzen mit Jeansfaden</span>
+    <span class="sub-description flex items-center gap-2">
+      Standardausführung mit sichtbarer, robuster Naht.
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-jeans">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+
+        <span id="tipp-jeans" role="tooltip" class="tooltip-text">
+  <b class="text-pink-400 text-base uppercase tracking-wide block">
+    PREMIUM OPTION
+  </b>
+  <span class="block text-xs text-gray-500 tracking-wide mt-1 mb-3">
+    (Aufpreis&nbsp;+&nbsp;5&nbsp;CHF)
+  </span>
+
+  <p class="text-sm mb-2">
+    Waehlen Sie diese Option fuer maximale Haltbarkeit und eine sichtbare, robuste Naht wie bei Original-Jeans.
+  </p>
+
+  <p class="text-sm mb-2">
+    Verwendet wird ein technischer <b>Hochleistungsfaden (Kernzwirn)</b> mit Polyesterkern und
+    Spinnfaser-Ummantelung – reissfest, abrieb- und dehnungsbestaendig (ca.&nbsp;2500–3000&nbsp;cN).
+    Ideal fuer stark beanspruchte Jeansstoffe und dekorative Steppnaehte.
+  </p>
+
+  <p class="text-sm mb-2">
+    Erhaeltlich in einer <b>reichhaltigen Farbpalette</b> klassischer Denimtoene:
+    honig, kupfer, beige und anthrazit – abgestimmt auf Original-Jeansnaehte.
+  </p>
+
+  <!-- dezente Trennlinie -->
+  <div class="border-t border-gray-700 my-3 opacity-50"></div>
+
+  <p class="text-sm text-gray-300">
+    Bitte bei Auftragserteilung angeben.
+  </p>
+</span>
+
+
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 25 CHF</span>
+</div>
+
+
+
+
+
+
+                               <div class="price-item">
+  <div class="description-wrapper">
+    <span class="description">Originalsaum</span>
+    <span class="sub-description flex items-center gap-2">
+      Premiumverarbeitung mit originalgetreuer Optik.
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-original">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+
+<span id="tipp-original" role="tooltip" class="tooltip-text">
+  <b class="text-pink-400 text-base uppercase tracking-wide block">
+    PREMIUM OPTION
+  </b>
+  <span class="block text-xs text-gray-500 tracking-wide mt-1 mb-3">
+    (Aufpreis&nbsp;+&nbsp;5&nbsp;CHF)
+  </span>
+
+  <p class="text-sm mb-2">
+    Diese Premium-Option ist optional und sorgt fuer ein originalgetreues Saumbild nach dem Kürzen.
+  </p>
+
+  <p class="text-sm mb-2">
+    Genäht mit einem <b>technischen Hochleistungsfaden (Kernzwirn)</b>,
+    der eine hohe Reissfestigkeit (ca.&nbsp;2500–3000&nbsp;cN) und Farbechtheit
+    auch nach vielen Waschgängen bietet. Die Naht bleibt formstabil und weich im Griff.
+  </p>
+
+  <p class="text-sm mb-2">
+    Ideal fuer Kunden, die Wert auf die Kombination aus <b>originaler Optik</b> und
+    <b>technischer Haltbarkeit</b> legen – besonders bei hochwertigen Denim- und Stoffhosen.
+  </p>
+
+  <!-- dezente Trennlinie -->
+  <div class="border-t border-gray-700 my-3 opacity-50"></div>
+
+  <p class="text-sm text-gray-300">
+    Bitte bei Auftragserteilung angeben.
+  </p>
+</span>
+
+
+
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 30 CHF</span>
+</div>
+
+
+
+
+
+
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Länger / falscher Saum</span></span><span class="price">ab 30 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Enger / auslassen hinten</span></span><span class="price">ab 35 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Hosenbeine enger</span></span><span class="price">ab 45 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Bund enger/weiter</span></span><span class="price">ab 38 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Reissverschluss neu einsetzen (inkl. RV)</span></span><span class="price">ab 40 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Knieflicken auf Jeans</span></span><span class="price">ab 20 CHF</span></div>
+                            </div>
+                            <!-- Lederhose Content -->
+                            <div id="lederhose-content" class="hosen-panel hidden">
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen</span></span><span class="price">ab 45 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Länger / falscher Saum</span></span><span class="price">ab 30 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Enger / auslassen hinten</span></span><span class="price">ab 25 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Hosenbeine enger / Seiten verengen</span></span><span class="price">ab 90 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Bund einnehmen</span></span><span class="price">ab 50 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Tasche ansetzen mit Stoff</span></span><span class="price">ab 35 CHF</span></div>
+                               <div class="price-item"><span class="description-wrapper"><span class="description">Reissverschluss neu einsetzen (inkl. RV)</span></span><span class="price">ab 35 CHF</span></div>
+                            </div>
+                            <!-- Skihose Content -->
+                            <div id="skihose-content" class="hosen-panel hidden">
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Anpassung & Kürzen (Premium Service)</span><span class="sub-description">Mit originalem Saum, Innenfutter & Membran-Anpassung.</span></div><span class="price">ab 120 CHF</span></div>
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Kürzen & anpassen (Standard)</span><span class="sub-description">Einfache Hosenkürzung ohne technische Schichten.</span></div><span class="price">ab 95 CHF</span></div>
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Kürzen mit Band / technischer Saum</span><span class="sub-description">Mit Verstärkung und Nahtsicherung.</span></div><span class="price">ab 80 CHF</span></div>
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Länger machen (wenn Stoff vorhanden)</span><span class="sub-description">Materialverlängerung oder Anpassung.</span></div><span class="price">ab 85 CHF</span></div>
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Reissverschluss neu einsetzen</span><span class="sub-description">Auswechseln des technischen Reissverschlusses.</span></div><span class="price">ab 80 CHF</span></div>
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Hosenbeine enger oder weiter machen</span><span class="sub-description">Schnittanpassung an Figur oder Schuh.</span></div><span class="price">ab 60 CHF</span></div>
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Nähte & Risse reparieren</span><span class="sub-description">Nachnähen und Materialverstärkung.</span></div><span class="price">ab 35 CHF</span></div>
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Klebeband / Nahtversiegelung erneuern</span><span class="sub-description">Neue Abdichtungsbänder aufbringen.</span></div><span class="price">ab 85 CHF</span></div>
+                               <div class="price-item"><div class="description-wrapper"><span class="description">Express-Service (1-2 Tage)</span><span class="sub-description">Prioritätsarbeit mit schneller Ausführung.</span></div><span class="price">ab 40 CHF</span></div>
+                            </div>
+                        </div>
+                         <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blusen, Hemden & T-Shirts -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Blusen, Hemden & T-Shirts</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div>
+                            <div class="price-item"><span class="description">Länge kürzen (einfach)</span><span class="price">ab 28 CHF</span></div>
+                            <div class="price-item"><span class="description">Länge kürzen (mit Schlitz)</span><span class="price">ab 33 CHF</span></div>
+                            <div class="price-item"><span class="description">Ärmellänge kürzen (einfach)</span><span class="price">ab 25 CHF</span></div>
+                            <div class="price-item"><span class="description">Ärmellänge kürzen (mit Manschette)</span><span class="price">ab 45 CHF</span></div>
+                            <div class="price-item"><span class="description">Ärmellänge kürzen (an der Schulter)</span><span class="price">ab 60 CHF</span></div>
+                            <div class="price-item"><span class="description">Seiten verengen</span><span class="price">ab 40 CHF</span></div>
+                            <div class="price-item"><span class="description">T-Shirt Länge kürzen</span><span class="price">ab 20 CHF</span></div>
+                            <div class="price-item"><span class="description">T-Shirt Ärmel kürzen</span><span class="price">ab 20 CHF</span></div>
+                            <div class="price-item"><span class="description">T-Shirt Seiten verengen</span><span class="price">ab 20 CHF</span></div>
+                        </div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leder & Pelz -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Leder & Pelz</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div>
+                            <div class="price-item"><span class="description">Lederjacke Ärmel kürzen</span><span class="price">ab 50 CHF</span></div>
+                            <div class="price-item"><span class="description">Lederjacke Länge kürzen</span><span class="price">ab 90 CHF</span></div>
+                            <div class="price-item"><span class="description">Lederhose kürzen</span><span class="price">ab 30 CHF</span></div>
+                            <div class="price-item"><span class="description">Pelzänderungen</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Reparaturen an Lederbekleidung</span><span class="price">Auf Anfrage</span></div>
+                        </div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sport- & Spezialbekleidung -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Sport- & Spezialbekleidung</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div>
+                            <div class="price-item"><span class="description">Änderungen an Ski-/Motorradkombis</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Reparatur von Membranbekleidung (z.B. Gore-Tex)</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Anpassung von Outdoor-Bekleidung (Fleece, Softshell)</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Änderungen an Reitanzug</span><span class="price">Auf Anfrage</span></div>
+                        </div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Heimtextilien -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Heimtextilien</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div>
+                            <div class="price-item"><span class="description">Vorhang kürzen (pro lfm)</span><span class="price">ab 20 CHF</span></div>
+                            <div class="price-item"><span class="description">Vorhänge nähen</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Möbelbezüge nähen</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Dekokissen nähen</span><span class="price">Auf Anfrage</span></div>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-gray-700 text-center">
+                             <a href="https://www.naehatelier-roxana.ch" target="_blank" class="calculator-button mb-4">
+                                 Preis berechnen
+                             </a>
+                            <div class="text-gray-400"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sticken -->
+             <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Sticken</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div class="space-y-4">
+                            <div>
+                                <label for="sticken-groesse" class="calculator-label">Grösse wählen:</label>
+                                <div id="sticken-groesse-buttons" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                                    <button class="option-button flex items-center justify-between" data-size="0">
+                                        <span>bis 25 cm²</span>
+                                        <div class="tooltip-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="tooltip-icon text-gray-400" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                                            <span class="tooltip-text">z.B. ca. 5 x 5 cm</span>
+                                        </div>
+                                    </button>
+                                    <button class="option-button flex items-center justify-between" data-size="1">
+                                        <span>bis 50 cm²</span>
+                                        <div class="tooltip-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="tooltip-icon text-gray-400" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                                            <span class="tooltip-text">z.B. ca. 7 x 7 cm</span>
+                                        </div>
+                                    </button>
+                                    <button class="option-button flex items-center justify-between" data-size="2">
+                                        <span>bis 75 cm²</span>
+                                        <div class="tooltip-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="tooltip-icon text-gray-400" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                                            <span class="tooltip-text">z.B. ca. 8.5 x 8.5 cm</span>
+                                        </div>
+                                    </button>
+                                    <button class="option-button flex items-center justify-between" data-size="3">
+                                        <span>bis 100 cm²</span>
+                                        <div class="tooltip-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="tooltip-icon text-gray-400" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                                            <span class="tooltip-text">z.B. ca. 10 x 10 cm</span>
+                                        </div>
+                                    </button>
+                                    <button class="option-button flex items-center justify-between" data-size="4">
+                                        <span>bis 150 cm²</span>
+                                        <div class="tooltip-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="tooltip-icon text-gray-400" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                                            <span class="tooltip-text">z.B. ca. 12 x 12.5 cm</span>
+                                        </div>
+                                    </button>
+                                    <button class="option-button flex items-center justify-between" data-size="5">
+                                        <span>bis 200 cm²</span>
+                                        <div class="tooltip-container">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="tooltip-icon text-gray-400" viewBox="0 0 16 16"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/><path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/></svg>
+                                            <span class="tooltip-text">z.B. ca. 14 x 14 cm</span>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="sticken-stueckzahl" class="calculator-label">Stückzahl: <span id="stueckzahl-output" class="font-bold text-white">1</span></label>
+                                <input type="range" id="sticken-stueckzahl" min="1" max="100" value="1" class="w-full">
+                            </div>
+                        </div>
+                        <div id="sticken-result">
+                             <div class="text-center">
+                                <p class="text-gray-400">Preis pro Stück</p>
+                                <p id="price-per-piece" class="price-highlight">Wählen Sie Grösse</p>
+                                <p class="text-gray-400 mt-2">Gesamtpreis</p>
+                                <p id="total-price" class="price-highlight">-</p>
+                            </div>
+                        </div>
+                        <div class="text-sm text-gray-400 mt-4 text-center">Preise pro Stück, ohne Textil. über 100 Stück oder über 200 cm² auf Anfrage.</div>
+                         <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bügelservice -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Bügelservice</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div>
+                            <div class="price-item"><span class="description">Hemd / Bluse (am Bügel)</span><span class="price">ab 5.70 CHF</span></div>
+                            <div class="price-item"><span class="description">Bluse (delikate Stoffe, z.B. Seide)</span><span class="price">ab 16.50 CHF</span></div>
+                            <div class="price-item"><span class="description">T-Shirt / Polo-Shirt</span><span class="price">ab 3 CHF</span></div>
+                            <div class="price-item"><span class="description">Hose (ohne Bügelfalten)</span><span class="price">ab 13.00 CHF</span></div>
+                             <div class="price-item"><span class="description">Hose (mit Bügelfalten)</span><span class="price">ab 15.50 CHF</span></div>
+                            <div class="price-item"><span class="description">Jupe / Rock</span><span class="price">ab 5 CHF</span></div>
+                            <div class="price-item"><span class="description">Kleid (einfach)</span><span class="price">ab 19.00 CHF</span></div>
+                             <div class="price-item"><span class="description">Veston / Jacke</span><span class="price">ab 17.50 CHF</span></div>
+                            <div class="price-item"><span class="description">Anzug (2-teilig)</span><span class="price">ab 31.00 CHF</span></div>
+                            <div class="price-item"><span class="description">Krawatte / Fliege</span><span class="price">ab 10.50 CHF</span></div>
+                            <div class="price-item"><span class="description">Tischtuch</span><span class="price">ab 12.50 CHF</span></div>
+                            <div class="price-item"><span class="description">Vorhänge (pro Stück)</span><span class="price">ab 25.00 CHF</span></div>
+                        </div>
+                        <div class="text-sm text-gray-400 mt-4">Preise pro Stück, handgebügelt.</div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Sonstiges & Regie Arbeit -->
+            <div class="accordion-item animated-item">
+                 <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Sonstiges & Regie Arbeit</h2>
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        <div>
+                            <div class="price-item"><span class="description">Knopf annähen</span><span class="price">ab 8 CHF</span></div>
+                            <div class="price-item"><span class="description">Neues Knopfloch (maschinell)</span><span class="price">ab 15 CHF</span></div>
+                            <div class="price-item"><span class="description">Neues Knopfloch (Handarbeit)</span><span class="price">ab 30 CHF</span></div>
+                            <div class="price-item"><span class="description">Wiffeln / Loch flicken (bis 2 cm)</span><span class="price">ab 20 CHF</span></div>
+                            <div class="price-item"><span class="description">Wiffeln / Loch flicken (ab 2 cm)</span><span class="price">ab 35 CHF</span></div>
+                            <div class="price-item"><span class="description">Bettwäsche neuer RV (inkl. RV, pro lfm)</span><span class="price">ab 30 CHF</span></div>
+                            <div class="price-item"><span class="description">Historische/Theaterkostüme</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Liefer- und Abholservice</span><span><a href="https://www.naehatelier-roxana.ch" target="_blank" class="inline-button">Mehr Infos</a></span></div>
+                            <div class="price-item"><span class="description">Expresszuschlag</span><span class="price">50 %</span></div>
+                            <div class="price-item"><span class="description">Regie Arbeit / Stundenansatz</span><span class="price">ab 75 CHF</span></div>
+                        </div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <footer class="text-center mt-12 pt-8 border-t border-gray-700">
+            <p class="text-lg font-semibold uppercase tracking-wider">
+                <a href="http://www.nähatelier-roxana.ch" target="_blank" class="hover:text-pink-400 transition-colors">WWW.NÄHATELIER-ROXANA.CH</a>
+            </p>
+            <p class="text-gray-500 text-sm mt-2">
+                © 2025 Nähatelier Roxana. Alle Rechte vorbehalten.
+            </p>
+        </footer>
+
+    </div>
+
+    <button id="to-top-button">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path></svg>
+    </button>
+
+<!-- GLOBALNY MODAL DLA WSZYSTKICH TOOLTIPÓW -->
+<div id="tooltipModal" class="tooltip-modal" aria-hidden="true">
+  <div class="tooltip-backdrop"></div>
+  <div class="tooltip-panel" role="dialog" aria-modal="true" aria-labelledby="tooltipModalTitle">
+    <button type="button" class="tooltip-close" aria-label="Zamknij">×</button>
+    <div class="tooltip-panel-content">
+      <h3 id="tooltipModalTitle" class="tooltip-modal-title"></h3>
+      <div class="tooltip-modal-body"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- test test -->
+
+</body>
+</html>
