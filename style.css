@@ -561,3 +561,23 @@ footer img {
   }
 }
 
+/* Uniknij kolizji z innymi stylami stopki */
+.footer-logo {
+  display: block;
+  width: 160px;        /* baza desktop */
+  max-width: 45vw;     /* niech się skaluje na wąskich ekranach */
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(237,78,184,.25));
+}
+
+@media (max-width: 640px) {
+  .footer-logo {
+    width: 140px;      /* odrobinę mniejsze na telefonie */
+    max-width: 60vw;
+  }
+}
+
+/* Gdyby jakieś wcześniejsze reguły dawały display:none dla obrazów w stopce */
+footer img { visibility: visible; opacity: 1; }
+
