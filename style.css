@@ -61,7 +61,7 @@
             box-shadow: 0 5px 25px rgba(0,0,0,0.3);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             border-radius: 0.5rem;
-            background-color: #2D2D2D; /* Slightly lighter background for sections */
+            background-color: #000000; /* Slightly lighter background for sections */
         }
 
         .accordion-item:hover {
@@ -97,10 +97,10 @@
             border-radius: 0.25rem;
         }
         .price-item:not(:first-child) {
-            border-top: 1px solid #000000;
+            border-top: 1px solid #444;
         }
         .price-item:hover {
-            background-color: rgba(0, 0, 0, 0.05);
+            background-color: rgba(255, 255, 255, 0.05);
             transform: scale(1.01);
         }
         
