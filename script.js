@@ -252,6 +252,8 @@
             });
 
         });
+
+        
  
 
 // === GLOBAL TOOLTIP MODAL – działa dla wszystkich tooltipów na stronie ===
@@ -361,6 +363,9 @@
     openModalFrom(src.innerHTML);
   });
 
+
+
+  
   // Opcjonalnie: klawiatura na desktopie – Enter/Space otwiera modal też na dotyku
   document.addEventListener('keydown', e => {
     if (!isTouch) return;
@@ -374,6 +379,91 @@
         lastFocused = target;
         openModalFrom(src.innerHTML);
       }
+    }
+  });
+})();
+
+// Zamknięcie pola wyszukiwania po kliknięciu ✕ (delegacja zdarzeń)
+(function () {
+  const container = document.getElementById('search-container');
+  const input     = document.getElementById('search-input');
+  if (!container || !input) return;
+
+  document.addEventListener('click', (ev) => {
+    const btn = ev.target.closest('#search-close-button');
+    // reaguj tylko gdy kliknięto w nasz ✕ i należy do tego kontenera
+    if (!btn || !container.contains(btn)) return;
+
+    ev.stopPropagation();
+    container.classList.remove('search-active');
+    input.value = '';
+    // wymuś zwinięcie nawet przy klasach Tailwinda
+    input.style.width = '0px';
+    input.style.opacity = '0';
+    input.style.pointerEvents = 'none';
+    input.blur();
+  });
+})();
+
+
+// --- PATCH: stabilny toggle dla wyszukiwarki (open/close style) ---
+(function () {
+  const container = document.getElementById('search-container');
+  const input     = document.getElementById('search-input');
+  const btnOpen   = document.getElementById('search-toggle-button');
+  const btnClose  = document.getElementById('search-close-button'); // jeśli masz X
+
+  if (!container || !input || !btnOpen) return;
+
+  // style dla stanu OTWARTEGO / ZAMKNIĘTEGO (przebijają Tailwinda)
+  const applyOpen  = () => {
+    input.style.width = '256px';      // możesz zmienić np. na 224 / 300
+    input.style.opacity = '1';
+    input.style.pointerEvents = 'auto';
+    btnClose && btnClose.classList.remove('hidden');
+  };
+  const applyClose = () => {
+    input.style.width = '0px';
+    input.style.opacity = '0';
+    input.style.pointerEvents = 'none';
+    btnClose && btnClose.classList.add('hidden');
+  };
+
+  // Gdy klikniesz lupę: jeśli zamknięte -> otwórz + ustaw style
+  btnOpen.addEventListener('click', () => {
+    if (!container.classList.contains('search-active')) {
+      container.classList.add('search-active');
+      applyOpen();
+      setTimeout(() => input.focus(), 60);
+    }
+    // jeśli już otwarte, nie zmieniamy Twojej logiki zamykania
+  }, true); // capture, żeby patch zadziałał przed innymi handlerami
+
+  // Klik w X: zamknij + style zamknięte
+  document.addEventListener('click', (ev) => {
+    const x = ev.target.closest('#search-close-button');
+    if (!x || !container.contains(x)) return;
+    ev.stopPropagation();
+    container.classList.remove('search-active');
+    input.value = '';
+    applyClose();
+    input.blur();
+  }, true);
+
+  // Klik poza – jeśli puste, też dołóż style zamknięte (spójne z Twoim kodem)
+  document.addEventListener('click', (ev) => {
+    if (!container.contains(ev.target) && (input.value.trim() === '')) {
+      container.classList.remove('search-active');
+      applyClose();
+    }
+  }, true);
+
+  // ESC też zamyka (opcjonalnie)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && container.classList.contains('search-active')) {
+      container.classList.remove('search-active');
+      applyClose();
+      input.blur();
     }
   });
 })();

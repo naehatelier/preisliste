@@ -481,3 +481,83 @@ footer img {
   height: auto;
   width: auto;
 }
+/* ✕ wewnątrz pola, z uwzględnieniem szerokości przycisku lupy */
+#search-container{
+  position: relative;
+  --btnW: 3rem;     /* w-12 = 48px; jeśli zmienisz szerokość lupy, zmień też to */
+  --gap: 8px;       /* luz między ✕ a krawędzią inputa */
+  --xPad: 2.4rem;   /* ile miejsca zrobić na ✕ wewnątrz pola */
+}
+
+#search-close-button{
+  position: absolute;
+  top: 50%;
+  right: calc(var(--btnW) + var(--gap));  /* ✕ w środku inputa, tuż przed lupą */
+  transform: translateY(-50%);
+  width: 1.6rem; height: 1.6rem;
+  display: none;
+  align-items: center; justify-content: center;
+  background: transparent; border: 0; cursor: pointer;
+  color: #bfbfbf; font-size: 1.1rem; line-height: 1;
+  transition: color .2s ease, opacity .2s ease;
+  opacity: .9;
+  z-index: 2;       /* pewność, że klik jest nad inputem */
+}
+#search-close-button:hover{ color:#fff; }
+
+/* pokaż ✕ dopiero po rozwinięciu pola */
+#search-container.search-active #search-close-button{ display:flex; }
+
+/* dołóż padding w polu, by tekst nie wpadał pod ✕ i uwzględnij szerokość przycisku lupy */
+#search-container.search-active #search-input{
+  padding-right: calc(var(--btnW) + var(--xPad));
+}
+
+@media (max-width:640px){
+  #search-container{ --gap: 6px; --xPad: 2.2rem; }
+}
+
+
+/* --- MOBILE HEAD LAYOUT FIX --- */
+@media (max-width: 640px) {
+  /* ułóż nagłówek i lupę pionowo, z odstępem */
+  #head-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;              /* oddech między tytułem a lupą */
+    margin-top: 6px;        /* lekko w dół cała góra */
+  }
+
+  /* przenieś lupę/pole pod tytuł i wyrównaj do prawej krawędzi kontenera */
+  #search-container {
+    align-self: stretch;    /* pełna szerokość wiersza */
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* po otwarciu: pole niech ma rozsądną szerokość i nie nachodzi na tytuł */
+  #search-container.search-active #search-input {
+    width: min(260px, calc(100% - 56px));  /* 56px ≈ szer. przycisku z lupą */
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* odrobinę powietrza nad kartami po rozwinięciu */
+  #search-container.search-active { margin-top: 2px; }
+}
+
+/* domyślnie zachowuj w jednej linii */
+.mob-newline { display: inline; }
+
+/* Domyślnie: ten fragment w tej samej linii */
+.mob-newline { display: inline; }
+
+/* Tylko mobile: przenieś na nową linię */
+@media (max-width: 640px) {
+  .mob-newline {
+    display: block;
+    margin-top: 2px;      /* lekki odstęp od pierwszej części */
+  }
+}
+

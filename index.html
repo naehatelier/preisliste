@@ -9,6 +9,10 @@
 <!-- Favicons: full cross-platform setup -->
 <link rel="manifest" href="assets/favicons/site.webmanifest" type="application/manifest+json">
 <meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-512x512.png">
+
+
 
 <link rel="icon" href="assets/favicons/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
@@ -45,22 +49,38 @@
 <body class="min-h-screen p-4 sm:p-6 lg:p-8">
 
     <div class="max-w-4xl mx-auto">
-        <div class="flex justify-between items-center mb-8">
+        <div class="flex justify-between items-center mb-8" id="head-row">
             <header class="text-left">
                 <h1 class="text-4xl sm:text-5xl font-bold mb-2 gradient-text">Preisliste</h1>
                 <p class="text-lg" style="color: #ED4EB8;">Änderungsschneiderei & Neuanfertigungen</p>
             </header>
+
+
+            
             <div id="search-container" class="relative z-10 h-12 flex items-center justify-end">
                 <input type="text" id="search-input" placeholder="Suche..." class="w-0 p-3 rounded-lg opacity-0 transition-all duration-500 ease-in-out">
-                <button id="search-toggle-button" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-lg text-white hover:bg-pink-500 transition-all duration-300">
-                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="w-6 h-6" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg>
-                </button>
+                <!-- ✕ wewnątrz pola -->
+                <button id="search-close-button"class="hidden" aria-label="Schliessen">✕</button>
+
+
+                <button id="search-close-button"
+        class="hidden absolute right-[3.2rem] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center
+               text-gray-400 hover:text-white bg-transparent transition-all duration-200"
+        aria-label="Schliessen">
+  ✕
+</button>
+                <button id="search-toggle-button"
+          class="flex items-center justify-center w-12 h-12 bg-[#1a1a1a] rounded-lg text-white border border-pink-500/40 hover:bg-pink-500 transition-all"
+          aria-label="Suche öffnen">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="22" height="22" fill="currentColor" aria-hidden="true">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.414zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg>
+  </button>
             </div>
         </div>
 
-        
+
+
         
         <div id="no-results" class="text-center text-gray-400 my-8 hidden">
             <p>Keine Dienstleistungen für Ihre Suche gefunden.</p>
@@ -71,7 +91,8 @@
             <!-- Massanfertigung & Neuanfertigungen -->
             <div class="accordion-item animated-item">
                 <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
-                    <h2 class="text-xl font-semibold main-header">Massanfertigung & Neuanfertigungen</h2>
+                    <h2 class="text-xl font-semibold main-header">Massanfertigung <span class="mob-newline">&amp; Neuanfertigungen</span></h2>
+
                     <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                 </div>
                 <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
