@@ -405,3 +405,79 @@
 @media (prefers-reduced-motion: reduce) {
   .tooltip-panel, .tooltip-modal.open .tooltip-panel { transition: none; transform: none; }
 }
+/* === Promo Cards === */
+.promo-card {
+  background: #151515;
+  border: 1px solid #373737;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.28);
+  transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease;
+}
+.promo-card:hover {
+  border-color: #ED4EB8;
+  box-shadow: 0 10px 32px rgba(237, 78, 184, .18);
+  transform: translateY(-2px);
+}
+
+.promo-badge {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background: #ED4EB8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(237, 78, 184, .35);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.promo-cta {
+  display: inline-block;
+  background: #ED4EB8;
+  color: #fff;
+  font-weight: 700;
+  padding: .7rem 1.1rem;
+  border-radius: .5rem;
+  border: 2px solid #ED4EB8;
+  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+  box-shadow: 0 6px 16px rgba(237, 78, 184, .25);
+}
+.promo-cta:hover,
+.promo-cta:focus-visible {
+  background: transparent;
+  color: #ED4EB8;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(237, 78, 184, .28);
+}
+
+/* dostępność */
+.promo-cta:focus-visible {
+  outline: 2px solid rgba(237, 78, 184, .6);
+  outline-offset: 2px;
+}
+
+#top-offers {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+footer img {
+  width: 10rem;              /* około 160px */
+  max-width: 100%;
+  filter: drop-shadow(0 0 8px rgba(237, 78, 184, 0.25));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 12px rgba(237, 78, 184, 0.35));
+}
+footer img {
+  max-height: 120px;
+  height: auto;
+  width: auto;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Nähatelier Roxana",
+  "short_name": "Roxana",
+  "description": "Nähatelier Roxana – Änderungen, Massanfertigungen & Mode nach Mass. Professionelle Schneiderei in der Schweiz.",
+  "icons": [
+    {
+      "src": "/assets/favicons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/favicons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/index.html",
+  "scope": "/",
+  "theme_color": "#0b0b0b",
+  "background_color": "#0b0b0b",
+  "display": "standalone",
+  "orientation": "portrait"
+}

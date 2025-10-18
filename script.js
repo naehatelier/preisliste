@@ -1,4 +1,8 @@
 
+
+
+
+
         document.addEventListener('DOMContentLoaded', function () {
              // Page load animation
             const accordionItems = document.querySelectorAll('.animated-item');
