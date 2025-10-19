@@ -78,8 +78,7 @@
             <div id="search-container" class="relative z-10 h-12 flex items-center justify-end">
                 <input type="text" id="search-input" placeholder="Suche..." class="w-0 p-3 rounded-lg opacity-0 transition-all duration-500 ease-in-out">
                 <!-- ✕ wewnątrz pola -->
-                <button id="search-close-button"class="hidden" aria-label="Schliessen">✕</button>
-
+                
 
                 <button id="search-close-button"
         class="hidden absolute right-[3.2rem] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center
@@ -153,7 +152,10 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
 <div class="accordion-item animated-item">
   <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
     <h2 class="text-xl font-semibold main-header">Jacken, Mäntel & Blazer</h2>
-    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
   </div>
 
   <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
@@ -163,68 +165,516 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
         <!-- 1) Länge kürzen -->
         <div class="price-item">
           <div class="description-wrapper">
-            <span class="description">Länge kürzen</span>
-
-            <span class="sub-description flex items-center gap-2">
-              Standardkürzung ohne Schlitz oder Futter.
+            <span class="description flex items-center gap-2">
+              Länge kürzen
               <div class="tooltip-container">
-                <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-jmb-1">
-                  <!-- ikona "i" -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-jmb-1">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                      d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                   </svg>
                 </button>
-
-                <span id="tipp-jmb-1" role="tooltip" class="tooltip-text">
-                  <b class="text-pink-400">Preisdetails:</b><br>
-                  Der Grundpreis gilt fuer eine einfache Kuerzung.
-                  Aufpreise fuer Futter, einen oder mehrere Schlitze werden je nach Aufwand separat berechnet.
+                <span id="tt-jmb-1" role="tooltip" class="tooltip-text">
+                  <b class="text-pink-400">Länge kürzen</b>
+                  <p class="text-sm mt-1">Standardkürzung ohne Schlitz oder Futter. Perfekt, wenn der Mantel oder Blazer einfach etwas zu lang ist.</p>
+                  <p class="text-xs text-gray-400 mt-2 border-t border-gray-700 pt-2">Aufpreis bei Futter oder mehreren Schlitzen – je nach Aufwand.</p>
                 </span>
               </div>
             </span>
+            <span class="price">ab 60&nbsp;CHF</span>
           </div>
-          <span class="price">ab 90 CHF</span>
         </div>
 
         <!-- 2) Ärmel kürzen -->
         <div class="price-item">
           <div class="description-wrapper">
-            <span class="description">Ärmel kürzen</span>
-
-            <span class="sub-description flex items-center gap-2">
-              Standardkürzung.
+            <span class="description flex items-center gap-2">
+              Ärmel kürzen
               <div class="tooltip-container">
-                <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-jmb-2">
-                  <!-- ikona "i" -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                    <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-jmb-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                      d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
                   </svg>
                 </button>
-
-                <span id="tipp-jmb-2" role="tooltip" class="tooltip-text">
-                  <b class="text-pink-400">Preisdetails:</b><br>
-                  Der Grundpreis gilt fuer eine einfache Kuerzung.
-                  Aufpreise fuer Aenderungen an Knoepfen oder eine Kuerzung an der Schulter werden je nach Aufwand separat berechnet.
+                <span id="tt-jmb-2" role="tooltip" class="tooltip-text">
+                  <b class="text-pink-400">Ärmel kürzen</b>
+                  <p class="text-sm mt-1">Korrektur der Ärmellänge für optimale Passform – ohne Veränderung an der Schulter.</p>
+                  <p class="text-xs text-gray-400 mt-2 border-t border-gray-700 pt-2">Knöpfe oder Futteranpassung je nach Aufwand zusätzlich.</p>
                 </span>
               </div>
             </span>
+            <span class="price">ab 55&nbsp;CHF</span>
           </div>
-          <span class="price">ab 55 CHF</span>
         </div>
 
-        <!-- kolejne pozycje bez zmian -->
-        <div class="price-item"><span class="description">Verengung der Ärmel</span><span class="price">ab 40 CHF</span></div>
-        <div class="price-item"><span class="description">Rücken enger / weiter</span><span class="price">ab 55 CHF</span></div>
-        <div class="price-item"><span class="description">Rücken enger / weiter (mit Schlitz)</span><span class="price">ab 75 CHF</span></div>
-        <div class="price-item"><span class="description">Seiten verengen (ohne Armloch)</span><span class="price">ab 60 CHF</span></div>
-        <div class="price-item"><span class="description">Seiten verengen (mit Armloch)</span><span class="price">ab 120 CHF</span></div>
-        <div class="price-item"><span class="description">Schulter schmälern</span><span class="price">ab 90 CHF</span></div>
-        <div class="price-item"><span class="description">Nackenfalte heben</span><span class="price">ab 70 CHF</span></div>
-        <div class="price-item"><span class="description">Reissverschluss erneuern (inkl. RV)</span><span class="price">ab 125 CHF</span></div>
-        <div class="price-item"><span class="description">Schulterpolster einnähen (inkl. Material)</span><span class="price">ab 35 CHF</span></div>
-        <div class="price-item"><span class="description">Jacke / Mantel neu einfüttern (inkl. Material)</span><span class="price">ab 250 CHF</span></div>
+        <!-- 3) Verengung der Ärmel -->
+        <div class="price-item">
+          <div class="description-wrapper">
+            <span class="description">Ärmel verengen</span>
+          </div>
+          <span class="price">ab 40&nbsp;CHF</span>
+        </div>
+
+ 
+<!-- Rücken enger / weiter – PREMIUM -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Rücken enger | weiter
+      <span class="premium-tag">PREMIUM</span>
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-ruecken">
+          <!-- ikonka "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-ruecken" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Rücken enger / weiter</b>
+          <p class="text-sm mt-1">
+            Präzise Anpassung der Rückenpartie – für optimalen Sitz und eine harmonische Silhouette.
+          </p>
+          <p class="text-sm text-gray-300">
+            Je nach Modell mit oder ohne Schlitz. Das gewährleistet Bewegungsfreiheit und ein elegantes Erscheinungsbild.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Facharbeit auf höchstem Niveau – erfordert Erfahrung, präzises Messen und feines Handgefühl.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 65&nbsp;CHF</span>
+</div>
+
+<!-- Seiten verengen (mit oder ohne Armloch) – PREMIUM -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Seiten verengen
+      <span class="premium-tag">PREMIUM</span>
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-seiten">
+          <!-- ikonka "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-seiten" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Seiten verengen | anpassen</b>
+          <p class="text-sm mt-1">
+            Verkleinerung oder Anpassung der Seitenpartie für eine schmalere, körperbetonte Passform.
+          </p>
+          <p class="text-sm text-gray-300">
+            <b>Ohne Armloch:</b> Standardverengung an den Seitennähten.<br>
+            <b>Mit Armloch:</b> Komplexere Anpassung bis in die Ärmelnaht – für perfekte Linienführung an Brust und Schultern.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Feine Massarbeit mit handgeführter Kontrolle der Silhouette. 
+            Empfohlen bei Blazern, Mänteln und hochwertigen Stoffen.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 60&nbsp;CHF</span>
+</div>
+
+<!-- Schulter schmälern – PREMIUM -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Schulter schmälern
+      <span class="premium-tag">PREMIUM</span>
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-schulter">
+          <!-- ikonka "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-schulter" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Schulter schmälern</b>
+          <p class="text-sm mt-1">
+            Aufwändige Anpassung der Schulterlinie für einen eleganten, modernen Sitz.
+            Empfohlen bei zu breiten Schultern oder locker fallenden Sakkos und Mänteln.
+          </p>
+          <p class="text-sm text-gray-300">
+            Dabei wird die Armkugel neu eingesetzt und die gesamte obere Konstruktion millimetergenau angepasst – 
+            für perfekte Proportionen ohne Spannung oder Falten.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Feine Handarbeit auf höchstem Niveau: erfordert Erfahrung, Präzision und das geschulte Auge eines Meisters.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 90&nbsp;CHF</span>
+</div>
+
+<!-- Nackenfalte heben -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Nackenfalte
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-nackenfalte">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-nackenfalte" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet das?</b>
+          <p class="text-sm mt-1">
+            Korrigiert eine Stofffalte im Nackenbereich, damit das Kleidungsstück
+            glatt am Rücken fällt und der Kragen sauber anliegt.
+          </p>
+
+          <p class="text-sm text-gray-300 mt-2">
+            Empfohlen, wenn sich unter dem Kragen Falten bilden oder der Rücken leicht „beutelt“.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Eine präzise Anpassung im oberen Rücken – für eine perfekte Passform und ruhigen Fall.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 70&nbsp;CHF</span>
+</div>
+
+
+
+<!--------------------------------------------------------- Nackenfalte  (scalona, docelowa wersja)
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Nackenfalte 
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-nacken-uni">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+      
+        <span id="tt-nacken-uni" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Kurz erklärt</b>
+          <p class="text-sm mt-1">
+            Wir entfernen überschüssigen Stoff im oberen Rücken/Nacken, damit hinter dem Kragen
+            keine Falte steht. Ergebnis: glatter Rücken, Kragen liegt sauber an.
+          </p>
+
+          <b class="text-pink-400">Wann sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn sich unter dem Kragen eine horizontale Falte bildet, der Kragen absteht
+            oder der Rücken leicht „beutelt“ – z.&nbsp;B. durch Haltung oder Konfektionsschnitt.
+          </p>
+
+          <b class="text-pink-400">Wie arbeiten wir?</b>
+          <p class="text-sm text-gray-300">
+            Falte abstecken, oberen Rücken millimetergenau kürzen, Kragen-/Halsloch proportional anpassen.
+            So bekommt das Teil einen ruhigen, sauberen Fall.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Hinweis: Bei stark ausgeprägten Passformthemen (z.&nbsp;B. starker Rundrücken)
+            kann zusätzlicher Aufwand an Kragen, Schulter oder Futter anfallen – separat kalkuliert.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 70&nbsp;CHF</span>
+</div>
+ ------------------------------------------------------>
+
+
+
+
+<!-- Reissverschluss erneuern (inkl. RV) -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      
+
+      <span class="text-base font-semibold text-white">
+        Reissverschluss erneuern 
+      </span>
+            <span class="text-sm text-gray-400 block mt-0.5"style="color: #ED4EB8;">
+        inkl. RV
+      </span>
+    
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-rv">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-rv" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was beinhaltet der Preis?</b>
+          <p class="text-sm mt-1">
+            Austausch des defekten Reissverschlusses inklusive neuem Qualitäts-RV
+            (Metall, Kunststoff oder Spiral – je nach Kleidungsstück und Farbe).
+          </p>
+
+          <b class="text-pink-400">Wann lohnt sich das?</b>
+          <p class="text-sm text-gray-300">
+            Wenn der Zipper klemmt, Zähne brechen oder der Schieber sich löst – besonders bei
+            Lieblingsjacken, Mänteln oder Hosen, die sonst in gutem Zustand sind.
+          </p>
+
+          <b class="text-pink-400">Wie arbeiten wir?</b>
+          <p class="text-sm text-gray-300">
+            Alter RV wird fachgerecht entfernt, Naht exakt nachgesteppt, neuer Reissverschluss farblich angepasst
+            und sauber eingenäht – mit verstärkten Endpunkten für Langlebigkeit.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Hinweis: Spezial-RV (z.&nbsp;B. 2-Wege-, wasserabweisend oder verdeckt) können einen Aufpreis verursachen.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 80&nbsp;CHF</span>
+</div>
+
+
+<!-- Reissverschluss erneuern (verdeckt) -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+       
+      <span class="text-base font-semibold text-white">
+        Reissverschluss erneuern
+      </span>
+            </span>
+      <span class="text-sm text-gray-400 block mt-0.5"style="color: #ED4EB8;">
+        verdeckt
+      </span>
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-rv-verdeckt">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-rv-verdeckt" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „verdeckt“?</b>
+          <p class="text-sm mt-1">
+            Der Reissverschluss ist unsichtbar eingenäht – die Zähne liegen unter der Stoffkante,
+            sodass von aussen kein Zipper oder Naht sichtbar ist.
+          </p>
+
+          <b class="text-pink-400">Wo wird das verwendet?</b>
+          <p class="text-sm text-gray-300">
+            Typisch bei Kleidern, Röcken, Abend- und Brautmode, wo ein elegantes, glattes Erscheinungsbild
+            gewünscht ist – ohne sichtbare Nähte oder Metallteile.
+          </p>
+
+          <b class="text-pink-400">Wie arbeiten wir?</b>
+          <p class="text-sm text-gray-300">
+            Alter RV wird vorsichtig entfernt, Stoff exakt gebügelt, verdeckter Spezial-RV millimetergenau
+            neu eingenäht und ausgerichtet, damit er beim Schliessen „verschwindet“.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Hinweis: Für feine Stoffe (z.&nbsp;B. Seide, Satin) verwenden wir spezielle Nadeln und Nähfäden,
+            um das Gewebe zu schonen.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 85&nbsp;CHF</span>
+</div>
+
+<!-- Reissverschluss reparieren -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex flex-col leading-tight">
+      <span class="text-base font-semibold text-white">
+        Reissverschluss reparieren
+      </span>
+      <span class="text-sm text-gray-400 block mt-0.5"style="color: #ED4EB8;">
+        Zipper | Schieber ersetzen
+      </span>
+    </span>
+
+    <div class="tooltip-container">
+      <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-rv-repair">
+        <!-- ikona "i" -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+      </button>
+
+      <!-- Tooltip -->
+      <span id="tt-rv-repair" role="tooltip" class="tooltip-text">
+        <b class="text-pink-400">Was wird gemacht?</b>
+        <p class="text-sm mt-1">
+          Austausch oder Justierung des Schiebers (Zipper) – ideal, wenn der Reissverschluss klemmt
+          oder sich nicht mehr richtig schliessen lässt.
+        </p>
+
+        <b class="text-pink-400">Vorteil:</b>
+        <p class="text-sm text-gray-300">
+          Schnelle, kostengünstige Reparatur – der Reissverschluss selbst bleibt erhalten.
+        </p>
+
+        <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+          Hinweis: Bei defekten Zähnen oder Gewebe empfehlen wir den kompletten Ersatz.
+        </p>
+      </span>
+    </div>
+  </div>
+  <span class="price">ab 35&nbsp;CHF</span>
+</div>
+
+
+
+<!-- Schulterpolster einnähen -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Schulterpolster einnähen
+      <span class="text-sm block mt-0.5 text-pink-strong">
+        
+      </span>
+
+            <span class="text-sm text-gray-400 block mt-0.5">
+        inkl. Material
+      </span>
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-schulterpolster">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-schulterpolster" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Schulterpolster einnähen”?</b>
+          <p class="text-sm mt-1">
+            Schulterpolster werden eingesetzt, um die Form und Linie der Schultern zu stabilisieren 
+            und dem Kleidungsstück eine harmonische Silhouette zu geben.
+          </p>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Ideal bei dünneren Stoffen, eingefallenen Schultern oder nach Änderungen an der Schulterlinie. 
+            Es sorgt für ein ausgewogenes, professionelles Erscheinungsbild.
+          </p>
+
+          <b class="text-pink-400">Wie arbeiten wir?</b>
+          <p class="text-sm text-gray-300">
+            Die Polster werden präzise per Hand eingesetzt und im Futter fixiert – 
+            unsichtbar von außen, aber mit spürbarer Wirkung für Haltung und Passform.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Enthält hochwertige, formstabile Polster. 
+            Optional: Anpassung an individuelle Schulterform oder asymmetrische Linien.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 35&nbsp;CHF</span>
+</div>
+
+
+
+
+ 
+      <!-- Jacke / Mantel neu einfüttern -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Jacke / Mantel neu einfüttern
+      <span class="text-sm block mt-0.5 text-pink-strong">
+      </span>
+
+                  <span class="text-sm text-gray-400 block mt-0.5">
+        inkl. Material
+      </span>
+      <div class="tooltip-container">
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-einfuettern">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-einfuettern" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „neu einfüttern”?</b>
+          <p class="text-sm mt-1">
+            Das alte Futter wird vollständig entfernt und durch ein neues, hochwertiges Innenfutter ersetzt.
+            Dadurch erhält Ihr Mantel oder Ihre Jacke wieder Form, Komfort und Stabilität wie am ersten Tag.
+          </p>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn das Innenfutter abgenutzt, gerissen oder verfärbt ist – oder wenn Sie ein atmungsaktiveres,
+            glatteres Material wünschen (z.&nbsp;B. für Seide, Viskose oder Acetat).
+          </p>
+
+          <b class="text-pink-400">Wie arbeiten wir?</b>
+          <p class="text-sm text-gray-300">
+            Das neue Futter wird passgenau nach dem Originalmuster gefertigt,
+            an Schultern, Ärmeln und Nähten präzise eingesetzt und sorgfältig vernäht.
+            Auf Wunsch kann auch das Design leicht angepasst werden (z.&nbsp;B. mit kontrastfarbenem Innenfutter).
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Der Preis beinhaltet Standard-Futtermaterial. 
+            Für Spezialstoffe oder Seidenfutter wird ein Aufpreis berechnet.
+          </p>
+        </span>
+      </div>
+    </span>
+  </div>
+  <span class="price">ab 180&nbsp;CHF</span>
+</div>
+
 
       </div>
 
@@ -234,6 +684,7 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
     </div>
   </div>
 </div>
+
 
 
             <!-- Kleider & Röcke -->
@@ -314,7 +765,29 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
                             <!-- Anzughose Content -->
                             <div id="anzughose-content" class="hosen-panel hidden">
                                 <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen</span></span><span class="price">ab 25 CHF</span></div>
-                                <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen mit Band</span></span><span class="price">ab 30 CHF</span></div>
+                                <!-- 9) Saum / Umschlag ändern -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Saum / Umschlag ändern
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-saum">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-saum" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Saum-Stile</b><br>
+            Klassisch gerade, mit Umschlag oder offen (raw hem) – wir gestalten den Saum nach Wunsch.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Detail mit grosser Wirkung.</span>
+    </div>
+    <span class="price">ab 35 CHF</span>
+  </div>
+
                                 <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen Umschlag</span></span><span class="price">ab 40 CHF</span></div>
                                 <div class="price-item"><span class="description-wrapper"><span class="description">Länger / falscher Saum</span></span><span class="price">ab 30 CHF</span></div>
                                 <div class="price-item"><span class="description-wrapper"><span class="description">Enger / auslassen hinten</span></span><span class="price">ab 25 CHF</span></div>
@@ -322,135 +795,395 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
                                 <div class="price-item"><span class="description-wrapper"><span class="description">Tasche ansetzen mit Stoff</span></span><span class="price">ab 35 CHF</span></div>
                                 <div class="price-item"><span class="description-wrapper"><span class="description">Reissverschluss neu einsetzen (inkl. RV)</span></span><span class="price">ab 35 CHF</span></div>
                             </div>
-                            <!-- Jeanshose Content -->
-                            <div id="jeanshose-content" class="hosen-panel hidden">
 
 
 
 
-                               <div class="price-item">
-  <div class="description-wrapper">
-    <span class="description">Kürzen mit Jeansfaden</span>
-    <span class="sub-description flex items-center gap-2">
-      Standardausführung mit sichtbarer, robuster Naht.
-      <div class="tooltip-container">
-        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-jeans">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-          </svg>
-        </button>
 
+   <!-- ------------------------------------------------------------------------------------- -->
 
-        <span id="tipp-jeans" role="tooltip" class="tooltip-text">
-  <b class="text-pink-400 text-base uppercase tracking-wide block">
-    PREMIUM OPTION
-  </b>
-  <span class="block text-xs text-gray-500 tracking-wide mt-1 mb-3">
-    (Aufpreis&nbsp;+&nbsp;5&nbsp;CHF)
-  </span>
+<!-- Jeanshose Content -->
+<div id="jeanshose-content" class="hosen-panel hidden">
 
-  <p class="text-sm mb-2">
-    Waehlen Sie diese Option fuer maximale Haltbarkeit und eine sichtbare, robuste Naht wie bei Original-Jeans.
-  </p>
+  <!-- 1) Kürzen mit Jeansfaden -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Kürzen mit Jeansfaden
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-jeans">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-jeans" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400 text-base uppercase tracking-wide block">PREMIUM OPTION</b>
+            <span class="block text-xs text-gray-500 tracking-wide mt-1 mb-3">(Aufpreis&nbsp;+&nbsp;5&nbsp;CHF)</span>
 
-  <p class="text-sm mb-2">
-    Verwendet wird ein technischer <b>Hochleistungsfaden (Kernzwirn)</b> mit Polyesterkern und
-    Spinnfaser-Ummantelung – reissfest, abrieb- und dehnungsbestaendig (ca.&nbsp;2500–3000&nbsp;cN).
-    Ideal fuer stark beanspruchte Jeansstoffe und dekorative Steppnaehte.
-  </p>
+            <p class="text-sm mb-2">
+              Wählen Sie diese Option für maximale Haltbarkeit und eine sichtbare, robuste Naht wie bei Original-Jeans.
+            </p>
 
-  <p class="text-sm mb-2">
-    Erhaeltlich in einer <b>reichhaltigen Farbpalette</b> klassischer Denimtoene:
-    honig, kupfer, beige und anthrazit – abgestimmt auf Original-Jeansnaehte.
-  </p>
+           
 
-  <!-- dezente Trennlinie -->
-  <div class="border-t border-gray-700 my-3 opacity-50"></div>
+            <p class="text-sm mb-2">
+              Technischer <b>Hochleistungsfaden (Kernzwirn)</b> mit Polyesterkern und Spinnfaser-Ummantelung –
+              reissfest, abrieb- und dehnungsbeständig (ca.&nbsp;2500–3000&nbsp;cN). Ideal für beanspruchte Jeansstoffe
+              und dekorative Steppnähte.
+            </p>
+            <p class="text-sm mb-2">
+              Farbpalette klassischer Denim-Töne: Honig, Kupfer, Beige, Anthrazit – abgestimmt auf Original-Jeansnähte.
+            </p>
 
-  <p class="text-sm text-gray-300">
-    Bitte bei Auftragserteilung angeben.
-  </p>
-</span>
+            
 
+            <b class="text-pink-400">Jeansfaden – Details</b>
+            <p class="text-sm mt-2">
+              • <b>Kernzwirn</b>: Polyesterkern + Spinnfaser-Ummantelung → hohe Reissfestigkeit, Formstabilität, sehr gute Abriebfestigkeit.<br>
+              • <b>Optik</b>: leicht matt, jeans-typisch; passend zu Marken-Steppnähten (Honig/Kupfer/Beige/Anthrazit).<br>
+              • <b>Einsatz</b>: ideal für Säume und sichtbare Steppnähte; bleibt auch nach vielen Wäschen formstabil.
+            </p>
 
-        </span>
-      </div>
-    </span>
+            
+
+            <p class="text-sm text-gray-400">Standardausführung mit sichtbarer, robuster Naht.</p>
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Standardausführung mit sichtbarer, robuster Naht.</span>
+    </div>
+    <span class="price">ab 27 CHF</span>
   </div>
-  <span class="price">ab 25 CHF</span>
+
+  <!-- 2) Originalsaum (Premium) -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Originalsaum
+        <span class="premium-tag">PREMIUM</span>
+
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-original">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-original" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400 text-base uppercase tracking-wide block">PREMIUM OPTION</b>
+            <span class="block text-xs text-gray-500 tracking-wide mt-1 mb-3">(Aufpreis&nbsp;+&nbsp;5&nbsp;CHF)</span>
+
+            <p class="text-sm mb-2">Originalgetreues Saumbild nach dem Kürzen – der Originalsaum bleibt erhalten (Marken-Optik).</p>
+            <p class="text-sm mb-2">Genäht mit <b>Kernzwirn</b> – hohe Reissfestigkeit (ca.&nbsp;2500–3000&nbsp;cN), farbecht und weich im Griff.</p>
+            <p class="text-sm mb-2">Ideal, wenn <b>Original-Look</b> und <b>technische Haltbarkeit</b> Priorität haben.</p>
+
+            
+
+            <b class="text-pink-400">Jeansfaden – Details</b>
+            <p class="text-sm mt-2">
+              • <b>Kernzwirn</b>: Polyesterkern + Spinnfaser-Ummantelung; elastisch-stabil, reissfest in Saum/Schritt/Knie.<br>
+              • <b>Vorteile</b>: geringere Bruchneigung, bessere Abriebfestigkeit, sauberes Stichbild.<br>
+              • <b>Farben</b>: Honig, Kupfer, Beige, Anthrazit – passend zum originalen Jeansfaden.
+            </p>
+
+            
+
+            <p class="text-sm text-gray-400">Premiumverarbeitung mit originalgetreuer Optik.</p>
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Premiumverarbeitung mit originalgetreuer Optik.</span>
+    </div>
+    <span class="price">ab 32 CHF</span>
+  </div>
+
+  <!-- 3) Jeans kürzen – neuer Saum -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Jeans kürzen – neuer Saum
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-neuer-saum">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-neuer-saum" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Neuer Abschluss</b><br>
+            Wenn der Originalsaum beschädigt ist, nähen wir einen neuen, sauberen Saum – modern, gepflegt, langlebig.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Neuer, sauberer Abschluss bei beschädigtem Originalsaum.</span>
+    </div>
+    <span class="price">ab 28 CHF</span>
+  </div>
+
+  <!-- 4) Hosenbeine verengen (Tapering) -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Hosenbeine verengen (Tapering)
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-tapering">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-tapering" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Tapering</b><br>
+            Beinverlauf wird vom Oberschenkel bis zum Saum schmaler genäht – moderne, schlanke Silhouette; symmetrisch und bequem.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Schmalere Linie an Oberschenkeln und Waden.</span>
+    </div>
+    <span class="price">ab 45 CHF</span>
+  </div>
+
+  <!-- 5) Hosenbeine erweitern -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Hosenbeine erweitern
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-erweitern">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-erweitern" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Mehr Weite</b><br>
+            Dezent erweitern über Nahtzugaben oder unsichtbare Einsätze – mehr Bewegungsfreiheit, harmonische Linien.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Dezente Erweiterung mit Nahtzugaben/Einsätzen.</span>
+    </div>
+    <span class="price">ab 45 CHF</span>
+  </div>
+
+  <!-- 6) Bund enger machen -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Bund enger machen
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-bund-enger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-bund-enger" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Technik</b><br>
+            Bund hinten öffnen, Überlappung präzise anpassen, formstabil neu vernähen – aussen unsichtbar, innen sauber verstärkt.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Perfekter Halt in der Taille.</span>
+    </div>
+    <span class="price">ab 38 CHF</span>
+  </div>
+
+  <!-- 7) Bund weiter machen -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Bund weiter machen
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-bund-weiter">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-bund-weiter" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Mehr Komfort</b><br>
+            Wenn genügend Stoff vorhanden ist: Bund fachgerecht verbreitern – komfortabler Sitz ohne Druckgefühl.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Verbreitern bei ausreichender Stoffreserve.</span>
+    </div>
+    <span class="price">ab 38 CHF</span>
+  </div>
+
+  <!-- 8) Sitz und Schritt anpassen -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Sitz und Schritt anpassen
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-sitz">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-sitz" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Optimierung</b><br>
+            Anpassung im Gesäss- und Schrittbereich gegen Falten und Zug – kleine Änderung mit grossem Effekt.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Glatteres Bild ohne Falten.</span>
+    </div>
+    <span class="price">ab 55 CHF</span>
+  </div>
+
+  
+  <!-- 10) Reissverschluss ersetzen -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Reissverschluss ersetzen
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-rv">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-rv" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Hinweis</b><br>
+            Ersatz durch Qualitäts-RV (z.&nbsp;B. YKK/Opti), farblich abgestimmt und robust vernäht. Inklusive Material; Nähgarantie 6 Monate.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Fachgerechter Austausch, farblich passend.</span>
+    </div>
+    <span class="price">ab 40 CHF</span>
+  </div>
+
+  <!-- 11) Knopf / Gürtelschlaufen ersetzen -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Knopf oder Gürtelschlaufen ersetzen
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-schlaufe">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-schlaufe" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Kleine Reparatur</b><br>
+            Abgerissene Knöpfe/Schlaufen ersetzen oder verstärken – sauber und haltbar.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Kleine Änderung, grosser Effekt.</span>
+    </div>
+    <span class="price">ab 15 CHF</span>
+  </div>
+
+  <!-- 12) Risse flicken / Stellen verstärken -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Risse flicken / Stellen verstärken
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-risse">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-risse" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Reparaturtechnik</b><br>
+            Unsichtbare Unterlegung + Steppnaht mit robustem Jeansgarn – elastisch und haltbar in Knie-/Schrittzonen.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Sorgfältige Verstärkung in Belastungszonen.</span>
+    </div>
+    <span class="price">ab 20 CHF</span>
+  </div>
+
+  <!-- 13) Hosen verlängern -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Hosen verlängern
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-verlaengern">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-verlaengern" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Verlängerung</b><br>
+            Wenn möglich über Reserven; sonst dezente, farblich abgestimmte Einsätze – natürlich und kaum sichtbar.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Reserven/Einsätze – natürliches Ergebnis.</span>
+    </div>
+    <span class="price">ab 30 CHF</span>
+  </div>
+
+  <!-- 14) Bundhöhe anpassen -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Bundhöhe anpassen (höher oder tiefer setzen)
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-bundhoehe">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-bundhoehe" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Bundhöhe</b><br>
+            Höhe von Bund/Schritt verändern – für besseren Sitz oder Stilwechsel (High- oder Low-Rise).
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Höhe an Figur und Stil anpassen.</span>
+    </div>
+    <span class="price">ab 70 CHF</span>
+  </div>
+
+  <!-- 15) Komplette Anpassung / Massänderung -->
+  <div class="price-item">
+    <div class="description-wrapper">
+      <span class="description flex items-center gap-2">
+        Komplette Anpassung / Massänderung
+        <div class="tooltip-container">
+          <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-komplett">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+          <span id="tipp-komplett" role="tooltip" class="tooltip-text">
+            <b class="text-pink-400">Massarbeit</b><br>
+            Kombination mehrerer Anpassungen (Länge, Taille, Schritt, Saum) – Analyse von Proportionen für einen wie massgeschneiderten Sitz.
+          </span>
+        </div>
+      </span>
+      <span class="sub-description sr-only">Mehrere Änderungen kombiniert.</span>
+    </div>
+    <span class="price">ab 80 CHF</span>
+  </div>
+
 </div>
 
 
 
 
 
-
-                               <div class="price-item">
-  <div class="description-wrapper">
-    <span class="description">Originalsaum</span>
-    <span class="sub-description flex items-center gap-2">
-      Premiumverarbeitung mit originalgetreuer Optik.
-      <div class="tooltip-container">
-        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tipp-original">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-          </svg>
-        </button>
+   <!-- ------------------------------------------------------------------------------------- -->
 
 
-<span id="tipp-original" role="tooltip" class="tooltip-text">
-  <b class="text-pink-400 text-base uppercase tracking-wide block">
-    PREMIUM OPTION
-  </b>
-  <span class="block text-xs text-gray-500 tracking-wide mt-1 mb-3">
-    (Aufpreis&nbsp;+&nbsp;5&nbsp;CHF)
-  </span>
-
-  <p class="text-sm mb-2">
-    Diese Premium-Option ist optional und sorgt fuer ein originalgetreues Saumbild nach dem Kürzen.
-  </p>
-
-  <p class="text-sm mb-2">
-    Genäht mit einem <b>technischen Hochleistungsfaden (Kernzwirn)</b>,
-    der eine hohe Reissfestigkeit (ca.&nbsp;2500–3000&nbsp;cN) und Farbechtheit
-    auch nach vielen Waschgängen bietet. Die Naht bleibt formstabil und weich im Griff.
-  </p>
-
-  <p class="text-sm mb-2">
-    Ideal fuer Kunden, die Wert auf die Kombination aus <b>originaler Optik</b> und
-    <b>technischer Haltbarkeit</b> legen – besonders bei hochwertigen Denim- und Stoffhosen.
-  </p>
-
-  <!-- dezente Trennlinie -->
-  <div class="border-t border-gray-700 my-3 opacity-50"></div>
-
-  <p class="text-sm text-gray-300">
-    Bitte bei Auftragserteilung angeben.
-  </p>
-</span>
-
-
-
-      </div>
-    </span>
-  </div>
-  <span class="price">ab 30 CHF</span>
-</div>
-
-
-
-
-
-
-                               <div class="price-item"><span class="description-wrapper"><span class="description">Länger / falscher Saum</span></span><span class="price">ab 30 CHF</span></div>
-                               <div class="price-item"><span class="description-wrapper"><span class="description">Enger / auslassen hinten</span></span><span class="price">ab 35 CHF</span></div>
-                               <div class="price-item"><span class="description-wrapper"><span class="description">Hosenbeine enger</span></span><span class="price">ab 45 CHF</span></div>
-                               <div class="price-item"><span class="description-wrapper"><span class="description">Bund enger/weiter</span></span><span class="price">ab 38 CHF</span></div>
-                               <div class="price-item"><span class="description-wrapper"><span class="description">Reissverschluss neu einsetzen (inkl. RV)</span></span><span class="price">ab 40 CHF</span></div>
-                               <div class="price-item"><span class="description-wrapper"><span class="description">Knieflicken auf Jeans</span></span><span class="price">ab 20 CHF</span></div>
-                            </div>
                             <!-- Lederhose Content -->
                             <div id="lederhose-content" class="hosen-panel hidden">
                                <div class="price-item"><span class="description-wrapper"><span class="description">Kürzen</span></span><span class="price">ab 45 CHF</span></div>
@@ -635,39 +1368,596 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
                                 <p id="total-price" class="price-highlight">-</p>
                             </div>
                         </div>
-                        <div class="text-sm text-gray-400 mt-4 text-center">Preise pro Stück, ohne Textil. über 100 Stück oder über 200 cm² auf Anfrage.</div>
+                        <div class="text-sm text-gray-400 mt-4 text-center space-y-2">
+  <p>Preise pro Stück, ohne Textil. Über 100 Stück oder über 200 cm² auf Anfrage.</p>
+
+  <!-- Linia nagłówka + ikona z wyjaśnieniem -->
+  <div class="flex items-center justify-center gap-2 text-gray-300">
+    <strong class="text-gray-200">Stickprogramm (einmalig):</strong>
+    <div class="tooltip-container">
+      <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-digit">
+        <!-- „i” -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+          <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+      </button>
+      <span id="tt-digit" role="tooltip" class="tooltip-text">
+        Erstellung des Maschinenprogramms (Digitalisierung) für Ihr Motiv. 
+        Der einmalige Preis richtet sich nach Motiv-Komplexität und Stichzahl. 
+        Bei Folgebestellungen mit demselben Motiv entfällt die Gebühr.
+      </span>
+    </div>
+  </div>
+
+  <!-- 3 przedziały: mały/średni/duży -->
+  <div class="flex items-center justify-center gap-2 flex-wrap">
+    <span class="setup-badge">Klein · bis ~25&nbsp;cm²</span>
+    <span class="setup-badge">Mittel · bis ~100&nbsp;cm²</span>
+    <span class="setup-badge">Gross · über ~100&nbsp;cm²</span>
+  </div>
+
+  <p class="text-xs text-gray-500">
+    Fixpreis nach Datenprüfung. Für Stückzahlen &gt; 100 oder sehr komplexe Motive kalkulieren wir individuell.
+  </p>
+</div>
+
                          <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
                     </div>
                 </div>
             </div>
 
-            <!-- Bügelservice -->
-            <div class="accordion-item animated-item">
-                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
-                    <h2 class="text-xl font-semibold main-header">Bügelservice</h2>
-                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </div>
-                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
-                    <div class="p-5 border-t border-gray-700 content-wrapper">
-                        <div>
-                            <div class="price-item"><span class="description">Hemd / Bluse (am Bügel)</span><span class="price">ab 5.70 CHF</span></div>
-                            <div class="price-item"><span class="description">Bluse (delikate Stoffe, z.B. Seide)</span><span class="price">ab 16.50 CHF</span></div>
-                            <div class="price-item"><span class="description">T-Shirt / Polo-Shirt</span><span class="price">ab 3 CHF</span></div>
-                            <div class="price-item"><span class="description">Hose (ohne Bügelfalten)</span><span class="price">ab 13.00 CHF</span></div>
-                             <div class="price-item"><span class="description">Hose (mit Bügelfalten)</span><span class="price">ab 15.50 CHF</span></div>
-                            <div class="price-item"><span class="description">Jupe / Rock</span><span class="price">ab 5 CHF</span></div>
-                            <div class="price-item"><span class="description">Kleid (einfach)</span><span class="price">ab 19.00 CHF</span></div>
-                             <div class="price-item"><span class="description">Veston / Jacke</span><span class="price">ab 17.50 CHF</span></div>
-                            <div class="price-item"><span class="description">Anzug (2-teilig)</span><span class="price">ab 31.00 CHF</span></div>
-                            <div class="price-item"><span class="description">Krawatte / Fliege</span><span class="price">ab 10.50 CHF</span></div>
-                            <div class="price-item"><span class="description">Tischtuch</span><span class="price">ab 12.50 CHF</span></div>
-                            <div class="price-item"><span class="description">Vorhänge (pro Stück)</span><span class="price">ab 25.00 CHF</span></div>
-                        </div>
-                        <div class="text-sm text-gray-400 mt-4">Preise pro Stück, handgebügelt.</div>
-                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
-                    </div>
-                </div>
-            </div>
+<!-- Bügelservice -->
+<div class="accordion-item animated-item">
+  <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+    <h2 class="text-xl font-semibold main-header">Bügelservice</h2>
+    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+
+  <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+    <div class="p-5 border-t border-gray-700 content-wrapper">
+      <div>
+
+<!-- 1) Hemd / Bluse — PREMIUM -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Business-Hemd
+     <span class="premium-tag">PREMIUM</span>
+
+      <div class="tooltip-container">
+        <button
+          type="button"
+          class="tooltip-icon text-gray-400"
+          aria-describedby="tt-b-hemd-premium"
+          aria-controls="tt-b-hemd-premium"
+          aria-expanded="false"
+        >
+          <!-- „i” -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38
+            2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8
+            5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <span id="tt-b-hemd-premium" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Premium Handfinish mit Kühltechnik</b>
+
+          <p class="text-sm mt-1">
+            Jedes Hemd wird im <b>Premiumverfahren</b> von Hand gebügelt – Schicht für Schicht,
+            mit einem natürlichen Fall und ohne sichtbare Glanzstellen.
+          </p>
+
+          <p class="text-sm text-gray-300">
+            Die Kombination aus <b>Dampf von oben</b> und <b>Kühlung von unten</b> sorgt dafür,
+            dass die Fasern sich entspannen und gleich danach sanft fixiert werden.
+            So bleibt der Stoff länger glatt – mit einem frischen, gepflegten Look.
+          </p>
+
+          <p class="text-sm text-gray-300">
+            Das eingesetzte <b>Profi-Bügeleisen</b> verfügt über eine präzise elektronische Temperaturregelung (±2 °C)
+            und erzeugt eine <b>trockene, feine Dampfqualität</b> – ideal für empfindliche Stoffe.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Die Premium-Funktion lebt von Erfahrung: <b>Fachkundige Hände</b> und ein <b>geschultes Auge</b>
+            geben jedem Hemd den perfekten Sitz – ohne sichtbare Druckstellen, aber mit erstklassiger Form.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    <span class="sub-description sr-only">
+      Premium Handfinish mit Dampf und Kühlung – natürlicher Look, kontrollierte Temperatur, fachkundige Handarbeit.
+    </span>
+  </div>
+
+  <span class="price">ab 7.50 CHF</span>
+</div>
+
+
+
+<!-- 2) Bluse – delikat (PREMIUM Care) -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Bluse | Delikatstoffe
+      <span class="premium-tag">PREMIUM</span>
+
+      <div class="tooltip-container">
+        <button
+          type="button"
+          class="tooltip-icon text-gray-400"
+          aria-describedby="tt-b-bluse"
+          aria-controls="tt-b-bluse"
+          aria-expanded="false"
+        >
+          <!-- „i” -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468
+            c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083
+            c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47
+            l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <span id="tt-b-bluse" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Premiumpflege für empfindliche Stoffe</b>
+
+          <p class="text-sm mt-1">
+            Feinblusen aus Seide und Delikatstoffen werden mit grösster Sorgfalt behandelt – sanft geglättet, ohne Druckstellen und ohne Glanz. Perfekt geeignet für Seide, Viskose und feine Synthetics.
+          </p>
+
+          <p class="text-sm text-gray-300">
+            Dank <b>Dampf von oben</b> und <b>Kühlung von unten</b> entspannen sich die Fasern und werden gleich danach fixiert.
+            So bleibt der Stoff geschmeidig und natürlich – kein steifer Bügel-Look.
+          </p>
+
+          <p class="text-sm text-gray-300">
+            Das <b>Profi-Bügeleisen mit Präzisionstemperatur (±2 °C)</b> gewährleistet, dass selbst feinste Gewebe sicher behandelt werden.
+            Jede Bewegung ist langsam, kontrolliert und auf das Material abgestimmt.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Nicht die Technik allein entscheidet – das Ergebnis verdanken Sie <b>feinem Fingerspitzengefühl</b> und
+            <b>geschultem Auge</b> unserer Schneiderinnen, die jedes Stück individuell prüfen.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">
+      Premiumpflege für Seide und empfindliche Stoffe – sanft, kühl fixiert, handgeführt.
+    </span>
+  </div>
+  <span class="price">ab 17.50 CHF</span>
+</div>
+
+
+<!-- Alltag-Bluse -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Alltag-Bluse
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-alltag">
+          <!-- „i” -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-alltag" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Alltag-Bluse – Natürlich gepflegt</b>
+          <p class="text-sm mt-1">
+            Alltag-Blusen werden mit viel Erfahrung und ruhiger Hand gebügelt – glatt, formstabil und trotzdem natürlich im Fall.
+          </p>
+          <p class="text-sm text-gray-300">
+            <b>Dampf von oben + Kühlung von unten</b>: Die Wärme entspannt die Fasern, die Kälte von unten „fixiert“ die Form
+            und entzieht Feuchtigkeit – für ein frisches Ergebnis, das länger hält.
+          </p>
+          <p class="text-sm text-gray-300">
+            <b>Ohne Glanz und ohne harte Pressfalten</b> – ideal für Alltag, Büro und Reisen.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Nicht nur die Technik zählt: <b>fachkundige Hand</b> und <b>geschultes Auge</b> sorgen für saubere Kanten,
+            gleichmässige Partien und ein natürliches Gesamtbild.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">Alltag-Bluse: natürliches Finish, Dampf von oben + Kühlung von unten, ohne Glanz.</span>
+  </div>
+  <span class="price">ab 6 CHF</span>
+</div>
+
+
+
+<!-- 3) T-Shirt / Polo -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      T-Shirt | Polo-Shirt
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-3" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Natürlich glatt & formstabil</b>
+          <p class="text-sm mt-1">
+            T-Shirts und Polos werden sorgfältig von Hand geglättet – mit natürlichem Fall und ohne Glanzstellen.
+          </p>
+          <p class="text-sm text-gray-300">
+            <b>Dampf von oben</b> entspannt die Fasern, während die <b>Kühlung von unten</b> sie sofort fixiert und trocknet.
+            So bleibt der Stoff weich, aber dauerhaft glatt.
+          </p>
+          <p class="text-sm text-gray-300">
+            Das Ergebnis: ein <b>frischer, gepflegter Look</b>, der auch nach dem Tragen seine Form behält – ideal für Freizeit und Arbeit.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Perfektion entsteht durch Erfahrung – <b>ruhige Hand, geschultes Auge</b> und die richtige Temperatur machen jedes Stück einzigartig.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">Natürliches Finish ohne Glanz, Dampf von oben + Kühlung von unten.</span>
+  </div>
+  <span class="price">ab 5 CHF</span>
+</div>
+
+
+<!-- 4) Hose ohne Bügelfalten -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Hose | ohne Bügelfalten
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-4" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Natürlich fallend</b>
+          <p class="text-sm mt-1">
+            Hosen werden sanft von Hand geglättet – ohne scharfe Kanten, mit natürlichem Fall und ruhiger Oberfläche.
+          </p>
+          <p class="text-sm text-gray-300">
+            <b>Dampf von oben</b> entspannt die Fasern, <b>Kühlung von unten</b> fixiert Form und nimmt Feuchte – dadurch bleibt die
+            Silhouette glatt, ohne „Press-Look“.
+          </p>
+          <p class="text-sm text-gray-300">
+            Bund und Saum werden sorgfältig ausgerichtet; geeignet für Chinos, leichte Wolle, Mischgewebe und Baumwolle.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Technik trifft Handwerk: <b>fachkundige Hand</b>, <b>geübtes Auge</b> und eine präzise Temperaturführung (±2&nbsp;°C)
+            zapewniają powtarzalny, elegancki efekt bez połysku.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">Natürliches Finish ohne scharfe Kanten – Dampf von oben, Kühlung von unten.</span>
+  </div>
+  <span class="price">ab 13.00 CHF</span>
+</div>
+
+
+<!-- 5) Hose mit Bügelfalten – PREMIUM -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Hose | mit Bügelfalten
+     <span class="premium-tag">PREMIUM</span>
+
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-5" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Premium-Bügelfalte – Präzision & Stil</b>
+          <p class="text-sm mt-1">
+            Jede Falte wird <b>von Hand gesetzt</b> und mit Dampf geformt – scharf, dauerhaft und perfekt ausgerichtet.
+          </p>
+          <p class="text-sm text-gray-300">
+            Die Technik <b>Dampf von oben + Kühlung von unten</b> fixiert die Form sofort und verhindert Glanz oder Druckstellen.
+          </p>
+          <p class="text-sm text-gray-300">
+            Ideal für <b>Business- & Anzughosen</b>, wo Präzision und eleganter Fall entscheidend sind.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Perfektion entsteht im Detail – <b>fachkundige Hand</b>, <b>geschultes Auge</b> und ein elektronisch gesteuertes Profi-Bügeleisen
+            (±2&nbsp;°C) garantieren Ergebnisse auf höchstem Niveau.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">
+      Premium-Finish mit handgesetzter Falte, Dampf von oben + Kühlung von unten.
+    </span>
+  </div>
+  <span class="price">ab 17.50 CHF</span>
+</div>
+
+
+<!-- 6) Jupe / Rock -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Jupe | Rock
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-6" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Feinfinish für Jupe & Rock</b>
+          <p class="text-sm mt-1">
+            Sanft geglättet, damit der Stoff natürlich fällt und seine Form behält – ohne Glanz, ohne Druckstellen.
+          </p>
+          <p class="text-sm text-gray-300">
+            Die Kombination aus <b>Dampf von oben</b> und <b>Kühlung von unten</b> fixiert die Falten sofort,
+            sodass der Rock ruhig und elegant fällt.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Feingefühl, Geduld und ein <b>geschultes Auge</b> machen den Unterschied – jede Bewegung sitzt.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">
+      Sanft geglättet mit Dampf & Kühlung – natürlich fallend, ohne Glanz.
+    </span>
+  </div>
+  <span class="price">ab 5 CHF</span>
+</div>
+
+
+
+<!-- 7) Kleid (einfach) -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Kleid
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-7">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-7" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Feinfinish für Kleider</b>
+          <p class="text-sm mt-1">
+            Leichte und elegante Stoffe werden sanft geglättet – das Kleid fällt natürlich, ohne sichtbare Bügelkanten.
+          </p>
+          <p class="text-sm text-gray-300">
+            Mit <b>Dampf von oben</b> und <b>Kühlung von unten</b> wird die Form sofort fixiert, die Oberfläche bleibt weich und gleichmässig.
+          </p>
+          <p class="text-sm text-gray-300">
+            Das <b>elektronisch gesteuerte Profi-Bügeleisen</b> (±2&nbsp;°C) sorgt für punktgenaue Hitze – ideal für Viskose, Baumwolle oder Mischgewebe.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Jeder Arbeitsschritt wird von Hand ausgeführt – mit <b>Ruhiger Hand</b> und <b>geschultem Auge</b>, um den natürlichen Look zu erhalten.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">
+      Feines, natürliches Finish mit Dampf & Kühlung – formstabil, ohne Glanz.
+    </span>
+  </div>
+  <span class="price">ab 19.00 CHF</span>
+</div>
+
+
+<!-- 8) Veston / Jacke – PREMIUM FORM -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Veston
+    <span class="premium-tag">PREMIUM</span>
+
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-8" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Premium Formfinish</b>
+          <p class="text-sm mt-1">
+            Revers und Schultern werden sorgfältig von Hand aufgedämpft – die Jacke erhält ihre ursprüngliche Form und Spannung zurück.
+          </p>
+          <p class="text-sm text-gray-300">
+            <b>Dampf von oben</b> entspannt die Fasern, während <b>Kühlung von unten</b> die Form sofort fixiert. So bleibt das Gewebe formstabil und natürlich im Griff.
+          </p>
+          <p class="text-sm text-gray-300">
+            Das <b>elektronisch gesteuerte Bügeleisen</b> (±2&nbsp;°C) ermöglicht präzises Arbeiten bei Wolle, Leinen und Mischgeweben – ohne Glanzstellen oder Druck.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Entscheidend ist nicht nur die Technik – <b>erfahrene Hände</b> und ein <b>geübtes Auge</b> modellieren jede Linie, damit die Jacke perfekt sitzt.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">
+      Handaufdämpfung mit Dampf & Kühlung – formstabil, natürlich, ohne Glanz.
+    </span>
+  </div>
+  <span class="price">ab 17.50 CHF</span>
+</div>
+
+
+<!-- 9) Anzug (2-teilig) – SUIT PREMIUM FINISH -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Anzug
+    <span class="premium-tag">PREMIUM</span>
+
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-9">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-9" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Suit Premium Finish</b>
+          <p class="text-sm mt-1">
+            Der Zweiteiler wird in mehreren Schritten von Hand geglättet – jede Naht, jede Falte präzise kontrolliert.
+          </p>
+          <p class="text-sm text-gray-300">
+            <b>Dampf von oben</b> entspannt die Stofffasern, während <b>Kühlung von unten</b> die Kontur sofort fixiert.
+            So bleibt der Anzug formstabil und elegant im Fall.
+          </p>
+          <p class="text-sm text-gray-300">
+            Das <b>elektronisch gesteuerte Profi-Bügeleisen</b> (±2&nbsp;°C) sorgt für konstante Hitze und
+            schont empfindliche Materialien wie Schurwolle oder Stretchgewebe.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Perfekte Linien entstehen nicht durch Technik allein – sie sind das Ergebnis von <b>erfahrener Hand</b>,
+            <b>geschultem Auge</b> und <b>Geduld</b> bis ins Detail.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">
+      Suit Premium Finish – Handarbeit mit Dampf & Kühlung, formstabil, elegant, ohne Glanz.
+    </span>
+  </div>
+  <span class="price">ab 31.00 CHF</span>
+</div>
+
+
+<!-- 10) Krawatte / Fliege – DELUXE CARE -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Krawatte | Fliege
+   <span class="premium-tag">PREMIUM</span>
+
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-10" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Deluxe Care – Handfinish</b>
+          <p class="text-sm mt-1">
+            Krawatten und Fliegen werden mit minimaler Hitze und feinem Dampf geglättet – keine Druckstellen, kein Glanz.
+          </p>
+          <p class="text-sm text-gray-300">
+            Durch <b>Dampf von oben</b> werden die Fasern sanft geöffnet, <b>Kühlung von unten</b> fixiert sofort die Form und schützt die empfindlichen Einlagen.
+          </p>
+          <p class="text-sm text-gray-300">
+            Ideal für <b>Seide, Satin und Mikrofaser</b> – die Struktur bleibt weich, der Griff natürlich.
+          </p>
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Jede Bewegung ist Handarbeit: <b>ruhige Hand</b>, <b>präziser Blick</b> und Erfahrung verhindern jede Falte und jeden Abdruck.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">
+      Deluxe Handfinish – feiner Dampf & Kühlung, kein Glanz, keine Druckstellen.
+    </span>
+  </div>
+  <span class="price">ab 10.50 CHF</span>
+</div>
+
+
+<!-- 11) Tischtuch -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Tischtuch
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-11">
+          <!-- „i” -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-11" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Grosser Radius</b>
+          <p class="text-sm mt-1">Gleichmässig und faltenfrei – auch bei grossen Flächen.</p>
+
+          <p class="text-sm text-gray-300">
+            <b>Dampf von oben</b> lockert die Fasern, <b>Kühlung von unten</b> fixiert sofort und entzieht Feuchte.
+            So bleibt die Fläche plan, ohne Glanz- oder Druckstellen.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Bahn für Bahn in <b>Handarbeit</b> ausgearbeitet – das <b>geübte Auge</b> achtet auf ruhige Kanten
+            und ein natürliches Gesamtbild.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">Gleichmässig faltenfrei auch bei grossen Flächen.</span>
+  </div>
+  <span class="price">ab 12.50 CHF</span>
+</div>
+
+<!-- 12) Vorhänge -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Vorhänge
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-b-12">
+          <!-- „i” -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c-.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+        <span id="tt-b-12" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Lang & sauber</b>
+          <p class="text-sm mt-1">Gerade Kanten und ruhiger Fall – auch bei schweren Stoffen.</p>
+
+          <p class="text-sm text-gray-300">
+            <b>Dampf von oben</b> richtet die Fasern sanft aus, während <b>Kühlung von unten</b> die Länge fixiert
+            und überschüssige Feuchte entzieht. So bleiben die Stoffbahnen glatt und stabil.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Jeder Vorhang wird <b>manuell ausgedämpft</b> und geprüft – das <b>geübte Auge</b> sorgt für präzise Linien,
+            gleichmässige Falten und einen <b>natürlich ruhigen Fall</b>.
+          </p>
+        </span>
+      </div>
+    </span>
+    <span class="sub-description sr-only">Materialgerecht, ruhig fallend – nach Aufwand.</span>
+  </div>
+  <span class="price">je nach Aufwand</span>
+</div>
+
+      </div>
+
+      <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700">
+        <i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
             <!-- Sonstiges & Regie Arbeit -->
@@ -682,13 +1972,13 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
                             <div class="price-item"><span class="description">Knopf annähen</span><span class="price">ab 8 CHF</span></div>
                             <div class="price-item"><span class="description">Neues Knopfloch (maschinell)</span><span class="price">ab 15 CHF</span></div>
                             <div class="price-item"><span class="description">Neues Knopfloch (Handarbeit)</span><span class="price">ab 30 CHF</span></div>
-                            <div class="price-item"><span class="description">Wiffeln / Loch flicken (bis 2 cm)</span><span class="price">ab 20 CHF</span></div>
-                            <div class="price-item"><span class="description">Wiffeln / Loch flicken (ab 2 cm)</span><span class="price">ab 35 CHF</span></div>
+                            <div class="price-item"><span class="description">Wiffeln | Loch flicken (bis 2 cm)</span><span class="price">ab 20 CHF</span></div>
+                            <div class="price-item"><span class="description">Wiffeln | Loch flicken (ab 2 cm)</span><span class="price">ab 35 CHF</span></div>
                             <div class="price-item"><span class="description">Bettwäsche neuer RV (inkl. RV, pro lfm)</span><span class="price">ab 30 CHF</span></div>
-                            <div class="price-item"><span class="description">Historische/Theaterkostüme</span><span class="price">Auf Anfrage</span></div>
-                            <div class="price-item"><span class="description">Liefer- und Abholservice</span><span><a href="https://www.naehatelier-roxana.ch" target="_blank" class="inline-button">Mehr Infos</a></span></div>
+                            <div class="price-item"><span class="description">Historische | Theaterkostüme</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Liefer- und Abholservice</span><span><a href="https://www.naehatelier-roxana.ch/termin" target="_blank" class="inline-button">Mehr Infos</a></span></div>
                             <div class="price-item"><span class="description">Expresszuschlag</span><span class="price">50 %</span></div>
-                            <div class="price-item"><span class="description">Regie Arbeit / Stundenansatz</span><span class="price">ab 75 CHF</span></div>
+                            <div class="price-item"><span class="description">Stundenansatz</span><span class="price">ab 75 CHF</span></div>
                         </div>
                         <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
                     </div>
@@ -816,7 +2106,7 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
 </div>
 
 
-<!-- test test hallo shdjhdj gjdedfdfg-->
+<!---->
 
 </body>
 </html>

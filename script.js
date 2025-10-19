@@ -214,21 +214,29 @@
                 totalPriceEl.textContent = `${totalPrice.toFixed(2)} CHF`;
             }
 
-            sizeButtons.forEach(button => {
-                button.addEventListener('click', (event) => {
-                    event.stopPropagation();
-                    const sizeIndex = parseInt(button.dataset.size);
-                    if (selectedSizeIndex === sizeIndex) {
-                        selectedSizeIndex = -1;
-                        button.classList.remove('active');
-                    } else {
-                        sizeButtons.forEach(btn => btn.classList.remove('active'));
-                        button.classList.add('active');
-                        selectedSizeIndex = sizeIndex;
-                    }
-                    calculatePrice();
-                });
-            });
+sizeButtons.forEach(button => {
+  button.addEventListener('click', (event) => {
+    // Jeśli klik w ikonę „i” – nic nie rób, pozwól iść dalej (modal/tooltip to obsłuży)
+    if (event.target.closest('.tooltip-icon')) {
+      return; // NIE przerywaj propagacji, nie zmieniaj wyboru rozmiaru
+    }
+
+    // Dla normalnego kliku w przycisk nadal blokujemy propagację, żeby akordeon nie łapał
+    event.stopPropagation();
+
+    const sizeIndex = parseInt(button.dataset.size, 10);
+    if (selectedSizeIndex === sizeIndex) {
+      selectedSizeIndex = -1;
+      button.classList.remove('active');
+    } else {
+      sizeButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      selectedSizeIndex = sizeIndex;
+    }
+    calculatePrice();
+  });
+});
+
             
             quantitySlider.addEventListener('input', () => {
                 quantityOutput.textContent = quantitySlider.value;
@@ -309,6 +317,11 @@
   mo.observe(document.body, { childList: true, subtree: true });
 
   // Otwórz modal z HTML tooltipa
+
+
+
+
+  
   function openModalFrom(html) {
     const tmp = document.createElement('div');
     tmp.innerHTML = html;
@@ -320,7 +333,7 @@
       tmp.firstElementChild.remove();
       if (tmp.firstChild && tmp.firstChild.nodeName === 'BR') tmp.removeChild(tmp.firstChild);
     }
-    h3.textContent = heading || 'Informacja';
+    h3.textContent = heading || 'Zeigt die ungefähre Stickgrösse – der Teil, der bestickt wird.';
     body.innerHTML = tmp.innerHTML;
 
     modal.classList.add('open');
@@ -439,6 +452,11 @@
     // jeśli już otwarte, nie zmieniamy Twojej logiki zamykania
   }, true); // capture, żeby patch zadziałał przed innymi handlerami
 
+
+
+
+  
+
   // Klik w X: zamknij + style zamknięte
   document.addEventListener('click', (ev) => {
     const x = ev.target.closest('#search-close-button');
@@ -467,3 +485,6 @@
     }
   });
 })();
+
+
+

@@ -97,8 +97,9 @@
             border-radius: 0.25rem;
         }
         .price-item:not(:first-child) {
-            border-top: 1px solid #444;
-        }
+    border-top: 1px solid rgba(255,255,255,.08); /* delikatniej */
+}
+
         .price-item:hover {
             background-color: rgba(255, 255, 255, 0.05);
             transform: scale(1.01);
@@ -130,15 +131,12 @@
             border-bottom: 2px solid #ED4EB8;
         }
 
-        @media (max-width: 640px) {
-            .price-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .price-item .price {
-                margin-top: 0.5rem;
-            }
-        }
+@media (max-width: 640px) {
+  .price-item { flex-direction: column; align-items: flex-start; }
+  .price-item .price { margin-top: 0.5rem; }
+  .price-item .description-wrapper { padding-right: 2.25rem; } /* tu, bez zagnieżdżania */
+}
+
         .option-button {
             transition: all 0.3s ease;
             border: 1px solid #555;
@@ -270,7 +268,17 @@
   align-items: center;
 }
 
-.tooltip-icon { cursor: help; margin-left: 0.5rem; }
+.tooltip-icon{
+  cursor: help;
+  margin-left: .5rem;
+  width: 28px;            /* większy, pewny hitbox */
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
 
 /* zamiast stałych szerokości i margin-left: -140px */
 .tooltip-text {
@@ -580,4 +588,254 @@ footer img {
 
 /* Gdyby jakieś wcześniejsze reguły dawały display:none dla obrazów w stopce */
 footer img { visibility: visible; opacity: 1; }
+
+
+.badge-premium{
+  display:inline-flex; align-items:center; gap:.25rem;
+  padding:.1rem .5rem; border-radius:9999px;
+  font-size:.72rem; font-weight:800; letter-spacing:.02em;
+  background:#ED4EB8; color:#fff; border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 2px 10px rgba(237,78,184,.35);
+  transform: translateY(-1px);
+}
+
+
+.tooltip-sep{
+  border-top: 1px solid rgba(255,255,255,.12);
+  margin: .65rem 0;
+  opacity: .9;
+}
+.accordion-item,
+.accordion-content.open,
+.price-item,
+.description-wrapper { overflow: visible; }
+
+/* === GLOBAL TOOLTIP SEPARATORS === */
+.tooltip-modal-body p + p,
+.tooltip-modal-body ul + p,
+.tooltip-modal-body div + p,
+.tooltip-modal-body p + ul,
+.tooltip-modal-body p + div,
+.tooltip-modal-body br + p,
+.tooltip-text p + p,
+.tooltip-text ul + p,
+.tooltip-text div + p {
+  border-top: 1px solid rgba(255,255,255,.14);
+  margin-top: .75rem;
+  padding-top: .75rem;
+  opacity: .9;
+}
+
+/* Dodatkowe wzmocnienie dla przejrzystości sekcji z nagłówkami */
+.tooltip-modal-body b + p,
+.tooltip-modal-body strong + p,
+.tooltip-text b + p {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: .65rem;
+  padding-top: .65rem;
+}
+
+/* Ujednolicenie stylu list i punktów w tooltipach */
+.tooltip-modal-body ul,
+.tooltip-text ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin: .5rem 0 .5rem .5rem;
+}
+.tooltip-modal-body li,
+.tooltip-text li {
+  margin-bottom: .3rem;
+  line-height: 1.45;
+}
+/* TYLKO MOBILE: poprawione pozycjonowanie ikonek „i” po prawej */
+@media (max-width: 640px) {
+  :root{
+    --tt-size: 22px;    /* średnica kółka z ikoną */
+    --tt-right: 12px;   /* odstęp od prawej krawędzi */
+    --tt-hitpad: 6px;   /* dodatkowy obszar klikalny */
+  }
+
+  /* Rezerwujemy miejsce na ikonę po prawej i ustawiamy kotwicę */
+  .accordion-item .price-item{
+    position: relative;
+    padding-right: calc(var(--tt-right) + var(--tt-size) + 12px);
+    min-height: 52px; /* pewne centrowanie w pionie */
+  }
+
+  /* Kontener tooltipu – po prawej, wyśrodkowany pionowo */
+  .accordion-item .price-item .tooltip-container{
+    position: absolute;
+    right: var(--tt-right);
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    padding: var(--tt-hitpad);
+    margin: 0;
+  }
+
+  /* Sam przycisk „i” – spójny wygląd i rozmiar */
+  .accordion-item .price-item .tooltip-icon{
+    width: var(--tt-size);
+    height: var(--tt-size);
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgba(255,255,255,0.06);
+    color: #9ca3af; /* text-gray-400 */
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .accordion-item .price-item .tooltip-icon svg{
+    width: 14px; height: 14px;
+  }
+  .accordion-item .price-item .tooltip-icon:hover{
+    background: rgba(255,255,255,0.10);
+    color: #d1d5db;
+  }
+  .accordion-item .price-item .tooltip-icon:focus-visible{
+    outline: 2px solid #ec4899; /* pink */
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(236,72,153,0.25);
+  }
+
+  /* Dymek idzie w LEWO od ikony (bo ikona jest przy prawej krawędzi) */
+  .accordion-item .price-item .tooltip-text{
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 78vw; /* wygodne na małych ekranach */
+    z-index: 30;
+  }
+
+  /* Pozbądź się ewentualnych lokalnych marginesów kolidujących z globalem */
+  .accordion-item .price-item .description .tooltip-container,
+  .accordion-item .price-item .description .tooltip-icon{
+    margin-left: 0 !important;
+  }
+}
+
+/* (opcjonalnie) bardzo wąskie telefony w poziomie */
+@media (max-width: 380px) {
+  :root{ --tt-right: 10px; --tt-size: 20px; }
+}
+
+/* === Premium Tags (global style) === */
+.price-item .premium-tag {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  color: rgb(236, 72, 153);
+  background: rgba(236, 72, 153, 0.08);
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-left: 0.4rem;
+  transform: translateY(-1px);
+}
+
+
+
+
+
+/* === Bazowy wygląd etykiet (zostawić) === */
+.price-item .premium-tag,
+.price-item .promo-badge {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-left: 0.4rem;
+  transform: translateY(-1px);
+}
+
+/* Kolorystyka */
+.price-item .premium-tag {
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  color: rgb(236, 72, 153);
+  background: rgba(236, 72, 153, 0.08);
+}
+.price-item .promo-badge {
+  border: 1px solid rgba(255, 199, 102, 0.3);
+  color: rgb(255, 199, 102);
+  background: rgba(255, 199, 102, 0.08);
+}
+
+/* === TELEFONY (≤640px): etykieta przy ikonce po prawej === */
+@media (max-width: 640px) {
+  /* Wiersz tytułu jako 3 kolumny: [nazwa] [etykieta] [ikonka] */
+  .price-item .description {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 0.35rem;
+  }
+
+  /* Wariant A — etykieta jest rodzeństwem .tooltip-container */
+  .price-item .description > .premium-tag,
+  .price-item .description > .promo-badge {
+    grid-column: 2;        /* stoi tuż przed ikonką */
+    justify-self: end;
+    font-size: 0.68rem;
+    padding: 1px 6px;
+    transform: translateY(0);
+  }
+
+  /* Wariant B — etykieta jest w środku .tooltip-container */
+  .price-item .tooltip-container {
+    display: flex;         /* zawsze trzyma badge + ikonkę razem */
+    align-items: center;   /* pionowe wyśrodkowanie */
+    gap: 0.35rem;          /* odstęp badge ↔ ikonka */
+    grid-column: 3;        /* całość po prawej stronie */
+    justify-self: end;
+    margin-right: 0.4rem;  /* delikatny odsuw od prawej krawędzi */
+  }
+  .price-item .tooltip-container .premium-tag,
+  .price-item .tooltip-container .promo-badge {
+    order: 1;              /* etykieta przed ikonką */
+    font-size: 0.68rem;
+    padding: 1px 6px;
+    transform: translateY(0);
+  }
+
+  /* Sama ikonka */
+  .price-item .tooltip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;              /* ikonka po prawej stronie etykiety */
+  }
+}
+
+/* Mobile: pokaż tooltip po nadaniu .tooltip-open */
+@media (max-width: 640px){
+  .tooltip-container.tooltip-open .tooltip-text{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0); /* zostaw, jeśli masz inne pozycjonowanie – nie przeszkadza */
+  }
+}
+
+
+/* === Globalna logika: wymusza drugą linię w opisie === */
+.price-item .description {
+  display: inline-block;
+  line-height: 1.3;
+}
+
+/* Każdy wewnętrzny span (np. sublinia, opis techniczny) – zawsze od nowej linii */
+.price-item .description span + span,
+.price-item .description .sub-description {
+  display: block !important;
+  margin-top: 0.25rem; /* subtelny odstęp między liniami */
+  color: #a1a1aa; /* delikatnie jaśniejszy, pasuje do stylu Twojej strony */
+  font-size: 0.875rem;
+  font-weight: 400;
+}
 
