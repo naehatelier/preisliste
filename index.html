@@ -635,7 +635,7 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
                   <span class="text-sm text-gray-400 block mt-0.5">
         inkl. Material
       </span>
-      <div class="tooltip-container">
+      
       <div class="tooltip-container">
         <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-einfuettern">
           <!-- ikona "i" -->
@@ -678,7 +678,7 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
 </div>
 
 
-      </div>
+      
 
       <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700">
         <i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i>
@@ -698,37 +698,761 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
                 <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
                     <div class="p-5 border-t border-gray-700 content-wrapper">
                         <div>
-                            <div class="price-item"><span class="description">Länge kürzen (einfach)</span><span class="price">ab 40 CHF</span></div>
-                            <div class="price-item"><span class="description">Länge kürzen (mit Futter)</span><span class="price">ab 50 CHF</span></div>
-                            <div class="price-item"><span class="description">Länge kürzen (mit Schlitz)</span><span class="price">ab 55 CHF</span></div>
-                            <div class="price-item"><span class="description">Rock verlängern</span><span class="price">ab 60 CHF</span></div>
-                            <div class="price-item"><span class="description">Ärmellänge kürzen (einfach)</span><span class="price">ab 30 CHF</span></div>
-                            <div class="price-item"><span class="description">Ärmellänge kürzen (mit Schlitz)</span><span class="price">ab 55 CHF</span></div>
-                            <div class="price-item"><span class="description">Träger kürzen</span><span class="price">ab 10 CHF</span></div>
-                            <div class="price-item"><span class="description">Seiten enger/weiter (ohne Armloch)</span><span class="price">ab 60 CHF</span></div>
-                            <div class="price-item"><span class="description">Seiten enger/weiter (mit Armloch)</span><span class="price">ab 110 CHF</span></div>
-                            <div class="price-item"><span class="description">Achsel einnehmen</span><span class="price">ab 40 CHF</span></div>
-                            <div class="price-item"><span class="description">Reissverschluss erneuern</span><span class="price">ab 30 CHF</span></div>
-                            <div class="price-item"><span class="description">Rock neu einfüttern (inkl. Material)</span><span class="price">ab 80 CHF</span></div>
+
+<!-- Länge kürzen -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Länge kürzen
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-laenge-kuerzen">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-laenge-kuerzen" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was ist Länge kürzen?</b>
+          <p class="text-sm mt-1">
+            Wir passen die Gesamtlänge des Kleidungsstücks an, damit es perfekt zur Figur und zum Stil passt.
+          </p>
+
+          <b class="text-pink-400">Varianten & Preise:</b>
+          <ul class="text-sm text-gray-300 mt-1">
+            <li><b>Einfach:</b> Standardkürzung ohne Futter oder Schlitz – <span class="text-pink-400">ab 40&nbsp;CHF</span></li>
+            <li><b>Mit Futter:</b> Innenfutter wird angepasst und neu vernäht – <span class="text-pink-400">ab 50&nbsp;CHF</span></li>
+            <li><b>Mit Schlitz:</b> Saubere Neuanpassung des Schlitzes – <span class="text-pink-400">ab 55&nbsp;CHF</span></li>
+          </ul>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Alle Varianten inklusive Dampf-Finish und Endkontrolle auf perfekte Saumlänge.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    <!-- Krótki opis pod główną nazwą -->
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Standard-, Futter- oder Schlitzbearbeitung nach Kleidungsart.
+    </span>
+  </div>
+
+  <!-- Główna cena bazowa -->
+  <span class="price">ab 40&nbsp;CHF</span>
+</div>
+
+
+<!------------------------------------------------------------------------- 
+ Rock kürzen
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Rock kürzen
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-rock-kuerzen">
+      
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        
+        <span id="tt-rock-kuerzen" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Rock kürzen“?</b>
+          <p class="text-sm mt-1">
+            Wir passen die Länge des Rocks an, damit er optimal zur Figur, Absatzhöhe oder zum Stil passt –
+            ohne den natürlichen Fall zu verlieren.
+          </p>
+
+          <b class="text-pink-400">Wie wird gearbeitet?</b>
+          <p class="text-sm text-gray-300">
+            Der Saum wird exakt abgesteckt, neu umgelegt und mit passender Stepp- oder Blindnaht verarbeitet.
+            Bei gefütterten Röcken wird das Innenfutter separat angepasst.
+          </p>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn der Rock zu lang ist, unpraktisch beim Gehen wirkt oder bei neuen Absatzhöhen nicht harmoniert.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Optional: Anpassung mit Originalsaum (Premium) für hochwertige Materialien oder Jeans.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Kürzen mit sauberem Saum – mit oder ohne Futter.
+    </span>
+  </div>
+
+  <span class="price">ab 50&nbsp;CHF</span>
+</div>
+ ---------------------------------------------------------------------->
+
+
+
+
+<!-- Rock verlängern -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Rock verlängern
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-rock-verlaengern">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-rock-verlaengern" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Rock verlängern“?</b>
+          <p class="text-sm mt-1">
+            Wir verlängern den Rock durch zusätzliche Saumzugabe oder Einsetzen von passendem Stoff,
+            sodass die Proportionen und der Fall erhalten bleiben.
+          </p>
+
+          <b class="text-pink-400">Wie arbeiten wir?</b>
+          <p class="text-sm text-gray-300">
+            Der bestehende Saum wird geöffnet, sorgfältig neu positioniert und mit feiner
+            Steppnaht fixiert. Falls nötig, wird zusätzlicher Stoff oder ein Zierstreifen eingearbeitet.
+          </p>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn der Rock beim Sitzen oder Gehen zu kurz wirkt, oder die Absatzhöhe geändert wurde.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Hinweis: Bei empfindlichen Stoffen (Seide, Satin, Plissee) kann ein Zuschlag für Spezialverarbeitung entstehen.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    <!-- Krótki opis pod tytułem -->
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Verlängerung mit originalem Fall und abgestimmter Saumnaht.
+    </span>
+  </div>
+
+  <span class="price">ab 60&nbsp;CHF</span>
+</div>
+
+
+
+<!-- Ärmellänge kürzen -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Ärmellänge kürzen
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-aermel-kuerzen">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-aermel-kuerzen" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Ärmellänge kürzen“?</b>
+          <p class="text-sm mt-1">
+            Die Ärmellänge wird sanft angepasst, damit sie perfekt zur Körperproportion
+            und zum Stil des Kleides oder der Bluse passt.
+          </p>
+
+          <b class="text-pink-400">Varianten & Preise:</b>
+          <ul class="text-sm text-gray-300 mt-1">
+            <li><b>Einfach:</b> Standardkürzung ohne Schlitz – <span class="text-pink-400">ab 30&nbsp;CHF</span></li>
+            <li><b>Mit Schlitz:</b> Anpassung inkl. Neuaufbau des Schlitzes – <span class="text-pink-400">ab 55&nbsp;CHF</span></li>
+          </ul>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn die Ärmel zu lang wirken oder beim Tragen Falten werfen –
+            besonders bei feinen Stoffen oder Kleidern mit transparentem Ärmelteil.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Wir arbeiten mit Gefühl für Stoff und Form, damit die natürliche Linie des Kleides erhalten bleibt.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    <!-- krótki opis pod nazwą -->
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Kürzen der Ärmel – sanft angepasst, mit oder ohne Schlitz.
+    </span>
+  </div>
+
+  <span class="price">ab 30&nbsp;CHF</span>
+</div>
+
+
+<!--
+ Ärmel kürzen (feine Stoffe / Spitze) 
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Ärmel kürzen (feine Stoffe / Spitze)
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-aermel-fein">
+         
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+      
+        <span id="tt-aermel-fein" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Ärmel kürzen (feine Stoffe / Spitze)“?</b>
+          <p class="text-sm mt-1">
+            Diese Arbeit betrifft besonders empfindliche Materialien – wie Tüll, Chiffon, Seide oder Spitze –
+            die beim Kürzen höchste Präzision und Fingerspitzengefühl erfordern.
+          </p>
+
+          <b class="text-pink-400">Wie wird gearbeitet?</b>
+          <p class="text-sm text-gray-300">
+            Der Stoff wird doppelt fixiert, die Kanten mit feinstem Garn oder französischer Naht gesichert.
+            Spitze wird an Musterkanten neu angesetzt, damit der Übergang unsichtbar bleibt.
+          </p>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Ideal für Abendkleider, Brautkleider oder Blusen mit transparenten, zarten Ärmeln,
+            die leicht zu lang wirken oder beim Bewegen stören.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Feine Stoffe reagieren empfindlich auf Hitze und Druck – wir arbeiten mit kühlem Dampf und Mikrostichen,
+            um die Textur zu bewahren.
+          </p>
+        </span>
+      </div>
+    </span>
+
+
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Kürzen von Tüll-, Seiden- oder Spitzenärmeln – präzise und nahezu unsichtbar.
+    </span>
+  </div>
+
+  <span class="price">ab 65&nbsp;CHF</span>
+</div>
+-->
+
+<!-- Träger kürzen -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Träger kürzen
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-traeger">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-traeger" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Träger kürzen“?</b>
+          <p class="text-sm mt-1">
+            Die Träger eines Kleides oder Tops werden präzise verkürzt, um einen besseren Sitz und
+            einen harmonischen Fall des Ausschnitts zu erreichen.
+          </p>
+
+          <b class="text-pink-400">Wie wird gearbeitet?</b>
+          <p class="text-sm text-gray-300">
+            Je nach Modell werden die Träger oben an der Schulter oder verdeckt im Futter angepasst.
+            Der Eingriff erfolgt so, dass Nähte und Übergänge unsichtbar bleiben.
+          </p>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn die Träger zu locker sitzen, der Ausschnitt zu tief fällt oder das Kleid leicht nach unten rutscht.
+            Besonders bei feinen Stoffen und Kleidern mit Spitze oder transparentem Rücken.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Auf Wunsch kombinierbar mit leichter Formanpassung im Brust- oder Rückenbereich.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    <!-- Subopis -->
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Träger kürzen – für perfekten Sitz und harmonischen Ausschnitt.
+    </span>
+  </div>
+
+  <span class="price">ab 20&nbsp;CHF</span>
+</div>
+
+<!-- Seiten enger / weiter -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Seiten enger / weiter
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-seiten-anpassen">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-seiten-anpassen" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Seiten enger / weiter“?</b>
+          <p class="text-sm mt-1">
+            Die Seiten des Kleides oder der Bluse werden angepasst, damit das Kleidungsstück
+            perfekt an Taille, Brust und Hüfte sitzt – ohne Falten oder Spannung.
+          </p>
+
+          <b class="text-pink-400">Varianten & Preise:</b>
+          <ul class="text-sm text-gray-300 mt-1">
+            <li><b>Ohne Armloch:</b> einfache Anpassung – <span class="text-pink-400">ab 60&nbsp;CHF</span></li>
+            <li><b>Mit Armloch:</b> komplexere Anpassung mit Nahtverlauf bis unter die Achsel – <span class="text-pink-400">ab 110&nbsp;CHF</span></li>
+          </ul>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn das Kleid zu locker sitzt, an der Taille absteht oder an der Brust leicht spannt.
+            Ideal für feine Stoffe, Abendmode und Brautkleider.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Je nach Stoff und Schnitt erfolgt die Anpassung verdeckt im Futter oder entlang der Seitennähte.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    <!-- Subopis -->
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Passform-Anpassung an Taille, Brust oder Hüfte – mit oder ohne Armlochkorrektur.
+    </span>
+  </div>
+
+  <span class="price">ab 60&nbsp;CHF</span>
+</div>
+
+<!-- Achsel einnehmen -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Achsel einnehmen
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-achsel">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-achsel" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Achsel einnehmen“?</b>
+          <p class="text-sm mt-1">
+            Dabei wird der Bereich unter der Achsel leicht angepasst, um überschüssigen Stoff zu entfernen
+            und ein besseres Anliegen im oberen Brustbereich zu erreichen.
+          </p>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn das Kleid unter der Achsel absteht oder kleine Falten bildet – häufig bei feinen Stoffen,
+            Trägerkleidern oder Modellen mit dünnem Futter.
+          </p>
+
+          <b class="text-pink-400">Wie wird gearbeitet?</b>
+          <p class="text-sm text-gray-300">
+            Der Stoff wird entlang der Seitennaht im Achselbereich millimetergenau eingezogen,
+            Futter und Oberstoff werden dabei getrennt bearbeitet und wieder sauber geschlossen.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Kleine Änderung mit grosser Wirkung – verbessert Sitz und Bewegungsfreiheit, besonders bei ärmellosen Kleidern.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    <!-- Subopis -->
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Leichte Anpassung unter dem Arm – für besseren Sitz im Brust- und Seitenbereich.
+    </span>
+  </div>
+
+  <span class="price">ab 40&nbsp;CHF</span>
+</div>
+
+<!-- Ausschnitt anpassen -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex items-center gap-2">
+      Ausschnitt anpassen
+      <div class="tooltip-container">
+        <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-ausschnitt">
+          <!-- ikona "i" -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+          </svg>
+        </button>
+
+        <!-- Tooltip -->
+        <span id="tt-ausschnitt" role="tooltip" class="tooltip-text">
+          <b class="text-pink-400">Was bedeutet „Ausschnitt anpassen“?</b>
+          <p class="text-sm mt-1">
+            Der Ausschnitt eines Kleides oder Oberteils wird korrigiert, um besser am Körper anzuliegen
+            – ohne Faltenbildung oder unerwünschtes Verrutschen.
+          </p>
+
+          <b class="text-pink-400">Wann ist das sinnvoll?</b>
+          <p class="text-sm text-gray-300">
+            Wenn der Ausschnitt zu weit oder zu tief sitzt, Falten schlägt oder die Form nicht
+            mehr mit dem Körper harmoniert – besonders bei Bustier- und V-Ausschnitten.
+          </p>
+
+          <b class="text-pink-400">Wie wird gearbeitet?</b>
+          <p class="text-sm text-gray-300">
+            Der obere Bereich wird präzise angepasst – durch leichtes Einnehmen, Verstärken
+            oder Neuformen der Kante, je nach Schnitt und Stoff.
+          </p>
+
+          <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+            Auf Wunsch kombinierbar mit Träger- oder Seitenkorrektur für eine perfekte Silhouette.
+          </p>
+        </span>
+      </div>
+    </span>
+
+    <!-- Subopis -->
+    <span class="sub-description text-sm text-gray-400 block mt-0.5">
+      Korrektur des Ausschnitts – für optimalen Sitz und elegante Linienführung.
+    </span>
+  </div>
+
+  <span class="price">ab 45&nbsp;CHF</span>
+</div>
+
+<!-- Reissverschluss erneuern -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex flex-col leading-tight">
+      <span class="text-base font-semibold text-white">Reissverschluss erneuern</span>
+      <span class="text-sm text-pink-400 block mt-0.5">Zipper | Schieber ersetzen</span>
+    </span>
+
+    <div class="tooltip-container">
+      <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-reissverschluss">
+        <!-- ikona "i" -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+      </button>
+
+      <!-- Tooltip -->
+      <span id="tt-reissverschluss" role="tooltip" class="tooltip-text">
+        <b class="text-pink-400">Was bedeutet „Reissverschluss erneuern“?</b>
+        <p class="text-sm mt-1">
+          Der alte Reissverschluss wird vollständig entfernt und durch einen neuen ersetzt – farblich und funktional passend zum Kleid oder Stofftyp.
+        </p>
+
+        <b class="text-pink-400">Wann ist das sinnvoll?</b>
+        <p class="text-sm text-gray-300">
+          Wenn der Zipper klemmt, der Schieber defekt ist oder der Reissverschluss sich nicht mehr sauber schliessen lässt.
+          Besonders häufig bei feinen Stoffen oder Kleidern mit engem Rückenbereich.
+        </p>
+
+        <b class="text-pink-400">Wie wird gearbeitet?</b>
+        <p class="text-sm text-gray-300">
+          Der alte Reissverschluss wird fachgerecht entfernt, die Naht geöffnet und ein neuer Reissverschluss exakt eingenäht.
+          Auf Wunsch verdeckt („verdeckt eingenäht“) für ein elegantes Finish.
+        </p>
+
+        <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+          Ersatz-Reissverschluss inklusive. Für Spezialreissverschlüsse (z.&nbsp;B. Metallic, Nahtverdeckt, Stretch) berechnen wir nach Aufwand.
+        </p>
+      </span>
+    </div>
+  </div>
+
+  <span class="price">ab 40&nbsp;CHF</span>
+</div>
+
+<!-- Rock neu einfüttern (inkl. Material) -->
+<div class="price-item">
+  <div class="description-wrapper">
+    <span class="description flex flex-col leading-tight">
+      <span class="text-base font-semibold text-white">Rock neu einfüttern</span>
+      <span class="text-sm text-pink-400 block mt-0.5">inkl. Material</span>
+    </span>
+
+    <div class="tooltip-container">
+      <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-rock-einfuettern">
+        <!-- ikona "i" -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+          <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+      </button>
+
+      <!-- Tooltip -->
+      <span id="tt-rock-einfuettern" role="tooltip" class="tooltip-text">
+        <b class="text-pink-400">Was bedeutet „neu einfüttern“?</b>
+        <p class="text-sm mt-1">
+          Die alte oder beschädigte Futterlage wird vollständig entfernt und durch ein neues, hochwertiges Futter ersetzt –
+          farblich und stofflich auf den Rock abgestimmt.
+        </p>
+
+        <b class="text-pink-400">Wann ist das sinnvoll?</b>
+        <p class="text-sm text-gray-300">
+          Wenn das Futter gerissen, verfärbt oder abgenutzt ist, oder wenn der Rock durch das alte Futter nicht mehr richtig fällt.
+        </p>
+
+        <b class="text-pink-400">Wie wird gearbeitet?</b>
+        <p class="text-sm text-gray-300">
+          Wir schneiden ein neues Innenfutter zu, vernähen es sorgfältig von Hand oder Maschine
+          und befestigen es unsichtbar entlang der Bund- und Saumnaht.
+        </p>
+
+        <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+          Das neue Futtermaterial (z.&nbsp;B. Viskose, Acetat oder Satin) ist im Preis enthalten.
+          Für Spezialstoffe oder Seidenfutter berechnen wir Aufpreis nach Aufwand.
+        </p>
+      </span>
+    </div>
+  </div>
+
+  <span class="price">ab 80&nbsp;CHF</span>
+</div>
+
+
+
+
+
                         </div>
                         <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+<br>
+
+<!-- DISKRET SERVICE -->
+<div class="promo-card p-5 relative text-center">
+  <!-- Ozdobna ikona w przerywanym kole -->
+  <div class="flex justify-center mb-3">
+    <div class="relative w-20 h-20 grid place-items-center rounded-full">
+      <span class="absolute inset-0 rounded-full border-2 border-dashed" style="border-color:#ED4EB8;"></span>
+      <svg viewBox="0 0 24 24" class="w-10 h-10 text-gray-200" fill="none" stroke="currentColor" stroke-width="1.5">
+        <!-- manekin -->
+        <path d="M12 3c2 0 3.5 1.6 3.5 3.5S14 10 12 10s-3.5-1.6-3.5-3.5S10 3 12 3z"/>
+        <path d="M8.5 10.2c-1.2 2.2-1.8 4.2-1.8 6.3 0 1.6 1.3 2.5 5.3 2.5s5.3-.9 5.3-2.5c0-2.1-.6-4.1-1.8-6.3" />
+        <!-- dłoń -->
+        <path d="M15.8 12.8c.9 0 1.7.8 1.7 1.7v3.3c0 1.2-.9 2.2-2.1 2.2H12c-1.2 0-2.1-1-2.1-2.2v-2.5c0-.7.6-1.3 1.3-1.3.5 0 1 .3 1.2.7v-.8c0-.6.5-1.1 1.1-1.1.5 0 1 .3 1.1.8v-.6c0-.6.5-1.1 1.1-1.1.5 0 1 .3 1.1.9" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Tytuł i opis -->
+  <h3 class="text-lg font-semibold text-pink-400 flex items-center justify-center gap-2">
+    Diskret
+    <div class="tooltip-container">
+      <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-diskret">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+          <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+      </button>
+
+      <!-- Tooltip -->
+      <span id="tt-diskret" role="tooltip" class="tooltip-text">
+        <b class="text-pink-400">Privater Änderungsservice</b>
+        <p class="text-sm mt-1">
+          Diskrete Anprobe und Anpassung in separatem Raum – auf Wunsch nur mit Schneiderin.
+          Ideal für Hochzeits-, Abend- oder Dessousarbeiten.
+        </p>
+
+        <p class="text-sm text-gray-300">
+          Termin nach Vereinbarung, vertraulich & respektvoll – mit grösster Diskretion behandelt.
+        </p>
+      </span>
+    </div>
+  </h3>
+
+  <p class="text-sm text-gray-300 mt-2">
+    Ein besonderer Service für Sie.
+  </p>
+</div>
+
+
+
+
+<!-- 
+<article class="group relative p-6 rounded-xl bg-[#0f0f10] border border-gray-700/60 hover:border-pink-500/50 transition-all">
+  
+  <div class="mx-auto mb-4 grid place-items-center w-28 h-28 rounded-full border-2 border-dashed"
+       style="border-color:#ED4EB8;">
+ 
+    <svg viewBox="0 0 64 64" width="56" height="56" fill="none" class="text-gray-200">
+     
+      <path d="M32 8c4 0 7 3 7 7v2c5 2 9 8 9 14 0 10-7 16-16 16s-16-6-16-16c0-6 4-12 9-14v-2c0-4 3-7 7-7Z"
+            stroke="currentColor" stroke-width="2"/>
+  
+      <path d="M20 31c3-2 6-3 12-3s9 1 12 3" stroke="currentColor" stroke-width="2"/>
+      <path d="M22 25c2 3 5 5 10 5s8-2 10-5" stroke="currentColor" stroke-width="2"/>
+      
+      <path d="M42 38v-7c0-1.7 1.3-3 3-3s3 1.3 3 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M36 39v-8c0-1.7 1.3-3 3-3s3 1.3 3 3v12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M33 41v-6c0-1.7 1.3-3 3-3s3 1.3 3 3v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M33 47c5 0 10-4 11-9" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+
+ 
+  <h3 class="text-center text-lg font-semibold text-white">Diskret-Service</h3>
+  <p class="mt-1 text-center text-gray-300">
+    Ein besonderer Service für Sie – vertraulich, respektvoll und auf Wunsch
+    <span class="text-pink-400">ausschliesslich durch Damen</span>.
+  </p>
+
+  
+  <p class="mt-3 text-center text-xs text-gray-500">
+    Private Anprobe & individuelle Beratung in ruhiger Atmosphäre.
+  </p>
+
+
+  <span class="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-transparent group-hover:ring-pink-500/40 transition"></span>
+</article>
+ -->
+
                     </div>
                 </div>
             </div>
 
-            <!-- Hochzeits- & Abendmode -->
-            <div class="accordion-item animated-item">
-                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
-                    <h2 class="text-xl font-semibold main-header">Hochzeits- & Abendmode</h2>
-                     <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </div>
-                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
-                    <div class="p-5 border-t border-gray-700 content-wrapper">
-                        <div class="price-item"><span class="description">Änderungen an Braut- & Abendkleidern (pro Stunde)</span><span class="price">ab 90 CHF</span></div>
-                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
-                    </div>
-                </div>
+<!-- Hochzeits- & Abendmode -->
+<div class="accordion-item animated-item">
+  <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+    <h2 class="text-xl font-semibold main-header">Hochzeits- & Abendmode</h2>
+    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+  </div>
+
+  <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+    <div class="p-5 border-t border-gray-700 content-wrapper">
+
+      <div class="price-item">
+        <div class="description-wrapper">
+          <span class="description flex items-start gap-2">
+            Änderungen an Braut- & Abendkleidern
+            <div class="tooltip-container">
+              <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-braut-abend">
+                <!-- ikonka "i" -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38.45-.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+              </button>
+              <span id="tt-braut-abend" role="tooltip" class="tooltip-text">
+                <b class="text-pink-400">Was ist enthalten?</b>
+                <p class="text-sm mt-1">
+                  Spezialanpassungen an Corsage | Mieder, Spitze, Tüll, Perlen, Schleppe, verdecktem Reissverschluss,
+                  Trägern | Ärmeln u.v.m.
+                </p>
+
+                <b class="text-pink-400">Warum pro Stunde?</b>
+                <p class="text-sm text-gray-300">
+                  Jedes Kleid ist anders. Stoff, Verzierungen und mehrere Anproben bestimmen den Aufwand.
+                  Vor Beginn erhalten Sie eine Einschätzung des Gesamtaufwands.
+                </p>
+
+                <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+                  Material (z.&nbsp;B. Spitze, Tüll, Reissverschlüsse) nach Bedarf zusätzlich. Express nach Absprache.
+                </p>
+              </span>
             </div>
+          </span>
+
+          <!-- mała linia pod tytułem -->
+          <span class="sub-description text-sm text-gray-400 block mt-0.5">
+            Abrechnung nach Aufwand
+          </span>
+        </div>
+
+        <span class="price">ab 90&nbsp;CHF</span>
+      </div>
+
+      <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700">
+        <i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i>
+        
+ <br> 
+<br>
+<!-- SENSIBEL SERVICE -->
+<div class="promo-card p-5 relative text-center">
+  <!-- Ozdobna ikona (gorset / body w przerywanym kole) -->
+  <div class="flex justify-center mb-3">
+    <div class="relative w-20 h-20 grid place-items-center rounded-full">
+      <span class="absolute inset-0 rounded-full border-2 border-dashed" style="border-color:#ED4EB8;"></span>
+      <!-- Ikona gorsetu -->
+      <svg viewBox="0 0 24 24" class="w-10 h-10 text-gray-200" fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M8 3c-.7 0-1.3.6-1.3 1.3V6c0 1 .4 1.9 1 2.6.6.6.6 1.6 0 2.2-.6.7-1 1.6-1 2.6v3c0 .8.6 1.6 1.4 1.7 2 .3 4 .3 6 0 .8-.1 1.4-.9 1.4-1.7v-3c0-1-.4-1.9-1-2.6-.6-.6-.6-1.6 0-2.2.6-.7 1-1.6 1-2.6V4.3c0-.7-.6-1.3-1.3-1.3H8z"/>
+        <path d="M9.5 5v2M14.5 5v2M9.5 17v2M14.5 17v2"/>
+      </svg>
+    </div>
+  </div>
+ 
+  <!-- Nagłówek z tooltipem -->
+  <h3 class="text-lg font-semibold text-pink-400 flex items-center justify-center gap-2">
+    Sensibel
+    <div class="tooltip-container">
+      <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-sensibel">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z"/>
+          <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+        </svg>
+      </button>
+
+      <!-- Tooltip tekst -->
+      <span id="tt-sensibel" role="tooltip" class="tooltip-text">
+        <b class="text-pink-400">Feine Arbeiten an Dessous & Corsagen</b>
+        <p class="text-sm mt-1">
+          Spezialänderungen an empfindlichen Materialien wie Spitze, Seide oder Satin.
+          Präzise Anpassung von Cups, Trägern und Formnähten für perfekten Sitz.
+        </p>
+        <p class="text-sm text-gray-300 mt-2">
+          Ideal für Braut- und Abendmode – fein, sicher und mit Gefühl ausgeführt.
+        </p>
+      </span>
+    </div>
+  </h3>
+
+  <p class="text-sm text-gray-300 mt-2">
+    Feine Anpassungen an Dessous & Corsagen – mit Gefühl und Präzision.
+  </p>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
 
             <!-- Hosen -->
             <div class="accordion-item animated-item">
