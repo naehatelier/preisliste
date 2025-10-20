@@ -652,37 +652,7 @@ footer img:hover{
 
 ========================================================= */
 
-/* =========================================================
-   🧭 FIX: Wyśrodkowanie ikonek „i” na urządzeniach mobilnych (Samsung / Android)
-========================================================= */
-@media (hover: none) and (pointer: coarse) and (max-width: 640px) {
-  /* Ogólne centrowanie tooltip-icon */
-  .price-item .tooltip-container {
-    position: absolute;
-    left: 50%;                    /* wyśrodkowanie */
-    right: auto !important;       /* wyłącz prawe wyrównanie */
-    transform: translateX(-50%) translateY(-50%); /* centrowanie w obu osiach */
-    top: 50%;
-    z-index: 20;
-  }
 
-  /* Dopasowanie szerokości i wyglądu */
-  .price-item .tooltip-icon {
-    width: 28px;
-    height: 28px;
-    background: #fff;
-    color: #ED4EB8;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(237, 78, 184, 0.35);
-  }
-
-  /* Jeśli ikony się nakładają, można zwiększyć odstęp pionowy */
-  .price-item {
-    padding-bottom: 0.75rem;
-  }
 
   /* Dla wyjątkowo wąskich ekranów */
   @media (max-width: 380px) {
