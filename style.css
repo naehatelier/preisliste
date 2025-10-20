@@ -1,226 +1,616 @@
-/* =========================================================
-   0) BAZA / TYPOGRAFIA / TŁO
-========================================================= */
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Verdana', sans-serif;
-  background: linear-gradient(180deg, #1a1a1a, #111);
-  color: #E0E0E0;
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Verdana', sans-serif;
+            background: linear-gradient(180deg, #1a1a1a, #111);
+            color: #E0E0E0;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ED4EB8, #FF84D3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        #search-input {
+            background-color: #2D2D2D;
+            border: 1px solid #444;
+            color: white;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        #search-input:focus {
+            border-color: #ED4EB8;
+            box-shadow: 0 0 0 2px rgba(237, 78, 184, 0.5);
+            outline: none;
+        }
+        #search-container.search-active #search-input {
+            width: 256px; /* w-64 */
+            opacity: 1;
+            pointer-events: auto;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+        #search-container.search-active #search-toggle-button {
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+
+        .animated-item {
+            opacity: 0; /* Initially hidden for animation */
+            animation: fadeInUp 0.6s ease-out forwards;
+            animation-delay: var(--animation-delay, 0s);
+        }
+
+        .accordion-item {
+            box-shadow: 0 5px 25px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 0.5rem;
+            background-color: #000000; /* Slightly lighter background for sections */
+        }
+
+        .accordion-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+        }
+        
+        .main-header {
+            color: #ED4EB8;
+            font-weight: 700;
+        }
+        
+        .accordion-content .content-wrapper {
+            opacity: 0;
+            transition: opacity 0.4s 0.1s ease-in-out;
+        }
+
+        .accordion-content.open .content-wrapper {
+            opacity: 1;
+        }
+        
+        .accordion-content.open {
+            overflow: visible;
+        }
+
+        .price-item {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 0.75rem 1rem;
+            align-items: center;
+            transition: all 0.2s ease-in-out;
+            border-radius: 0.25rem;
+        }
+        .price-item:not(:first-child) {
+    border-top: 1px solid rgba(255,255,255,.08); /* delikatniej */
 }
 
-/* Akcent tekstu */
-.gradient-text{
-  background: linear-gradient(90deg, #ED4EB8, #FF84D3);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  color: transparent;
+        .price-item:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            transform: scale(1.01);
+        }
+        
+        .price-item .description-wrapper {
+             flex-grow: 1;
+             padding-right: 1rem;
+        }
+        .price-item .description {
+           display: block;
+        }
+        .price-item .sub-description {
+            display: block;
+            font-size: 0.875rem;
+            color: #a0aec0;
+            margin-top: 0.25rem;
+        }
+        .price-item .price {
+            white-space: nowrap;
+        }
+        
+        .subsection-header {
+            color: #ED4EB8;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #ED4EB8;
+        }
+
+@media (max-width: 640px) {
+  .price-item { flex-direction: column; align-items: flex-start; }
+  .price-item .price { margin-top: 0.5rem; }
+  .price-item .description-wrapper { padding-right: 2.25rem; } /* tu, bez zagnieżdżania */
 }
 
-/* =========================================================
-   1) ANIMACJE
-========================================================= */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-.animated-item{
-  opacity: 0;
-  animation: fadeInUp .6s ease-out forwards;
-  animation-delay: var(--animation-delay, 0s);
-}
-
-/* =========================================================
-   2) AKORDEON / NAGŁÓWKI
-========================================================= */
-.accordion-item{
-  box-shadow: 0 5px 25px rgba(0,0,0,.3);
-  transition: transform .3s ease, box-shadow .3s ease;
-  border-radius: .5rem;
-  background-color: #000;
-}
-.accordion-item:hover{
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0,0,0,.4);
-}
-.main-header{ color:#ED4EB8; font-weight:700; }
-
-.accordion-content .content-wrapper{
-  opacity: 0;
-  transition: opacity .4s .1s ease-in-out;
-}
-.accordion-content.open .content-wrapper{ opacity:1; }
-.accordion-content.open{ overflow: visible; }
-
-/* =========================================================
-   3) CENNIK / POZYCJE
-========================================================= */
-.price-item{
-  display:flex; justify-content:space-between; flex-wrap:wrap;
-  align-items:center; padding:.75rem 1rem; border-radius:.25rem;
-  transition: all .2s ease-in-out;
-}
-.price-item:not(:first-child){ border-top:1px solid rgba(255,255,255,.08); }
-.price-item:hover{ background-color: rgba(255,255,255,.05); transform: scale(1.01); }
-
-.price-item .description-wrapper{ flex-grow:1; padding-right:1rem; }
-.price-item .description{ display:block; } /* baza */
-.price-item .sub-description{
-  display:block; font-size:.875rem; color:#a0aec0; margin-top:.25rem;
-}
-.price-item .price{ white-space: nowrap; }
-
-/* Druga linia w opisie – globalna i wymuszona (np. dodatkowe <span>) */
-.price-item .description{ display:inline-block; line-height:1.3; }
-.price-item .description span + span,
-.price-item .description .sub-description{
-  display:block !important; margin-top:.25rem;
-  color:#a1a1aa; font-size:.875rem; font-weight:400;
-}
-
-/* Nagłówki podsekcji */
-.subsection-header{
-  color:#ED4EB8; font-weight:700;
-  margin:1.5rem 0 .5rem;
-  padding-bottom:.5rem; border-bottom:2px solid #ED4EB8;
-}
-
-/* =========================================================
-   4) WIDOK MOBILNY CENNIKA + POZYCJA IKON „i” (PRAWO)
-========================================================= */
-@media (max-width: 640px){
-  .price-item{ flex-direction: column; align-items: flex-start; }
-  .price-item .price{ margin-top:.5rem; }
-
-  /* zostaw miejsce na ikonę po prawej w każdym wierszu */
-  .price-item .description-wrapper{ padding-right: 2.25rem; }
-
-  :root{
-    --tt-size: 22px;  /* średnica koła ikony */
-    --tt-right: 12px; /* odsunięcie od prawej krawędzi */
-    --tt-hitpad: 6px; /* większy hitbox */
-  }
-  .accordion-item .price-item{
-    position: relative;
-    padding-right: calc(var(--tt-right) + var(--tt-size) + 12px);
-    min-height: 52px;
-  }
-  /* Dokładne pozycjonowanie kontenera ikony */
-  .accordion-item .price-item .tooltip-container{
-    position: absolute; right: var(--tt-right); top: 50%;
-    transform: translateY(-50%);
-    line-height: 0; padding: var(--tt-hitpad); margin: 0;
-  }
-  /* Wygląd ikonki na mobile */
-  .accordion-item .price-item .tooltip-icon{
-    width: var(--tt-size); height: var(--tt-size);
-    border-radius: 9999px; display:inline-flex; align-items:center; justify-content:center;
-    cursor: pointer;
-    background: rgba(255,255,255,.06);
-    color:#9ca3af; border:1px solid rgba(255,255,255,.12);
-  }
-  .accordion-item .price-item .tooltip-icon svg{ width:14px; height:14px; }
-  .accordion-item .price-item .tooltip-icon:hover{
-    background: rgba(255,255,255,.10); color:#d1d5db;
-  }
-  .accordion-item .price-item .tooltip-icon:focus-visible{
-    outline:2px solid #ec4899; outline-offset:2px;
-    box-shadow:0 0 0 4px rgba(236,72,153,.25);
-  }
-  /* Dymek ustawiony domyślnie W LEWO od ikony (bo ikona po prawej) */
-  .accordion-item .price-item .tooltip-text{
-    position:absolute; right: calc(100% + 8px); top:50%;
-    transform: translateY(-50%); max-width:78vw; z-index:30;
-  }
-  /* brak lewego marginesu ikony wewnątrz opisu */
-  .accordion-item .price-item .description .tooltip-container,
-  .accordion-item .price-item .description .tooltip-icon{ margin-left: 0 !important; }
-}
-
-/* Bardzo wąskie poziome telefony */
-@media (max-width: 380px){ :root{ --tt-right: 10px; --tt-size: 20px; } }
-
-/* =========================================================
-   5) BADGE (PREMIUM / PROMO) + UKŁAD NA MOBILE
-========================================================= */
-.price-item .premium-tag,
-.price-item .promo-badge{
-  display:inline-block; white-space:nowrap; font-size:.7rem; font-weight:500;
-  letter-spacing:.03em; border-radius:6px; padding:1px 6px; margin-left:.4rem;
-  transform: translateY(-1px);
-}
-.price-item .premium-tag{
-  border:1px solid rgba(236,72,153,.3);
-  color:rgb(236,72,153);
-  background:rgba(236,72,153,.08);
-}
-.price-item .promo-badge{
-  border:1px solid rgba(255,199,102,.3);
-  color:rgb(255,199,102);
-  background:rgba(255,199,102,.08);
+        .option-button {
+            transition: all 0.3s ease;
+            border: 1px solid #555;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            background-color: transparent;
+            color: white;
+            font-weight: 500;
+            width: 100%;
+        }
+        .option-button:hover, .option-button.active {
+            background-color: white;
+            color: #ED4EB8;
+            border-color: #000;
+            transform: scale(1.05);
+        }
+        .calculator-button {
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 2px solid #ED4EB8;
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            background-color: #ED4EB8;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .calculator-button:hover {
+            background-color: white;
+            color: #ED4EB8;
+            transform: scale(1.05);
+        }
+        .inline-button {
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: 1px solid #ED4EB8;
+            border-radius: 0.5rem;
+            padding: 0.25rem 0.75rem;
+            text-align: center;
+            cursor: pointer;
+            background-color: transparent;
+            color: #ED4EB8;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+        .inline-button:hover {
+            background-color: #ED4EB8;
+            color: white;
+        }
+        #to-top-button {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #ED4EB8;
+            color: white;
+            border: none;
+            border-radius: 0.5rem; /* Changed from 50% */
+            width: 50px;
+            height: 50px;
+            display: none; /* Initially hidden */
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+        }
+        #to-top-button.show {
+            display: flex;
+            opacity: 1;
+        }
+        #to-top-button:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Sticken Calculator Styles */
+        .calculator-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #ccc;
+        }
+        #sticken-result {
+            background-color: #1a1a1a;
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            border: 1px solid #444;
+        }
+        #sticken-result .price-highlight {
+            color: #ED4EB8;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        input[type=range] {
+          -webkit-appearance: none;
+          width: 100%;
+          background: transparent;
+        }
+        input[type=range]:focus {
+          outline: none;
+        }
+        input[type=range]::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          height: 24px;
+          width: 24px;
+          border-radius: 50%;
+          background: #ED4EB8;
+          cursor: pointer;
+          margin-top: -8px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+          box-shadow: 0px 0px 5px #ED4EB8;
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 8px;
+          cursor: pointer;
+          background: #4a5568;
+          border-radius: 5px;
+        }
+        /* --- TOOLTIP: pozycjonowanie i responsywność --- */
+.tooltip-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
-/* Mobile: grid dla tytułu – [nazwa | badge | ikonka] */
-@media (max-width: 640px){
-  .price-item .description{
-    display:grid; grid-template-columns: 1fr auto auto; align-items:center; column-gap:.35rem;
-  }
-  .price-item .description > .premium-tag,
-  .price-item .description > .promo-badge{
-    grid-column:2; justify-self:end; font-size:.68rem; padding:1px 6px; transform:none;
-  }
-  .price-item .tooltip-container{
-    display:flex; align-items:center; gap:.35rem; grid-column:3; justify-self:end; margin-right:.4rem;
-  }
-  .price-item .tooltip-container .premium-tag,
-  .price-item .tooltip-container .promo-badge{
-    order:1; font-size:.68rem; padding:1px 6px; transform:none;
-  }
-}
-
-/* =========================================================
-   6) TOOLTIP – DESKTOP (nad ikoną, wycentrowany) + HOVER-NONE
-========================================================= */
-.tooltip-container{ position:relative; display:inline-flex; align-items:center; }
 .tooltip-icon{
-  cursor:help; margin-left:.5rem;
-  width:28px; height:28px; display:inline-flex; align-items:center; justify-content:center; border-radius:9999px;
+  cursor: help;
+  margin-left: .5rem;
+  width: 28px;            /* większy, pewny hitbox */
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
 }
 
-/* Dymek (desktop – nad ikoną, wyśrodkowany) */
-.tooltip-text{
-  visibility:hidden; position:absolute; z-index:30;
-  bottom: calc(100% + 8px); left:50%; transform: translateX(-50%);
-  max-width: min(280px, calc(100vw - 32px)); width:max-content;
-  background:#1a1a1a; color:#fff; text-align:left; border-radius:6px;
-  padding:10px 12px; opacity:0; transition: opacity .25s ease;
-  border:1px solid #444; line-height:1.35; word-wrap: break-word;
-}
-.tooltip-text::after{
-  content:""; position:absolute; top:100%; left:50%; transform: translateX(-50%);
-  border-width:6px; border-style:solid; border-color:#1a1a1a transparent transparent transparent;
+
+/* zamiast stałych szerokości i margin-left: -140px */
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 30;
+  bottom: calc(100% + 8px);               /* trochę odstępu nad ikoną */
+  left: 50%;
+  transform: translateX(-50%);            /* wyśrodkuj BEZ sztywnego marginesu */
+  max-width: min(280px, calc(100vw - 32px)); /* nie wychodź poza ekran */
+  width: max-content;
+  background-color: #1a1a1a;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 10px 12px;
+  opacity: 0;
+  transition: opacity .25s ease;
+  border: 1px solid #444;
+  line-height: 1.35;
+  word-wrap: break-word;
 }
 
-/* Pokaż (hover/keyboard) */
+/* strzałka */
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #1a1a1a transparent transparent transparent;
+}
+
+/* pokaż na hover/focus (desktop + klawiatura) */
 .tooltip-container:hover .tooltip-text,
-.tooltip-container:focus-within .tooltip-text{ visibility:visible; opacity:1; }
+.tooltip-container:focus-within .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
 
-/* Urządzenia dotykowe: dymek obok ikony (żeby palec nie zasłaniał) */
-@media (hover:none){
-  .tooltip-text{
-    bottom:auto; top:50%; left: calc(100% + 8px); transform: translateY(-50%);
+/* mobile: jeśli palec zasłania, przesuń dymek w prawo od ikony */
+@media (hover: none) {
+  .tooltip-text {
+    bottom: auto;
+    top: 50%;
+    left: calc(100% + 8px);
+    transform: translateY(-50%);          /* obok ikony, nie nad nią */
     max-width: min(320px, calc(100vw - 32px));
   }
-  .tooltip-text::after{
-    top:50%; left:0; transform: translate(-6px,-50%) rotate(90deg);
+  .tooltip-text::after {
+    top: 50%;
+    left: 0;
+    transform: translate(-6px, -50%) rotate(90deg);
     border-color: transparent transparent transparent #1a1a1a;
   }
-
-  /* Na dotyku — inline dymki chowamy (używamy modala na tap) */
-  .tooltip-container .tooltip-text{ display:none !important; }
 }
 
-/* Separator w treściach tooltipów (spójność desktop/modal) */
+
+/* === DESKTOP zostaje jak masz; na mobile ukrywamy inline dymki === */
+@media (hover: none) {
+  .tooltip-container .tooltip-text { display: none !important; }
+}
+
+/* === MODAL: wspólny dla wszystkich tooltipów === */
+.tooltip-modal {
+  position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1000;
+}
+.tooltip-modal.open { display: flex; }
+.tooltip-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.6); backdrop-filter: blur(2px); }
+
+.tooltip-panel {
+  position: relative; z-index: 1;
+  max-width: min(560px, 92vw); width: auto; margin: 16px;
+  background: #1a1a1a; color: #fff; border: 1px solid #444; border-radius: 12px;
+  padding: 18px 20px 16px; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  transform: translateY(10px); opacity: 0; transition: transform .2s ease, opacity .2s ease;
+}
+.tooltip-modal.open .tooltip-panel { transform: translateY(0); opacity: 1; }
+
+.tooltip-close {
+  position: absolute; top: 8px; right: 10px; font-size: 22px; line-height: 1;
+  background: transparent; border: 0; color: #bbb; cursor: pointer;
+}
+.tooltip-close:hover, .tooltip-close:focus { color: #fff; }
+
+.tooltip-modal-title { margin: 0 28px 10px 0; font-size: 16px; font-weight: 600; color: #ff66c4; }
+.tooltip-modal-body  { font-size: 15px; line-height: 1.5; }
+.tooltip-modal-body b { color: #ff66c4; }
+
+/* Preferencje dostępności */
+@media (prefers-reduced-motion: reduce) {
+  .tooltip-panel, .tooltip-modal.open .tooltip-panel { transition: none; transform: none; }
+}
+
+
+
+
+/* === DESKTOP zostaje jak masz; na mobile ukrywamy inline dymki === */
+@media (hover: none) {
+  .tooltip-container .tooltip-text { display: none !important; }
+}
+
+/* === MODAL: wspólny dla wszystkich tooltipów === */
+.tooltip-modal {
+  position: fixed; inset: 0; display: none; align-items: center; justify-content: center; z-index: 1000;
+}
+.tooltip-modal.open { display: flex; }
+.tooltip-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.6); backdrop-filter: blur(2px); }
+
+.tooltip-panel {
+  position: relative; z-index: 1;
+  max-width: min(560px, 92vw); width: auto; margin: 16px;
+  background: #1a1a1a; color: #fff; border: 1px solid #444; border-radius: 12px;
+  padding: 18px 20px 16px; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  transform: translateY(10px); opacity: 0; transition: transform .2s ease, opacity .2s ease;
+}
+.tooltip-modal.open .tooltip-panel { transform: translateY(0); opacity: 1; }
+
+.tooltip-close {
+  position: absolute; top: 8px; right: 10px; font-size: 22px; line-height: 1;
+  background: transparent; border: 0; color: #bbb; cursor: pointer;
+}
+.tooltip-close:hover, .tooltip-close:focus { color: #fff; }
+
+.tooltip-modal-title { margin: 0 28px 10px 0; font-size: 16px; font-weight: 600; color: #ff66c4; }
+.tooltip-modal-body  { font-size: 15px; line-height: 1.5; }
+.tooltip-modal-body b { color: #ff66c4; }
+
+/* Preferencje dostępności */
+@media (prefers-reduced-motion: reduce) {
+  .tooltip-panel, .tooltip-modal.open .tooltip-panel { transition: none; transform: none; }
+}
+/* === Promo Cards === */
+.promo-card {
+  background: #151515;
+  border: 1px solid #373737;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0,0,0,.28);
+  transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease;
+}
+.promo-card:hover {
+  border-color: #ED4EB8;
+  box-shadow: 0 10px 32px rgba(237, 78, 184, .18);
+  transform: translateY(-2px);
+}
+
+.promo-badge {
+  position: absolute;
+  top: -10px;
+  right: 14px;
+  background: #ED4EB8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.72rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  padding: 6px 10px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 16px rgba(237, 78, 184, .35);
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.promo-cta {
+  display: inline-block;
+  background: #ED4EB8;
+  color: #fff;
+  font-weight: 700;
+  padding: .7rem 1.1rem;
+  border-radius: .5rem;
+  border: 2px solid #ED4EB8;
+  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+  box-shadow: 0 6px 16px rgba(237, 78, 184, .25);
+}
+.promo-cta:hover,
+.promo-cta:focus-visible {
+  background: transparent;
+  color: #ED4EB8;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(237, 78, 184, .28);
+}
+
+/* dostępność */
+.promo-cta:focus-visible {
+  outline: 2px solid rgba(237, 78, 184, .6);
+  outline-offset: 2px;
+}
+
+#top-offers {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+footer img {
+  width: 10rem;              /* około 160px */
+  max-width: 100%;
+  filter: drop-shadow(0 0 8px rgba(237, 78, 184, 0.25));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+footer img:hover {
+  transform: scale(1.04);
+  filter: drop-shadow(0 0 12px rgba(237, 78, 184, 0.35));
+}
+footer img {
+  max-height: 120px;
+  height: auto;
+  width: auto;
+}
+/* ✕ wewnątrz pola, z uwzględnieniem szerokości przycisku lupy */
+#search-container{
+  position: relative;
+  --btnW: 3rem;     /* w-12 = 48px; jeśli zmienisz szerokość lupy, zmień też to */
+  --gap: 8px;       /* luz między ✕ a krawędzią inputa */
+  --xPad: 2.4rem;   /* ile miejsca zrobić na ✕ wewnątrz pola */
+}
+
+#search-close-button{
+  position: absolute;
+  top: 50%;
+  right: calc(var(--btnW) + var(--gap));  /* ✕ w środku inputa, tuż przed lupą */
+  transform: translateY(-50%);
+  width: 1.6rem; height: 1.6rem;
+  display: none;
+  align-items: center; justify-content: center;
+  background: transparent; border: 0; cursor: pointer;
+  color: #bfbfbf; font-size: 1.1rem; line-height: 1;
+  transition: color .2s ease, opacity .2s ease;
+  opacity: .9;
+  z-index: 2;       /* pewność, że klik jest nad inputem */
+}
+#search-close-button:hover{ color:#fff; }
+
+/* pokaż ✕ dopiero po rozwinięciu pola */
+#search-container.search-active #search-close-button{ display:flex; }
+
+/* dołóż padding w polu, by tekst nie wpadał pod ✕ i uwzględnij szerokość przycisku lupy */
+#search-container.search-active #search-input{
+  padding-right: calc(var(--btnW) + var(--xPad));
+}
+
+@media (max-width:640px){
+  #search-container{ --gap: 6px; --xPad: 2.2rem; }
+}
+
+
+/* --- MOBILE HEAD LAYOUT FIX --- */
+@media (max-width: 640px) {
+  /* ułóż nagłówek i lupę pionowo, z odstępem */
+  #head-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;              /* oddech między tytułem a lupą */
+    margin-top: 6px;        /* lekko w dół cała góra */
+  }
+
+  /* przenieś lupę/pole pod tytuł i wyrównaj do prawej krawędzi kontenera */
+  #search-container {
+    align-self: stretch;    /* pełna szerokość wiersza */
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* po otwarciu: pole niech ma rozsądną szerokość i nie nachodzi na tytuł */
+  #search-container.search-active #search-input {
+    width: min(260px, calc(100% - 56px));  /* 56px ≈ szer. przycisku z lupą */
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* odrobinę powietrza nad kartami po rozwinięciu */
+  #search-container.search-active { margin-top: 2px; }
+}
+
+/* domyślnie zachowuj w jednej linii */
+.mob-newline { display: inline; }
+
+/* Domyślnie: ten fragment w tej samej linii */
+.mob-newline { display: inline; }
+
+/* Tylko mobile: przenieś na nową linię */
+@media (max-width: 640px) {
+  .mob-newline {
+    display: block;
+    margin-top: 2px;      /* lekki odstęp od pierwszej części */
+  }
+}
+
+/* Uniknij kolizji z innymi stylami stopki */
+.footer-logo {
+  display: block;
+  width: 160px;        /* baza desktop */
+  max-width: 45vw;     /* niech się skaluje na wąskich ekranach */
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(237,78,184,.25));
+}
+
+@media (max-width: 640px) {
+  .footer-logo {
+    width: 140px;      /* odrobinę mniejsze na telefonie */
+    max-width: 60vw;
+  }
+}
+
+/* Gdyby jakieś wcześniejsze reguły dawały display:none dla obrazów w stopce */
+footer img { visibility: visible; opacity: 1; }
+
+
+.badge-premium{
+  display:inline-flex; align-items:center; gap:.25rem;
+  padding:.1rem .5rem; border-radius:9999px;
+  font-size:.72rem; font-weight:800; letter-spacing:.02em;
+  background:#ED4EB8; color:#fff; border:1px solid rgba(255,255,255,.08);
+  box-shadow:0 2px 10px rgba(237,78,184,.35);
+  transform: translateY(-1px);
+}
+
+
+.tooltip-sep{
+  border-top: 1px solid rgba(255,255,255,.12);
+  margin: .65rem 0;
+  opacity: .9;
+}
+.accordion-item,
+.accordion-content.open,
+.price-item,
+.description-wrapper { overflow: visible; }
+
+/* === GLOBAL TOOLTIP SEPARATORS === */
 .tooltip-modal-body p + p,
 .tooltip-modal-body ul + p,
 .tooltip-modal-body div + p,
@@ -229,255 +619,254 @@ body {
 .tooltip-modal-body br + p,
 .tooltip-text p + p,
 .tooltip-text ul + p,
-.tooltip-text div + p{
-  border-top:1px solid rgba(255,255,255,.14);
-  margin-top:.75rem; padding-top:.75rem; opacity:.9;
+.tooltip-text div + p {
+  border-top: 1px solid rgba(255,255,255,.14);
+  margin-top: .75rem;
+  padding-top: .75rem;
+  opacity: .9;
 }
+
+/* Dodatkowe wzmocnienie dla przejrzystości sekcji z nagłówkami */
 .tooltip-modal-body b + p,
 .tooltip-modal-body strong + p,
-.tooltip-text b + p{
-  border-top:1px solid rgba(255,255,255,.1);
-  margin-top:.65rem; padding-top:.65rem;
+.tooltip-text b + p {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: .65rem;
+  padding-top: .65rem;
 }
+
+/* Ujednolicenie stylu list i punktów w tooltipach */
 .tooltip-modal-body ul,
-.tooltip-text ul{ list-style:disc; padding-left:1.2rem; margin:.5rem 0 .5rem .5rem; }
+.tooltip-text ul {
+  list-style-type: disc;
+  padding-left: 1.2rem;
+  margin: .5rem 0 .5rem .5rem;
+}
 .tooltip-modal-body li,
-.tooltip-text li{ margin-bottom:.3rem; line-height:1.45; }
-
-/* =========================================================
-   7) MODAL TOOLTIP (WSPÓLNY)
-========================================================= */
-.tooltip-modal{
-  position:fixed; inset:0; display:none; align-items:center; justify-content:center; z-index:1000;
+.tooltip-text li {
+  margin-bottom: .3rem;
+  line-height: 1.45;
 }
-.tooltip-modal.open{ display:flex; }
-.tooltip-backdrop{ position:absolute; inset:0; background:rgba(0,0,0,.6); backdrop-filter: blur(2px); }
-.tooltip-panel{
-  position:relative; z-index:1; max-width:min(560px,92vw); width:auto; margin:16px;
-  background:#1a1a1a; color:#fff; border:1px solid #444; border-radius:12px;
-  padding:18px 20px 16px; box-shadow:0 10px 30px rgba(0,0,0,.35);
-  transform: translateY(10px); opacity:0; transition: transform .2s ease, opacity .2s ease;
+/* TYLKO MOBILE: poprawione pozycjonowanie ikonek „i” po prawej */
+@media (max-width: 640px) {
+  :root{
+    --tt-size: 22px;    /* średnica kółka z ikoną */
+    --tt-right: 12px;   /* odstęp od prawej krawędzi */
+    --tt-hitpad: 6px;   /* dodatkowy obszar klikalny */
+  }
+
+  /* Rezerwujemy miejsce na ikonę po prawej i ustawiamy kotwicę */
+  .accordion-item .price-item{
+    position: relative;
+    padding-right: calc(var(--tt-right) + var(--tt-size) + 12px);
+    min-height: 52px; /* pewne centrowanie w pionie */
+  }
+
+  /* Kontener tooltipu – po prawej, wyśrodkowany pionowo */
+  .accordion-item .price-item .tooltip-container{
+    position: absolute;
+    right: var(--tt-right);
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    padding: var(--tt-hitpad);
+    margin: 0;
+  }
+
+  /* Sam przycisk „i” – spójny wygląd i rozmiar */
+  .accordion-item .price-item .tooltip-icon{
+    width: var(--tt-size);
+    height: var(--tt-size);
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgba(255,255,255,0.06);
+    color: #9ca3af; /* text-gray-400 */
+    border: 1px solid rgba(255,255,255,0.12);
+  }
+  .accordion-item .price-item .tooltip-icon svg{
+    width: 14px; height: 14px;
+  }
+  .accordion-item .price-item .tooltip-icon:hover{
+    background: rgba(255,255,255,0.10);
+    color: #d1d5db;
+  }
+  .accordion-item .price-item .tooltip-icon:focus-visible{
+    outline: 2px solid #ec4899; /* pink */
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(236,72,153,0.25);
+  }
+
+  /* Dymek idzie w LEWO od ikony (bo ikona jest przy prawej krawędzi) */
+  .accordion-item .price-item .tooltip-text{
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 78vw; /* wygodne na małych ekranach */
+    z-index: 30;
+  }
+
+  /* Pozbądź się ewentualnych lokalnych marginesów kolidujących z globalem */
+  .accordion-item .price-item .description .tooltip-container,
+  .accordion-item .price-item .description .tooltip-icon{
+    margin-left: 0 !important;
+  }
 }
-.tooltip-modal.open .tooltip-panel{ transform:none; opacity:1; }
 
-.tooltip-close{
-  position:absolute; top:8px; right:10px; font-size:22px; line-height:1;
-  background:transparent; border:0; color:#bbb; cursor:pointer;
-}
-.tooltip-close:hover, .tooltip-close:focus{ color:#fff; }
-
-.tooltip-modal-title{ margin:0 28px 10px 0; font-size:16px; font-weight:600; color:#ff66c4; }
-.tooltip-modal-body{ font-size:15px; line-height:1.5; }
-.tooltip-modal-body b{ color:#ff66c4; }
-
-@media (prefers-reduced-motion: reduce){
-  .tooltip-panel, .tooltip-modal.open .tooltip-panel{ transition:none; transform:none; }
+/* (opcjonalnie) bardzo wąskie telefony w poziomie */
+@media (max-width: 380px) {
+  :root{ --tt-right: 10px; --tt-size: 20px; }
 }
 
-/* Zapobieganie ucinaniu (Galaxy/Android/iOS) */
+/* === Premium Tags (global style) === */
+.price-item .premium-tag {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  color: rgb(236, 72, 153);
+  background: rgba(236, 72, 153, 0.08);
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-left: 0.4rem;
+  transform: translateY(-1px);
+}
+
+
+
+
+
+/* === Bazowy wygląd etykiet (zostawić) === */
+.price-item .premium-tag,
+.price-item .promo-badge {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  border-radius: 6px;
+  padding: 1px 6px;
+  margin-left: 0.4rem;
+  transform: translateY(-1px);
+}
+
+/* Kolorystyka */
+.price-item .premium-tag {
+  border: 1px solid rgba(236, 72, 153, 0.3);
+  color: rgb(236, 72, 153);
+  background: rgba(236, 72, 153, 0.08);
+}
+.price-item .promo-badge {
+  border: 1px solid rgba(255, 199, 102, 0.3);
+  color: rgb(255, 199, 102);
+  background: rgba(255, 199, 102, 0.08);
+}
+
+/* === TELEFONY (≤640px): etykieta przy ikonce po prawej === */
+@media (max-width: 640px) {
+  /* Wiersz tytułu jako 3 kolumny: [nazwa] [etykieta] [ikonka] */
+  .price-item .description {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    column-gap: 0.35rem;
+  }
+
+  /* Wariant A — etykieta jest rodzeństwem .tooltip-container */
+  .price-item .description > .premium-tag,
+  .price-item .description > .promo-badge {
+    grid-column: 2;        /* stoi tuż przed ikonką */
+    justify-self: end;
+    font-size: 0.68rem;
+    padding: 1px 6px;
+    transform: translateY(0);
+  }
+
+  /* Wariant B — etykieta jest w środku .tooltip-container */
+  .price-item .tooltip-container {
+    display: flex;         /* zawsze trzyma badge + ikonkę razem */
+    align-items: center;   /* pionowe wyśrodkowanie */
+    gap: 0.35rem;          /* odstęp badge ↔ ikonka */
+    grid-column: 3;        /* całość po prawej stronie */
+    justify-self: end;
+    margin-right: 0.4rem;  /* delikatny odsuw od prawej krawędzi */
+  }
+  .price-item .tooltip-container .premium-tag,
+  .price-item .tooltip-container .promo-badge {
+    order: 1;              /* etykieta przed ikonką */
+    font-size: 0.68rem;
+    padding: 1px 6px;
+    transform: translateY(0);
+  }
+
+  /* Sama ikonka */
+  .price-item .tooltip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;              /* ikonka po prawej stronie etykiety */
+  }
+}
+
+/* Mobile: pokaż tooltip po nadaniu .tooltip-open */
 @media (max-width: 640px){
-  .tooltip-container,
+  .tooltip-container.tooltip-open .tooltip-text{
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0); /* zostaw, jeśli masz inne pozycjonowanie – nie przeszkadza */
+  }
+}
+
+
+/* === Globalna logika: wymusza drugą linię w opisie === */
+.price-item .description {
+  display: inline-block;
+  line-height: 1.3;
+}
+
+/* Każdy wewnętrzny span (np. sublinia, opis techniczny) – zawsze od nowej linii */
+.price-item .description span + span,
+.price-item .description .sub-description {
+  display: block !important;
+  margin-top: 0.25rem; /* subtelny odstęp między liniami */
+  color: #a1a1aa; /* delikatnie jaśniejszy, pasuje do stylu Twojej strony */
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+/* --- UNIWERSALNA POPRAWKA TOOLTIP DLA MOBILE (Galaxy, Android, iOS) --- */
+@media (max-width: 640px) {
+  .tooltip-container {
+    position: relative;
+    overflow: visible !important; /* wymusza widoczność */
+  }
+
+  .tooltip-text {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: calc(100% + 10px); /* domyślnie pokazuj po LEWEJ stronie */
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+
+  /* Jeśli tooltip ma mało miejsca po lewej, przerzuć na prawą */
+  @supports (anchor-name: --tt) {
+    .tooltip-text {
+      anchor-name: --tt;
+      inset: auto;
+    }
+  }
+
+  /* Upewnij się, że nie jest ucięty */
   .accordion-item,
   .price-item,
-  .description-wrapper{ overflow: visible !important; }
-  .tooltip-container .tooltip-icon{ position: relative; z-index: 10000; }
-}
-
-/* =========================================================
-   8) PRZYCISKI
-========================================================= */
-.option-button{
-  transition: all .3s ease;
-  border: 1px solid #555; border-radius:.5rem;
-  padding:.75rem 1rem; text-align:center; cursor:pointer;
-  background:transparent; color:#fff; font-weight:500; width:100%;
-}
-.option-button:hover, .option-button.active{
-  background:#fff; color:#ED4EB8; border-color:#000; transform: scale(1.05);
-}
-
-.calculator-button{
-  display:inline-block; transition: all .3s ease;
-  border:2px solid #ED4EB8; border-radius:.5rem;
-  padding:.75rem 1.5rem; text-align:center; cursor:pointer;
-  background:#ED4EB8; color:#fff; font-weight:600; text-transform:uppercase; letter-spacing:.05em;
-}
-.calculator-button:hover{ background:#fff; color:#ED4EB8; transform: scale(1.05); }
-
-.inline-button{
-  display:inline-block; transition: all .3s ease;
-  border:1px solid #ED4EB8; border-radius:.5rem;
-  padding:.25rem .75rem; text-align:center; cursor:pointer;
-  background:transparent; color:#ED4EB8; font-weight:500; font-size:.9rem;
-}
-.inline-button:hover{ background:#ED4EB8; color:#fff; }
-
-/* =========================================================
-   9) PRZYCISK "DO GÓRY"
-========================================================= */
-#to-top-button{
-  position:fixed; bottom:30px; right:30px;
-  background:#ED4EB8; color:#fff; border:none; border-radius:.5rem;
-  width:50px; height:50px; display:none; align-items:center; justify-content:center;
-  cursor:pointer; opacity:0; transition: opacity .3s, transform .3s;
-  box-shadow: 0 4px 10px rgba(0,0,0,.3); z-index:1000;
-}
-#to-top-button.show{ display:flex; opacity:1; }
-#to-top-button:hover{ transform: scale(1.1); }
-
-/* =========================================================
-   10) KALKULATOR STICKEN
-========================================================= */
-.calculator-label{ font-weight:600; margin-bottom:.5rem; color:#ccc; }
-#sticken-result{
-  background:#1a1a1a; border-radius:.5rem; padding:1rem; margin-top:1.5rem; border:1px solid #444;
-}
-#sticken-result .price-highlight{ color:#ED4EB8; font-weight:700; font-size:1.5rem; }
-
-/* Range UI */
-input[type=range]{ -webkit-appearance:none; width:100%; background:transparent; }
-input[type=range]:focus{ outline:none; }
-input[type=range]::-webkit-slider-thumb{
-  -webkit-appearance:none; height:24px; width:24px; border-radius:50%;
-  background:#ED4EB8; cursor:pointer; margin-top:-8px; box-shadow:0 0 5px #ED4EB8;
-}
-input[type=range]::-webkit-slider-runnable-track{
-  width:100%; height:8px; cursor:pointer; background:#4a5568; border-radius:5px;
-}
-
-/* =========================================================
-   11) WYSZUKIWARKA (LUPA + ✕)
-========================================================= */
-#search-input{
-  background:#2D2D2D; border:1px solid #444; color:#fff; transition:all .3s ease; pointer-events:none;
-}
-#search-input:focus{
-  border-color:#ED4EB8; box-shadow:0 0 0 2px rgba(237,78,184,.5); outline:none;
-}
-#search-container.search-active #search-input{
-  width:256px; opacity:1; pointer-events:auto;
-  border-top-right-radius:0; border-bottom-right-radius:0;
-}
-#search-container.search-active #search-toggle-button{
-  border-top-left-radius:0; border-bottom-left-radius:0;
-}
-
-/* ✕ po prawej wewnątrz inputa */
-#search-container{
-  position: relative;
-  --btnW: 3rem;  /* szerokość przycisku z lupą */
-  --gap: 8px;
-  --xPad: 2.4rem;
-}
-#search-close-button{
-  position:absolute; top:50%; right: calc(var(--btnW) + var(--gap)); transform: translateY(-50%);
-  width:1.6rem; height:1.6rem; display:none; align-items:center; justify-content:center;
-  background:transparent; border:0; cursor:pointer; color:#bfbfbf; font-size:1.1rem; line-height:1;
-  transition: color .2s ease, opacity .2s ease; opacity:.9; z-index:2;
-}
-#search-close-button:hover{ color:#fff; }
-#search-container.search-active #search-close-button{ display:flex; }
-#search-container.search-active #search-input{ padding-right: calc(var(--btnW) + var(--xPad)); }
-
-@media (max-width:640px){
-  #search-container{ --gap: 6px; --xPad: 2.2rem; }
-}
-
-/* MOBILE: head layout */
-@media (max-width: 640px){
-  #head-row{
-    display:flex; flex-direction:column; align-items:flex-start; gap:10px; margin-top:6px;
-  }
-  #search-container{ align-self:stretch; display:flex; justify-content:flex-end; }
-  #search-container.search-active #search-input{
-    width: min(260px, calc(100% - 56px));
-    opacity:1; pointer-events:auto;
-  }
-  #search-container.search-active{ margin-top:2px; }
-}
-
-/* Przenoszenie fragmentu na nową linię (mobile) */
-.mob-newline{ display:inline; }
-@media (max-width:640px){
-  .mob-newline{ display:block; margin-top:2px; }
-}
-
-/* =========================================================
-   12) PROMO KARTY
-========================================================= */
-.promo-card{
-  background:#151515; border:1px solid #373737; border-radius:12px;
-  box-shadow: 0 6px 24px rgba(0,0,0,.28);
-  transition: border-color .25s ease, box-shadow .25s ease, transform .2s ease;
-}
-.promo-card:hover{
-  border-color:#ED4EB8; box-shadow: 0 10px 32px rgba(237,78,184,.18);
-  transform: translateY(-2px);
-}
-.promo-badge{
-  position:absolute; top:-10px; right:14px; background:#ED4EB8; color:#fff; font-weight:800; font-size:.72rem;
-  letter-spacing:.03em; text-transform:uppercase; padding:6px 10px; border-radius:9999px;
-  box-shadow:0 4px 16px rgba(237,78,184,.35); border:1px solid rgba(255,255,255,.08);
-}
-.promo-cta{
-  display:inline-block; background:#ED4EB8; color:#fff; font-weight:700; padding:.7rem 1.1rem; border-radius:.5rem;
-  border:2px solid #ED4EB8; transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
-  box-shadow:0 6px 16px rgba(237,78,184,.25);
-}
-.promo-cta:hover,.promo-cta:focus-visible{
-  background:transparent; color:#ED4EB8; transform: translateY(-1px);
-  box-shadow:0 8px 22px rgba(237,78,184,.28);
-}
-.promo-cta:focus-visible{ outline:2px solid rgba(237,78,184,.6); outline-offset:2px; }
-
-#top-offers{ border-top:1px solid rgba(255,255,255,.1); padding-top:2rem; margin-top:2rem; }
-
-/* =========================================================
-   13) STOPKA (obrazy/logo)
-========================================================= */
-footer img{
-  width:10rem; max-width:100%;
-  filter: drop-shadow(0 0 8px rgba(237,78,184,.25));
-  transition: transform .3s ease, filter .3s ease;
-  max-height:120px; height:auto; width:auto; visibility:visible; opacity:1;
-}
-footer img:hover{
-  transform: scale(1.04);
-  filter: drop-shadow(0 0 12px rgba(237,78,184,.35));
-}
-
-.footer-logo{
-  display:block; width:160px; max-width:45vw; height:auto; object-fit:contain;
-  filter: drop-shadow(0 0 8px rgba(237,78,184,.25));
-}
-@media (max-width:640px){
-  .footer-logo{ width:140px; max-width:60vw; }
-}
-
-
-/* === FIX: Wycentrowanie modala tooltip na Android/Samsung === */
-@supports (-webkit-touch-callout: none) {
-  /* Android/iOS Safari detection (działa tylko na WebKit/Blink) */
-  .tooltip-modal.open {
-    align-items: flex-start !important; /* zamiast center */
-    padding-top: 10vh !important;       /* przesunięcie w górę */
-  }
-
-  .tooltip-panel {
-    position: relative;
-    margin: 0 auto;
-    top: 0 !important;
-    left: 50%;
-    transform: translateX(-50%) !important;
-    max-width: 90vw;
+  .description-wrapper {
+    overflow: visible !important;
   }
 }
 
-/* Dodatkowe zabezpieczenie – Samsung Chrome czasem przesuwa modal 
-   przy klawiaturze ekranowej */
-@media screen and (max-height: 700px) and (max-width: 480px) {
-  .tooltip-modal.open {
-    align-items: flex-start !important;
-    padding-top: 6vh !important;
-  }
-}
