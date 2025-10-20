@@ -660,4 +660,49 @@ footer img:hover{
       transform: translateX(-50%) translateY(-45%);
     }
   }
+
+/* =========================================================
+   DESKTOP (monitory): ikona „i” przy cenie po prawej
+   - działa od szerokości typowo desktopowej
+   - cena jest dosunięta do prawej, ikona tuż za nią
+   - mobile/tablet zostaje bez zmian
+========================================================= */
+@media (min-width: 1024px) {
+  /* kotwica do pozycjonowania ikony */
+  .accordion-item .price-item {
+    position: relative;
+  }
+
+  /* zostaw miejsce na kółko z prawej strony ceny */
+  .accordion-item .price-item .price {
+    margin-right: 34px; /* ~26px ikona + ~8px luz */
+  }
+
+  /* przenieś (wizualnie) kontener ikony obok ceny, po prawej krawędzi wiersza */
+  .accordion-item .price-item .tooltip-container {
+    position: absolute;
+    right: 0;             /* przy samej prawej krawędzi price-item */
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* zapewnij, że stoi nad tłem i nic jej nie przykrywa */
+    z-index: 2;
+  }
+
+
+
+  
+
+
+  /* samo „i” wewnątrz kółka */
+  .accordion-item .price-item .tooltip-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: #e7aacd; /* różowe „i” */
+  }
 }
+
+
