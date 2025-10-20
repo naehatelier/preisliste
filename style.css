@@ -541,3 +541,153 @@ footer img:hover{
     padding-top: 6vh !important;
   }
 }
+
+
+/* =========================================================
+   🎯 AKTYWNA KLASA TOOLTIP – TYLKO TYTUŁ
+   Wszystkie inne stare style modala tooltip są wyłączone.
+========================================================= */
+
+/* Główna i jedyna aktywna klasa tytułu tooltipa */
+.tooltip-modal-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #ED4EB8; /* różowy – zgodny z głównym akcentem */
+  margin: 0 0 0.75rem 0;
+  text-align: center; /* wyśrodkowanie tytułu */
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+
+
+/* =========================================================
+   🧱 BLOKADA FUNKCJI HOVER/FOKUS DLA TOOLTIPÓW
+   (dymki nie będą się pojawiały po najechaniu lub kliknięciu)
+========================================================= */
+
+/*
+.tooltip-container:hover .tooltip-text,
+.tooltip-container:focus-within .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+*/
+
+/* Wymuszone wyłączenie wyświetlania tooltipów */
+.tooltip-container:hover .tooltip-text,
+.tooltip-container:focus-within .tooltip-text {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+
+/* =========================================================
+   💤 WYŁĄCZONE STARE STYLOWANIE MODALA TOOLTIP
+   (pozostawione w komentarzu dla bezpieczeństwa)
+========================================================= */
+
+/* =========================================================
+.tooltip-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.tooltip-modal.open {
+  display: flex;
+}
+.tooltip-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(2px);
+}
+.tooltip-panel {
+  position: relative;
+  z-index: 1;
+  max-width: min(560px, 92vw);
+  width: auto;
+  margin: 16px;
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 18px 20px 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform .2s ease, opacity .2s ease;
+}
+.tooltip-modal.open .tooltip-panel {
+  transform: translateY(0);
+  opacity: 1;
+}
+.tooltip-close {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  font-size: 22px;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  color: #bbb;
+  cursor: pointer;
+}
+.tooltip-close:hover,
+.tooltip-close:focus {
+  color: #fff;
+}
+.tooltip-modal-body {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.tooltip-modal-body b {
+  color: #ff66c4;
+}
+*/
+
+========================================================= */
+
+/* =========================================================
+   🧭 FIX: Wyśrodkowanie ikonek „i” na urządzeniach mobilnych (Samsung / Android)
+========================================================= */
+@media (hover: none) and (pointer: coarse) and (max-width: 640px) {
+  /* Ogólne centrowanie tooltip-icon */
+  .price-item .tooltip-container {
+    position: absolute;
+    left: 50%;                    /* wyśrodkowanie */
+    right: auto !important;       /* wyłącz prawe wyrównanie */
+    transform: translateX(-50%) translateY(-50%); /* centrowanie w obu osiach */
+    top: 50%;
+    z-index: 20;
+  }
+
+  /* Dopasowanie szerokości i wyglądu */
+  .price-item .tooltip-icon {
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    color: #ED4EB8;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px rgba(237, 78, 184, 0.35);
+  }
+
+  /* Jeśli ikony się nakładają, można zwiększyć odstęp pionowy */
+  .price-item {
+    padding-bottom: 0.75rem;
+  }
+
+  /* Dla wyjątkowo wąskich ekranów */
+  @media (max-width: 380px) {
+    .price-item .tooltip-container {
+      transform: translateX(-50%) translateY(-45%);
+    }
+  }
+}
