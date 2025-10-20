@@ -1,0 +1,1062 @@
+/* =========================================================
+   0) VARIABLES / BAZA / TYPOGRAFIA / TŁO
+========================================================= */
+:root {
+  /* Kolory */
+  --primary-accent: #ED4EB8;
+  --secondary-accent: #FF84D3;
+  --background-dark: #1a1a1a;
+  --background-darker: #111;
+  --text-light: #E0E0E0;
+  --text-muted: #a0aec0;
+  --border-color: #444;
+  --card-bg: #000;
+  
+  /* Tooltip mobile */
+  --tt-size: 22px;
+  --tt-right: 12px;
+  --tt-hitpad: 6px;
+  
+  /* Animacje */
+  --transition-smooth: all .3s ease;
+  --transition-bounce: all .3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Verdana', sans-serif;
+  background: linear-gradient(180deg, var(--background-dark), var(--background-darker));
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Akcent tekstu */
+.gradient-text {
+  background: linear-gradient(90deg, var(--primary-accent), var(--secondary-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* =========================================================
+   1) ANIMACJE
+========================================================= */
+@keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animated-item {
+  opacity: 0;
+  animation: fadeInUp .6s ease-out forwards;
+  animation-delay: var(--animation-delay, 0s);
+}
+
+.slide-in-left {
+  opacity: 0;
+  animation: slideInLeft .5s ease-out forwards;
+}
+
+/* =========================================================
+   2) AKORDEON / NAGŁÓWKI
+========================================================= */
+.accordion-section {
+  margin-bottom: 2rem;
+}
+
+.accordion-item {
+  box-shadow: 0 5px 25px rgba(0,0,0,.3);
+  transition: var(--transition-bounce);
+  border-radius: .5rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.accordion-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.4);
+  border-color: var(--primary-accent);
+}
+
+.accordion-header {
+  padding: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: between;
+  align-items: center;
+  background: rgba(0,0,0,.3);
+  transition: var(--transition-smooth);
+}
+
+.accordion-header:hover {
+  background: rgba(237, 78, 184, 0.05);
+}
+
+.main-header { 
+  color: var(--primary-accent); 
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.accordion-icon {
+  transition: transform .3s ease;
+  color: var(--primary-accent);
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .4s ease, opacity .3s ease;
+}
+
+.accordion-content.open {
+  max-height: 2000px;
+}
+
+.accordion-content .content-wrapper {
+  opacity: 0;
+  transition: opacity .4s .1s ease-in-out;
+  padding: 0 1.5rem;
+}
+
+.accordion-content.open .content-wrapper {
+  opacity: 1;
+  padding: 1.5rem;
+}
+
+/* =========================================================
+   3) CENNIK / POZYCJE
+========================================================= */
+.price-list {
+  space-y: .5rem;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  transition: var(--transition-smooth);
+  background: rgba(255,255,255,.02);
+  border: 1px solid transparent;
+}
+
+.price-item:not(:first-child) {
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.price-item:hover {
+  background: rgba(255,255,255,.08);
+  transform: translateX(5px);
+  border-color: rgba(237, 78, 184, 0.2);
+}
+
+.price-item .description-wrapper {
+  flex-grow: 1;
+  padding-right: 1rem;
+}
+
+.price-item .description {
+  display: block;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.price-item .sub-description {
+  display: block;
+  font-size: .875rem;
+  color: var(--text-muted);
+  margin-top: .25rem;
+  line-height: 1.4;
+}
+
+.price-item .price {
+  white-space: nowrap;
+  font-weight: 700;
+  color: var(--primary-accent);
+  font-size: 1.1rem;
+}
+
+/* Nagłówki podsekcji */
+.subsection-header {
+  color: var(--primary-accent);
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+  padding-bottom: .5rem;
+  border-bottom: 2px solid var(--primary-accent);
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   4) WIDOK MOBILNY CENNIKA
+========================================================= */
+@media (max-width: 768px) {
+  .price-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  
+  .price-item .description-wrapper {
+    padding-right: 2.5rem;
+    width: 100%;
+  }
+  
+  .price-item .price {
+    margin-top: .5rem;
+    align-self: flex-end;
+  }
+  
+  .accordion-item .price-item {
+    position: relative;
+    padding-right: calc(var(--tt-right) + var(--tt-size) + 12px);
+    min-height: 60px;
+  }
+  
+  .accordion-item .price-item .tooltip-container {
+    position: absolute;
+    right: var(--tt-right);
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    padding: var(--tt-hitpad);
+    margin: 0;
+    z-index: 10;
+  }
+  
+  .accordion-item .price-item .tooltip-icon {
+    width: var(--tt-size);
+    height: var(--tt-size);
+    border-radius: 9999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgba(255,255,255,.08);
+    color: #9ca3af;
+    border: 1px solid rgba(255,255,255,.15);
+    transition: var(--transition-smooth);
+  }
+  
+  .accordion-item .price-item .tooltip-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .accordion-item .price-item .tooltip-icon:hover {
+    background: rgba(255,255,255,.15);
+    color: #d1d5db;
+    transform: scale(1.1);
+  }
+  
+  .accordion-item .price-item .tooltip-text {
+    position: absolute;
+    right: calc(100% + 8px);
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 78vw;
+    z-index: 30;
+  }
+}
+
+/* Bardzo wąskie telefony */
+@media (max-width: 380px) {
+  :root {
+    --tt-right: 10px;
+    --tt-size: 20px;
+  }
+  
+  .price-item {
+    padding: 0.875rem;
+  }
+}
+
+/* =========================================================
+   5) BADGE (PREMIUM / PROMO)
+========================================================= */
+.price-item .premium-tag,
+.price-item .promo-badge {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .03em;
+  border-radius: 6px;
+  padding: 3px 8px;
+  margin-left: .5rem;
+  transform: translateY(-1px);
+}
+
+.price-item .premium-tag {
+  border: 1px solid rgba(236,72,153,.4);
+  color: rgb(236,72,153);
+  background: rgba(236,72,153,.12);
+}
+
+.price-item .promo-badge {
+  border: 1px solid rgba(255,199,102,.4);
+  color: rgb(255,199,102);
+  background: rgba(255,199,102,.12);
+}
+
+/* Mobile: grid dla tytułu */
+@media (max-width: 768px) {
+  .price-item .description {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+  }
+  
+  .price-item .description > .premium-tag,
+  .price-item .description > .promo-badge {
+    grid-column: 2;
+    justify-self: end;
+    font-size: .65rem;
+    padding: 2px 6px;
+    margin: 0;
+  }
+  
+  .price-item .tooltip-container {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+    grid-column: 3;
+    justify-self: end;
+  }
+}
+
+/* =========================================================
+   6) TOOLTIP SYSTEM
+========================================================= */
+.tooltip-container {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tooltip-icon {
+  cursor: help;
+  margin-left: .5rem;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  color: #9ca3af;
+  transition: var(--transition-smooth);
+}
+
+.tooltip-icon:hover {
+  background: rgba(255,255,255,.1);
+  color: #d1d5db;
+  transform: scale(1.1);
+}
+
+/* Dymek desktop */
+.tooltip-text {
+  visibility: hidden;
+  position: absolute;
+  z-index: 30;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: min(300px, calc(100vw - 40px));
+  width: max-content;
+  background: var(--background-dark);
+  color: #fff;
+  text-align: left;
+  border-radius: 8px;
+  padding: 12px 14px;
+  opacity: 0;
+  transition: opacity .25s ease, visibility .25s ease;
+  border: 1px solid var(--border-color);
+  line-height: 1.4;
+  box-shadow: 0 10px 25px rgba(0,0,0,.3);
+  font-size: .9rem;
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--background-dark) transparent transparent transparent;
+}
+
+/* Wyłączone hover/focus dla tooltipów */
+.tooltip-container:hover .tooltip-text,
+.tooltip-container:focus-within .tooltip-text {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+/* =========================================================
+   7) MODAL TOOLTIP
+========================================================= */
+.tooltip-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  place-items: center;
+  z-index: 1000;
+  padding: max(16px, env(safe-area-inset-top))
+           max(16px, env(safe-area-inset-right))
+           max(16px, env(safe-area-inset-bottom))
+           max(16px, env(safe-area-inset-left));
+  overscroll-behavior: contain;
+}
+
+.tooltip-modal.open {
+  display: grid;
+}
+
+.tooltip-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.7);
+  backdrop-filter: blur(4px);
+}
+
+.tooltip-panel {
+  position: relative;
+  z-index: 1;
+  width: min(560px, 92vw);
+  max-height: calc(100svh - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 32px);
+  margin: 0;
+  overflow: auto;
+  background: var(--background-dark);
+  color: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px 24px 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,.4);
+  opacity: 0;
+  transform: scale(.95);
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.tooltip-modal.open .tooltip-panel {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.tooltip-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  font-size: 24px;
+  line-height: 1;
+  background: transparent;
+  border: 0;
+  color: #bbb;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: var(--transition-smooth);
+}
+
+.tooltip-close:hover,
+.tooltip-close:focus {
+  color: #fff;
+  background: rgba(255,255,255,.1);
+}
+
+.tooltip-modal-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--primary-accent);
+  margin: 0 32px 12px 0;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(237, 78, 184, 0.3);
+}
+
+.tooltip-modal-body {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.tooltip-modal-body b {
+  color: var(--primary-accent);
+}
+
+/* Separatory w treściach */
+.tooltip-modal-body p + p,
+.tooltip-modal-body ul + p,
+.tooltip-modal-body div + p,
+.tooltip-modal-body p + ul,
+.tooltip-modal-body p + div,
+.tooltip-text p + p,
+.tooltip-text ul + p,
+.tooltip-text div + p {
+  border-top: 1px solid rgba(255,255,255,.14);
+  margin-top: .75rem;
+  padding-top: .75rem;
+}
+
+.tooltip-modal-body ul,
+.tooltip-text ul {
+  list-style: disc;
+  padding-left: 1.2rem;
+  margin: .5rem 0;
+}
+
+.tooltip-modal-body li,
+.tooltip-text li {
+  margin-bottom: .3rem;
+  line-height: 1.45;
+}
+
+/* =========================================================
+   8) PRZYCISKI
+========================================================= */
+.option-button {
+  transition: var(--transition-bounce);
+  border: 1px solid var(--border-color);
+  border-radius: .5rem;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  cursor: pointer;
+  background: rgba(255,255,255,.05);
+  color: #fff;
+  font-weight: 600;
+  width: 100%;
+  font-size: .95rem;
+}
+
+.option-button:hover {
+  background: rgba(255,255,255,.1);
+  border-color: var(--primary-accent);
+  transform: translateY(-2px);
+}
+
+.option-button.active {
+  background: var(--primary-accent);
+  color: #fff;
+  border-color: var(--primary-accent);
+  box-shadow: 0 5px 15px rgba(237, 78, 184, 0.3);
+}
+
+.calculator-button {
+  display: inline-block;
+  transition: var(--transition-bounce);
+  border: 2px solid var(--primary-accent);
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  background: var(--primary-accent);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-size: 1rem;
+}
+
+.calculator-button:hover {
+  background: transparent;
+  color: var(--primary-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(237, 78, 184, 0.3);
+}
+
+.inline-button {
+  display: inline-block;
+  transition: var(--transition-smooth);
+  border: 1px solid var(--primary-accent);
+  border-radius: .25rem;
+  padding: .4rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  color: var(--primary-accent);
+  font-weight: 600;
+  font-size: .85rem;
+}
+
+.inline-button:hover {
+  background: var(--primary-accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   9) PRZYCISK "DO GÓRY"
+========================================================= */
+#to-top-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary-accent);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: var(--transition-bounce);
+  box-shadow: 0 6px 20px rgba(237, 78, 184, 0.4);
+  z-index: 1000;
+  font-size: 1.2rem;
+}
+
+#to-top-button.show {
+  display: flex;
+  opacity: 1;
+}
+
+#to-top-button:hover {
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 8px 25px rgba(237, 78, 184, 0.5);
+}
+
+/* =========================================================
+   10) KALKULATOR STICKEN
+========================================================= */
+.calculator-section {
+  background: rgba(0,0,0,.3);
+  border-radius: 1rem;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  margin: 2rem 0;
+}
+
+.calculator-label {
+  font-weight: 600;
+  margin-bottom: .75rem;
+  color: #ccc;
+  font-size: 1rem;
+}
+
+#sticken-result {
+  background: var(--background-dark);
+  border-radius: .75rem;
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+#sticken-result .price-highlight {
+  color: var(--primary-accent);
+  font-weight: 800;
+  font-size: 2rem;
+  margin: .5rem 0;
+  display: block;
+}
+
+/* Range Input Styles */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+  margin: 1rem 0;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  background: var(--primary-accent);
+  cursor: pointer;
+  margin-top: -8px;
+  box-shadow: 0 0 10px rgba(237, 78, 184, 0.5);
+  border: 2px solid #fff;
+  transition: var(--transition-smooth);
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+  background: #4a5568;
+  border-radius: 5px;
+}
+
+/* =========================================================
+   11) WYSZUKIWARKA
+========================================================= */
+#search-container {
+  position: relative;
+  --btnW: 3rem;
+  --gap: 8px;
+  --xPad: 2.4rem;
+}
+
+#search-input {
+  background: var(--background-dark);
+  border: 1px solid var(--border-color);
+  color: #fff;
+  transition: var(--transition-smooth);
+  pointer-events: none;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  width: 0;
+  opacity: 0;
+}
+
+#search-input:focus {
+  border-color: var(--primary-accent);
+  box-shadow: 0 0 0 2px rgba(237,78,184,.3);
+  outline: none;
+}
+
+#search-container.search-active #search-input {
+  width: 280px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#search-close-button {
+  position: absolute;
+  top: 50%;
+  right: calc(var(--btnW) + var(--gap));
+  transform: translateY(-50%);
+  width: 1.6rem;
+  height: 1.6rem;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: #bfbfbf;
+  font-size: 1.1rem;
+  line-height: 1;
+  transition: var(--transition-smooth);
+  opacity: .9;
+  z-index: 2;
+}
+
+#search-close-button:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+#search-container.search-active #search-close-button {
+  display: flex;
+}
+
+#search-container.search-active #search-input {
+  padding-right: calc(var(--btnW) + var(--xPad));
+}
+
+/* Mobile Search */
+@media (max-width: 768px) {
+  #search-container {
+    --gap: 6px;
+    --xPad: 2.2rem;
+  }
+  
+  #head-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    margin-top: 8px;
+  }
+  
+  #search-container {
+    align-self: stretch;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  #search-container.search-active #search-input {
+    width: min(280px, calc(100% - 60px));
+  }
+}
+
+/* Przenoszenie na nową linię (mobile) */
+.mob-newline { display: inline; }
+@media (max-width: 768px) {
+  .mob-newline { 
+    display: block; 
+    margin-top: 4px;
+  }
+}
+
+/* =========================================================
+   12) PROMO KARTY
+========================================================= */
+.promo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.promo-card {
+  background: rgba(21,21,21,.8);
+  border: 1px solid #373737;
+  border-radius: 12px;
+  padding: 2rem;
+  position: relative;
+  transition: var(--transition-bounce);
+  backdrop-filter: blur(10px);
+}
+
+.promo-card:hover {
+  border-color: var(--primary-accent);
+  box-shadow: 0 15px 40px rgba(237,78,184,.2);
+  transform: translateY(-5px);
+}
+
+.promo-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--primary-accent);
+  color: #fff;
+  font-weight: 800;
+  font-size: .75rem;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 9999px;
+  box-shadow: 0 6px 20px rgba(237,78,184,.4);
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.promo-cta {
+  display: inline-block;
+  background: var(--primary-accent);
+  color: #fff;
+  font-weight: 700;
+  padding: .875rem 1.5rem;
+  border-radius: .5rem;
+  border: 2px solid var(--primary-accent);
+  transition: var(--transition-bounce);
+  box-shadow: 0 8px 20px rgba(237,78,184,.3);
+  text-decoration: none;
+  margin-top: 1rem;
+}
+
+.promo-cta:hover,
+.promo-cta:focus-visible {
+  background: transparent;
+  color: var(--primary-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(237,78,184,.4);
+}
+
+#top-offers {
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 3rem;
+  margin-top: 3rem;
+}
+
+/* =========================================================
+   13) STOPKA
+========================================================= */
+.footer {
+  background: rgba(0,0,0,.5);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0 2rem;
+  margin-top: 4rem;
+}
+
+.footer-logo {
+  display: block;
+  width: 160px;
+  max-width: 45vw;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(237,78,184,.3));
+  transition: var(--transition-smooth);
+}
+
+.footer-logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 15px rgba(237,78,184,.4));
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    width: 140px;
+    max-width: 60vw;
+  }
+}
+
+/* =========================================================
+   14) DESKTOP OPTIMIZATIONS
+========================================================= */
+@media (min-width: 1024px) {
+  .accordion-item .price-item {
+    position: relative;
+  }
+  
+  .accordion-item .price-item .price {
+    margin-right: 40px;
+  }
+  
+  .accordion-item .price-item .tooltip-container {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .accordion-item .price-item .tooltip-icon {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+  }
+  
+  .accordion-item .price-item .tooltip-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: #e7aacd;
+  }
+}
+
+/* =========================================================
+   15) ACCESSIBILITY & PREFERENCES
+========================================================= */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+input:focus-visible,
+.tooltip-icon:focus-visible {
+  outline: 2px solid var(--primary-accent);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(237, 72, 153, 0.25);
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+  :root {
+    --primary-accent: #ff00ff;
+    --border-color: #fff;
+  }
+}
+
+/* =========================================================
+   16) FIXES FOR MOBILE BROWSERS
+========================================================= */
+@supports (-webkit-touch-callout: none) {
+  .tooltip-modal.open {
+    align-items: flex-start;
+    padding-top: 10vh;
+  }
+  
+  .tooltip-panel {
+    position: relative;
+    margin: 0 auto;
+    top: 0 !important;
+    left: 50%;
+    transform: translateX(-50%) !important;
+    max-width: 90vw;
+  }
+}
+
+@media screen and (max-height: 700px) and (max-width: 480px) {
+  .tooltip-modal.open {
+    align-items: flex-start;
+    padding-top: 6vh;
+  }
+}
+
+/* Zapobieganie overflow issues */
+@media (max-width: 768px) {
+  .tooltip-container,
+  .accordion-item,
+  .price-item,
+  .description-wrapper {
+    overflow: visible !important;
+  }
+  
+  .tooltip-container .tooltip-icon {
+    position: relative;
+    z-index: 10000;
+  }
+}
+
+/* =========================================================
+   17) LOADING STATES
+========================================================= */
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255,255,255,.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-accent);
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* =========================================================
+   END OF STYLES
+========================================================= */

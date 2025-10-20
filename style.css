@@ -127,7 +127,11 @@ body {
     outline:2px solid #ec4899; outline-offset:2px;
     box-shadow:0 0 0 4px rgba(236,72,153,.25);
   }
-
+  /* Dymek ustawiony domyślnie W LEWO od ikony (bo ikona po prawej) */
+  .accordion-item .price-item .tooltip-text{
+    position:absolute; right: calc(100% + 8px); top:50%;
+    transform: translateY(-50%); max-width:78vw; z-index:30;
+  }
   /* brak lewego marginesu ikony wewnątrz opisu */
   .accordion-item .price-item .description .tooltip-container,
   .accordion-item .price-item .description .tooltip-icon{ margin-left: 0 !important; }
@@ -328,7 +332,16 @@ body {
   }
 }
 
-
+/* Zapobieganie ucinaniu w pobliżu ikony i w akordeonie (zostawiamy) */
+@media (max-width: 640px){
+  .tooltip-container,
+  .accordion-item,
+  .price-item,
+  .description-wrapper{
+    overflow: visible !important;
+  }
+  .tooltip-container .tooltip-icon{ position: relative; z-index: 10000; }
+}
 
 
 /* =========================================================
@@ -619,5 +632,100 @@ footer img:hover{
     fill: #e7aacd; /* różowe „i” */
   }
 }
+
+/* ========== 1) TOOLTIP – stan ukryty nie wpływa na layout ========== */
+.tooltip-text {
+  display: none;               /* zamiast visibility/opacity */
+  position: absolute;
+  z-index: 30;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  right: auto;                 /* ważne: kasujemy right: calc(100% + 8px) */
+  transform: translateX(-50%); /* wyśrodkuj nad ikoną */
+  max-width: min(280px, calc(100vw - 32px));
+  background: #1a1a1a;
+  color: #fff;
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px 12px;
+  line-height: 1.35;
+}
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: #1a1a1a;
+}
+
+/* Pokaż dopiero przy klasie sterującej (JS dodaje/usuwa .tooltip-open) */
+.tooltip-container.tooltip-open .tooltip-text {
+  display: block;
+}
+
+/* ========== 2) MOBILNIE – zero „wystawania”, używamy modala ========== */
+@media (hover:none) and (max-width: 640px) {
+  /* Inline dymki wyłączone na dotyku – używamy modala po tapnięciu */
+  .tooltip-container .tooltip-text { display: none !important; }
+}
+
+/* ========== 3) Usunięcie globalnego overflow:visible ========== */
+/* Jeśli miałeś to wcześniej, wyłączamy: */
+@media (max-width: 640px) {
+  .tooltip-container,
+  .accordion-item,
+  .price-item,
+  .description-wrapper {
+    overflow: initial !important; /* reset zamiast visible */
+  }
+}
+
+/* ========== 4) Ochrona przed poziomym przewijaniem (Samsung) ========== */
+html, body { max-width: 100%; overflow-x: hidden; }
+body { overscroll-behavior-x: contain; touch-action: pan-y; }
+/* awaryjnie: jeśli gdzieś jest 100vw, które powoduje „wystawanie” */
+[style*="100vw"] { width: 100% !important; }
+
+/* ========== 5) Pozycja ikonki przy cenie (desktop: przed ceną) ========== */
+.price { display: inline-flex; align-items: center; gap: 8px; }
+@media (min-width: 1024px) {
+  .price-item { display:flex; align-items:center; justify-content:space-between; }
+  .price-item .tooltip-container { order: -1; position: static; display:inline-flex; } /* ikona przed ceną */
+}
+/* Mobile/tablet: ikona po prawej, ale z odstępem od krawędzi */
+@media (max-width: 1023.98px) {
+  .price-item { position: relative; padding-right: 44px; }
+  .price-item .tooltip-container {
+    position: absolute;
+    right: 12px;           /* nie przyklejamy do krawędzi */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 3;
+  }
+}
+
+
+
+/* ========== 7) Modal – zawsze idealnie centralnie na mobile ========== */
+.tooltip-modal {
+  position: fixed; inset: 0;
+  display: none; align-items: center; justify-content: center; z-index: 1000;
+}
+.tooltip-modal.open { display: flex; }
+.tooltip-backdrop { position: absolute; inset: 0; background: rgba(0,0,0,.6); backdrop-filter: blur(2px); }
+.tooltip-panel {
+  position: relative; z-index: 1;
+  width: min(92vw, 560px);
+  background: #1a1a1a; color: #fff; border: 1px solid #444; border-radius: 12px;
+  padding: 18px 20px 16px; box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+/* Fallback na niektóre Samsungi (gdy flex-centrowanie zawodzi) */
+@supports (-webkit-touch-callout: none) {
+  .tooltip-modal.open { display: block; }
+  .tooltip-panel { position: fixed; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+}
+
 
 
