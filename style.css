@@ -516,12 +516,13 @@ footer img:hover{
 }
 
 /* === FIX: Wycentrowanie modala tooltip na Android/Samsung === */
+/* === POPRAWIONE: Centrowanie modala === */
 @supports (-webkit-touch-callout: none) {
-  /* Android/iOS Safari detection (działa tylko na WebKit/Blink) */
   .tooltip-modal.open {
-    align-items: flex-start !important; /* zamiast center */
-    padding-top: 10vh !important;       /* przesunięcie w górę */
+    align-items: center !important; /* ZOSTAW center */
+    padding-top: 0 !important;
   }
+
 
   .tooltip-panel {
     position: relative;

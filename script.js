@@ -266,7 +266,9 @@ sizeButtons.forEach(button => {
 
 // === GLOBAL TOOLTIP MODAL – działa dla wszystkich tooltipów na stronie ===
 (() => {
-  const isTouch = window.matchMedia('(hover: none)').matches;
+  // Sprawdza, czy ekran ma maksymalnie 1023px szerokości
+// Sprawdza brak hovera LUB "gruby" wskaźnik (co zwykle oznacza dotyk)
+const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
 
   // Referencje do modala:
   const modal   = document.getElementById('tooltipModal');
@@ -485,7 +487,6 @@ sizeButtons.forEach(button => {
     }
   });
 })();
-
 
 
 
