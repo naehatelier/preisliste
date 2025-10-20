@@ -732,7 +732,7 @@ body { overscroll-behavior-x: contain; touch-action: pan-y; }
 
 
 
-/* 4. Uproszczenie i poprawa modal tooltip dla mobile */
+/*  zaciemnia tlo poprawa modal tooltip dla mobile
 .tooltip-modal {
   position: fixed;
   top: 0;
@@ -747,3 +747,4 @@ body { overscroll-behavior-x: contain; touch-action: pan-y; }
   backdrop-filter: blur(5px);
 }
 
+ */
