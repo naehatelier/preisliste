@@ -838,4 +838,35 @@ footer img { visibility: visible; opacity: 1; }
   font-size: 0.875rem;
   font-weight: 400;
 }
+/* --- UNIWERSALNA POPRAWKA TOOLTIP DLA MOBILE (Galaxy, Android, iOS) --- */
+@media (max-width: 640px) {
+  .tooltip-container {
+    position: relative;
+    overflow: visible !important; /* wymusza widoczność */
+  }
+
+  .tooltip-text {
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: calc(100% + 10px); /* domyślnie pokazuj po LEWEJ stronie */
+    transform: translateY(-50%);
+    z-index: 9999;
+  }
+
+  /* Jeśli tooltip ma mało miejsca po lewej, przerzuć na prawą */
+  @supports (anchor-name: --tt) {
+    .tooltip-text {
+      anchor-name: --tt;
+      inset: auto;
+    }
+  }
+
+  /* Upewnij się, że nie jest ucięty */
+  .accordion-item,
+  .price-item,
+  .description-wrapper {
+    overflow: visible !important;
+  }
+}
 
