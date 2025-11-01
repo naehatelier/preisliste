@@ -1726,29 +1726,158 @@ Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
                 </div>
             </div>
 
-            <!-- Blusen, Hemden & T-Shirts -->
-            <div class="accordion-item animated-item">
-                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
-                    <h2 class="text-xl font-semibold main-header">Blusen, Hemden & T-Shirts</h2>
-                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-                </div>
-                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
-                    <div class="p-5 border-t border-gray-700 content-wrapper">
-                        <div>
-                            <div class="price-item"><span class="description">Länge kürzen (einfach)</span><span class="price">ab 28 CHF</span></div>
-                            <div class="price-item"><span class="description">Länge kürzen (mit Schlitz)</span><span class="price">ab 33 CHF</span></div>
-                            <div class="price-item"><span class="description">Ärmellänge kürzen (einfach)</span><span class="price">ab 25 CHF</span></div>
-                            <div class="price-item"><span class="description">Ärmellänge kürzen (mit Manschette)</span><span class="price">ab 45 CHF</span></div>
-                            <div class="price-item"><span class="description">Ärmellänge kürzen (an der Schulter)</span><span class="price">ab 60 CHF</span></div>
-                            <div class="price-item"><span class="description">Seiten verengen</span><span class="price">ab 40 CHF</span></div>
-                            <div class="price-item"><span class="description">T-Shirt Länge kürzen</span><span class="price">ab 20 CHF</span></div>
-                            <div class="price-item"><span class="description">T-Shirt Ärmel kürzen</span><span class="price">ab 20 CHF</span></div>
-                            <div class="price-item"><span class="description">T-Shirt Seiten verengen</span><span class="price">ab 20 CHF</span></div>
-                        </div>
-                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
-                    </div>
-                </div>
-            </div>
+<!-- Blusen, Hemden & T-Shirts -->
+<div class="accordion-item animated-item">
+  <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+    <h2 class="text-xl font-semibold main-header">Blusen, Hemden & T-Shirts</h2>
+    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </div>
+
+  <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+    <div class="p-5 border-t border-gray-700 content-wrapper">
+      <div>
+
+        <!-- Untergruppe: Blusen & Hemden 
+        <h3 class="text-lg font-semibold text-pink-400 mb-3">Blusen & Hemden</h3>
+
+       Länge kürzen -------------------------------------------------------------->
+        <div class="price-item">
+          <div class="description-wrapper">
+            <span class="text-base font-semibold text-white">
+              Länge kürzen
+              <div class="tooltip-container">
+                <button type="button" class="tooltip-icon" aria-describedby="tt-bluse-laenge">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"
+                    aria-hidden="true">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z" />
+                    <path
+                      d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg>
+                </button>
+                <span id="tt-bluse-laenge" role="tooltip" class="tooltip-text">
+                  <b class="text-pink-400">Länge kürzen</b>
+                  <p class="text-sm mt-1">Saubere Anpassung der Gesamtlänge – mit oder ohne Schlitz.</p>
+                  <ul class="text-sm text-gray-300 mt-1">
+                    <li><b>Einfach:</b> Standard-Saum – <span class="text-pink-400">ab 28 CHF</span></li>
+                    <li><b>Mit Schlitz:</b> Seitenschlitze neu gesetzt – <span class="text-pink-400">ab 33 CHF</span></li>
+                  </ul>
+                </span>
+              </div>
+            </span>
+            <span class="sub-description text-sm text-gray-400 block mt-0.5">
+              Kürzung der Blusen- oder Hemdlänge mit präzisem Saumabschluss.
+            </span>
+          </div>
+          <span class="price">ab 28 CHF</span>
+        </div>
+
+        <!-- Ärmellänge kürzen -->
+        <div class="price-item">
+          <div class="description-wrapper">
+            <span class="text-base font-semibold text-white">
+              Ärmellänge kürzen
+              <div class="tooltip-container">
+                <button type="button" class="tooltip-icon" aria-describedby="tt-bluse-aermel">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"
+                    aria-hidden="true">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z" />
+                    <path
+                      d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg>
+                </button>
+                <span id="tt-bluse-aermel" role="tooltip" class="tooltip-text">
+                  <b class="text-pink-400">Ärmellänge kürzen</b>
+                  <p class="text-sm mt-1">Fein abgestimmte Kürzung für perfekten Sitz.</p>
+                  <ul class="text-sm text-gray-300 mt-1">
+                    <li><b>Einfach:</b> ab 25 CHF</li>
+                    <li><b>Mit Manschette:</b> ab 45 CHF</li>
+                    <li><b>Über Schulter:</b> ab 60 CHF</li>
+                  </ul>
+                </span>
+              </div>
+            </span>
+            <span class="sub-description text-sm text-gray-400 block mt-0.5">
+              Kürzung an Manschette oder Schulter – je nach Stil und Stoff.
+            </span>
+          </div>
+          <span class="price">ab 25 CHF</span>
+        </div>
+
+        <!-- Seiten verengen -->
+        <div class="price-item">
+          <div class="description-wrapper">
+            <span class="text-base font-semibold text-white">
+              Seiten verengen
+              <div class="tooltip-container">
+                <button type="button" class="tooltip-icon" aria-describedby="tt-bluse-seiten">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"
+                    aria-hidden="true">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z" />
+                    <path
+                      d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg>
+                </button>
+                <span id="tt-bluse-seiten" role="tooltip" class="tooltip-text">
+                  <b class="text-pink-400">Seiten verengen</b>
+                  <p class="text-sm mt-1">Anpassung für figurnahe Passform – Taille und Brust perfekt.</p>
+                </span>
+              </div>
+            </span>
+            <span class="sub-description text-sm text-gray-400 block mt-0.5">
+              Figurbetonte Form, ohne Falten oder Zug im Stoff.
+            </span>
+          </div>
+          <span class="price">ab 40 CHF</span>
+        </div>
+
+        <!-- Untergruppe: T-Shirts -->
+        <h3 class="text-lg font-semibold text-pink-400 mt-8 mb-3">T-Shirts</h3>
+
+        <div class="price-item">
+          <div class="description-wrapper">
+            <span class="text-base font-semibold text-white">
+              T-Shirt anpassen
+              <div class="tooltip-container">
+                <button type="button" class="tooltip-icon" aria-describedby="tt-tshirt">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16" fill="currentColor"
+                    aria-hidden="true">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0z" />
+                    <path
+                      d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                  </svg>
+                </button>
+                <span id="tt-tshirt" role="tooltip" class="tooltip-text">
+                  <b class="text-pink-400">T-Shirt Anpassungen</b>
+                  <p class="text-sm mt-1">Länge, Ärmel und Seiten werden präzise angepasst.</p>
+                  <ul class="text-sm text-gray-300 mt-1">
+                    <li><b>Länge:</b> ab 20 CHF</li>
+                    <li><b>Ärmel:</b> ab 20 CHF</li>
+                    <li><b>Seiten:</b> ab 20 CHF</li>
+                  </ul>
+                  <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+                    Nähte mit originaler Overlock oder Coverstitch.
+                  </p>
+                </span>
+              </div>
+            </span>
+            <span class="sub-description text-sm text-gray-400 block mt-0.5">
+              Länge, Ärmel & Seiten – angepasst wie neu vom Werk.
+            </span>
+          </div>
+          <span class="price">ab 20 CHF</span>
+        </div>
+      </div>
+
+      <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700">
+        <i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i>
+      </div>
+    </div>
+  </div>
+</div>
+
 
             <!-- Leder & Pelz -->
             <div class="accordion-item animated-item">
