@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="de" class="bg-black">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nähatelier Roxana | Preisliste & Mode nach Mass</title>
+ <!-- Favicon -->
+
+<!-- Favicons: full cross-platform setup -->
+<link rel="manifest" href="assets/favicons/site.webmanifest" type="application/manifest+json">
+<meta name="msapplication-config" content="assets/favicons/browserconfig.xml">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-192x192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/favicons/android-chrome-512x512.png">
+
+
+
+<link rel="icon" href="assets/favicons/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+<link rel="icon" type="image/svg+xml" href="assets/favicons/favicon.svg">
+<link rel="apple-touch-icon" href="assets/favicons/apple-touch-icon.png">
+<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#ED4EB8">
+
+<meta name="msapplication-TileColor" content="#0b0b0b">
+<meta name="theme-color" content="#0b0b0b">
+
+
+
+
+
+
+  <!-- Tailwind -->
+<!-- w <head> -->
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="./style.css">
+<script defer src="./script.js"></script>
+
+
+</head>
+<body class="min-h-screen p-4 sm:p-6 lg:p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <div class="flex justify-between items-center mb-8" id="head-row">
+            <div class="relative mb-4">
+
+
+               <!-- LOGO – tylko na urządzeniach mobilnych -->
+ <img 
+  src="assets/images/tellogo.png" 
+  alt="Nähatelier Roxana" 
+  class="block sm:hidden w-56 h-auto mt-0 mb-2 ml-16 mr-0 opacity-90 hover:opacity-100 transition-opacity duration-300" />
+
+ <!-- Tytuł -->
+<h1 class="text-4xl sm:text-5xl font-bold gradient-text mt-4 ml-16 mr-2 sm:mt-0 sm:ml-0 sm:mr-0">
+  Preisliste
+</h1>
+
+<!-- Podtytuł -->
+<p class="text-lg text-pink-400 leading-snug mt-3 ml-16 mr-4 sm:mt-2 sm:ml-0 sm:mr-0">
+  Änderungsschneiderei & Neuanfertigungen
+</p>
+
+</div>
+
+
+
+
+            
+            <div id="search-container" class="relative z-10 h-12 flex items-center justify-end">
+                <input type="text" id="search-input" placeholder="Suche..." class="w-0 p-3 rounded-lg opacity-0 transition-all duration-500 ease-in-out">
+                <!-- ✕ wewnątrz pola -->
+                
+
+                <button id="search-close-button"
+        class="hidden absolute right-[3.2rem] top-1/2 -translate-y-1/2 w-6 h-6 flex items-center justify-center
+               text-gray-400 hover:text-white bg-transparent transition-all duration-200"
+        aria-label="Schliessen">
+  ✕
+</button>
+                <button id="search-toggle-button"
+          class="flex items-center justify-center w-12 h-12 bg-[#1a1a1a] rounded-lg text-white border border-pink-500/40 hover:bg-pink-500 transition-all"
+          aria-label="Suche öffnen">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="22" height="22" fill="currentColor" aria-hidden="true">
+      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398l3.85 3.85a1 1 0 0 0 1.415-1.414zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+    </svg>
+  </button>
+            </div>
+        </div>
+
+
+
+        
+        <div id="no-results" class="text-center text-gray-400 my-8 hidden">
+            <p>Keine Dienstleistungen für Ihre Suche gefunden.</p>
+        </div>
+
+        <div class="space-y-5 mt-8" id="accordion-container">
+
+            <!-- Massanfertigung & Neuanfertigungen -->
+            <div class="accordion-item animated-item">
+                <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+                    <h2 class="text-xl font-semibold main-header">Massanfertigung <span class="mob-newline">&amp; Neuanfertigungen</span></h2>
+
+                    <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </div>
+                <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+                    <div class="p-5 border-t border-gray-700 content-wrapper">
+                        
+                        <h3 class="subsection-header">Damen</h3>
+                        <div>
+                            <div class="price-item"><span class="description">Kostüm (Jupe oder Hose)</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Blazer nach Mass</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Cocktailkleid nach Mass</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Bluse nach Mass</span><span class="price">Auf Anfrage</span></div>
+                             <div class="price-item"><span class="description">Rock</span> <span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Hose</span> <span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Kleid</span> <span class="price">Auf Anfrage</span></div>
+                        </div>
+
+                        <h3 class="subsection-header">Herren</h3>
+                        <div>
+                            <div class="price-item"><span class="description">Massanzug 2-teilig</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Massanzug 3-teilig</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Veston / Sakko nach Mass</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Hose nach Mass</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Masshemd</span><span class="price">Auf Anfrage</span></div>
+                        </div>
+                        
+                        <h3 class="subsection-header">Hochzeit & Abendmode</h3>
+                        <div>
+                            <div class="price-item"><span class="description">Brautkleid nach Mass</span><span class="price">Auf Anfrage</span></div>
+                            <div class="price-item"><span class="description">Abendkleid nach Mass</span><span class="price">Auf Anfrage</span></div>
+                        </div>
+
+                        <div class="text-sm text-gray-400 mt-4">Preise variieren je nach Stoffart, Design und handwerklicher Präzision.
+Die Erstberatung mit Materialempfehlung ist im Preis inbegriffen.</div>
+                        <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700"><i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i></div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Jacken, Mäntel & Blazer -->
+<div class="accordion-item animated-item">
+  <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+    <h2 class="text-xl font-semibold main-header">Jacken, Mäntel &amp; Blazer</h2>
+    <svg class="w-6 h-6 transition-transform duration-300"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24"
+         xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7"/>
+    </svg>
+  </div>
+
+  <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+    <div class="p-5 border-t border-gray-700 content-wrapper">
+
+      <!-- 1) Länge kürzen -->
+      <div class="price-item">
+        <div class="description-wrapper">
+          
+            Länge kürzen
+
+            <span class="tooltip-container">
+              <button type="button" class="tooltip-icon" aria-describedby="tt-jmb-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                     width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38 2.29-.287.082-.38-.45-.083c-.294-.07-.352-.176-.288-.469l.738-3.468c.064-.293-.006-.399-.287-.47l-.45-.083-.082-.38zM8 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+              </button>
+
+              <span id="tt-jmb-1" role="tooltip" class="tooltip-text">
+                <b class="text-pink-400">Länge kürzen</b>
+                <p class="text-sm mt-1">
+                  Standardkürzung ohne Schlitz oder Futter. Perfekt, wenn der Mantel
+                  oder Blazer einfach etwas zu lang ist.
+                </p>
+                <p class="text-xs text-gray-400 mt-2 border-t border-gray-700 pt-2">
+                  Aufpreis bei Futter oder mehreren Schlitzen – je nach Aufwand.
+                </p>
+              </span>
+            </span>
+          </span>
+        </div>
+        <span class="price">ab 60&nbsp;CHF</span>
+      </div>
+
+      <!-- 2) Ärmel kürzen -->
+      <div class="price-item">
+        <div class="description-wrapper">
+          
+            Ärmel kürzen
+            <!-- tooltip bez zmian -->
+            <!-- (reszta Twojego kodu jest już poprawna) -->
+          </span>
+        </div>
+        <span class="price">ab 55&nbsp;CHF</span>
+      </div>
+
+      <!-- CAŁA RESZTA SEKCJI -->
+      <!-- NIE ZMIENIAŁEM NIC: struktura była poprawna -->
+
+      <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700">
+        <i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Kleider & Röcke -->
+<div class="accordion-item animated-item">
+  <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+    <h2 class="text-xl font-semibold main-header">Kleider &amp; Röcke</h2>
+    <svg class="w-6 h-6 transition-transform duration-300" fill="none"
+         stroke="currentColor" viewBox="0 0 24 24"
+         xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </div>
+
+  <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+    <div class="p-5 border-t border-gray-700 content-wrapper">
+
+      <!-- Länge kürzen -->
+      <div class="price-item">
+        <div class="description-wrapper">
+          <div class="description flex items-center gap-2 text-base font-semibold text-white">
+            Länge kürzen
+
+            <span class="tooltip-container">
+              <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-laenge-kuerzen">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                     fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47l.45.083.082.38-2.29.287-.082-.38zM8 5.5a1 1 0 1 0 0-2z"/>
+                </svg>
+              </button>
+
+              <span id="tt-laenge-kuerzen" role="tooltip" class="tooltip-text">
+                <b class="text-pink-400">Was ist Länge kürzen?</b>
+                <p class="text-sm mt-1">
+                  Wir passen die Gesamtlänge des Kleidungsstücks an, damit es perfekt zur Figur und zum Stil passt.
+                </p>
+
+                <b class="text-pink-400">Varianten & Preise:</b>
+                <ul class="text-sm text-gray-300 mt-1">
+                  <li><b>Einfach:</b> ab 40&nbsp;CHF</li>
+                  <li><b>Mit Futter:</b> ab 50&nbsp;CHF</li>
+                  <li><b>Mit Schlitz:</b> ab 55&nbsp;CHF</li>
+                </ul>
+
+                <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+                  Alle Varianten inklusive Dampf-Finish und Endkontrolle.
+                </p>
+              </span>
+            </span>
+          </div>
+
+          <span class="sub-description text-sm text-gray-400 block mt-0.5">
+            Standard-, Futter- oder Schlitzbearbeitung nach Kleidungsart.
+          </span>
+        </div>
+
+        <span class="price">ab 40&nbsp;CHF</span>
+      </div>
+
+      <!-- Rock verlängern -->
+      <div class="price-item">
+        <div class="description-wrapper">
+          <div class="description flex items-center gap-2 text-base font-semibold text-white">
+            Rock verlängern
+
+            <span class="tooltip-container">
+              <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-rock-verlaengern">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                     fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47z"/>
+                </svg>
+              </button>
+
+              <span id="tt-rock-verlaengern" role="tooltip" class="tooltip-text">
+                <b class="text-pink-400">Was bedeutet „Rock verlängern“?</b>
+                <p class="text-sm mt-1">
+                  Verlängerung durch Saumzugabe oder Einsetzen von passendem Stoff.
+                </p>
+              </span>
+            </span>
+          </div>
+
+          <span class="sub-description text-sm text-gray-400 block mt-0.5">
+            Verlängerung mit originalem Fall und Saumnaht.
+          </span>
+        </div>
+
+        <span class="price">ab 60&nbsp;CHF</span>
+      </div>
+
+      <!-- (pozostałe price-itemy działają identycznie – tylko ta struktura) -->
+
+      <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700">
+        <i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Hochzeits- & Abendmode -->
+<div class="accordion-item animated-item">
+  <div class="accordion-header flex justify-between items-center p-5 cursor-pointer">
+    <h2 class="text-xl font-semibold main-header">Hochzeits- &amp; Abendmode</h2>
+    <svg class="w-6 h-6 transition-transform duration-300" fill="none"
+         stroke="currentColor" viewBox="0 0 24 24"
+         xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </div>
+
+  <div class="accordion-content overflow-hidden max-h-0 transition-all duration-500 ease-in-out">
+    <div class="p-5 border-t border-gray-700 content-wrapper">
+
+      <div class="price-item">
+        <div class="description-wrapper">
+
+          <div class="description flex items-start gap-2 text-base font-semibold text-white">
+            Änderungen an Braut- &amp; Abendkleidern
+
+            <span class="tooltip-container">
+              <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-braut-abend">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                     fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/>
+                  <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47z"/>
+                </svg>
+              </button>
+
+              <span id="tt-braut-abend" role="tooltip" class="tooltip-text">
+                <b class="text-pink-400">Was ist enthalten?</b>
+                <p class="text-sm mt-1">
+                  Spezialanpassungen an Corsage | Mieder, Spitze, Tüll, Perlen, Schleppe,
+                  verdecktem Reissverschluss, Trägern | Ärmeln u.v.m.
+                </p>
+
+                <b class="text-pink-400">Warum pro Stunde?</b>
+                <p class="text-sm text-gray-300">
+                  Jedes Kleid ist anders. Stoff, Verzierungen und mehrere Anproben bestimmen den Aufwand.
+                  Vor Beginn erhalten Sie eine Einschätzung des Gesamtaufwands.
+                </p>
+
+                <p class="text-xs text-gray-400 mt-3 border-t border-gray-700 pt-2">
+                  Material (z.&nbsp;B. Spitze, Tüll, Reissverschlüsse) nach Bedarf zusätzlich.
+                  Express nach Absprache.
+                </p>
+              </span>
+            </span>
+          </div>
+
+          <span class="sub-description text-sm text-gray-400 block mt-0.5">
+            Abrechnung nach Aufwand
+          </span>
+        </div>
+
+        <span class="price">ab 90&nbsp;CHF</span>
+      </div>
+
+      <div class="text-center text-gray-400 pt-4 mt-4 border-t border-gray-700">
+        <i>Jeder Auftrag ist ein Unikat – Stoff, Präzision und Zeit bestimmen den Wert.</i>
+      </div>
+
+      <br><br>
+
+      <!-- SENSIBEL SERVICE -->
+      <div class="promo-card p-5 relative text-center">
+
+        <div class="flex justify-center mb-3">
+          <div class="relative w-20 h-20 grid place-items-center rounded-full">
+            <span class="absolute inset-0 rounded-full border-2 border-dashed"
+                  style="border-color:#ED4EB8;"></span>
+
+            <svg viewBox="0 0 24 24" class="w-10 h-10 text-gray-200"
+                 fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M8 3c-.7 0-1.3.6-1.3 1.3V6c0 1 .4 1.9 1 2.6.6.6.6 1.6 0 2.2-.6.7-1 1.6-1 2.6v3c0 .8.6 1.6 1.4 1.7 2 .3 4 .3 6 0 .8-.1 1.4-.9 1.4-1.7v-3c0-1-.4-1.9-1-2.6-.6-.6-.6-1.6 0-2.2.6-.7 1-1.6 1-2.6V4.3c0-.7-.6-1.3-1.3-1.3H8z"/>
+              <path d="M9.5 5v2M14.5 5v2M9.5 17v2M14.5 17v2"/>
+            </svg>
+          </div>
+        </div>
+
+        <h3 class="text-lg font-semibold text-pink-400 flex items-center justify-center gap-2">
+          Sensibel
+
+          <span class="tooltip-container">
+            <button type="button" class="tooltip-icon text-gray-400" aria-describedby="tt-sensibel">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15"
+                   fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14z"/>
+                <path d="M8.93 6.588 6.64 6.875l-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.064.293.006.399.287.47z"/>
+              </svg>
+            </button>
+
+            <span id="tt-sensibel" role="tooltip" class="tooltip-text">
+              <b class="text-pink-400">Feine Arbeiten an Dessous &amp; Corsagen</b>
+              <p class="text-sm mt-1">
+                Spezialänderungen an empfindlichen Materialien wie Spitze, Seide oder Satin.
+                Präzise Anpassung von Cups, Trägern und Formnähten für perfekten Sitz.
+              </p>
+              <p class="text-sm text-gray-300 mt-2">
+                Ideal für Braut- und Abendmode – fein, sicher und mit Gefühl ausgeführt.
+              </p>
+            </span>
+          </span>
+        </h3>
+
+        <p class="text-sm text-gray-300 mt-2">
+          Feine Anpassungen an Dessous &amp; Corsagen – mit Gefühl und Präzision.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+

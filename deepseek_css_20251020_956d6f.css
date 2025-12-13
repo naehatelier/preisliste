@@ -407,24 +407,19 @@ body {
   font-size: .9rem;
 }
 
-.tooltip-text::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  border-width: 6px;
-  border-style: solid;
-  border-color: var(--background-dark) transparent transparent transparent;
+
+
+
+/* === DESKTOP: tooltip sterowany kliknięciem (JS) === */
+.tooltip-container.tooltip-open .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
-/* Wyłączone hover/focus dla tooltipów */
-.tooltip-container:hover .tooltip-text,
-.tooltip-container:focus-within .tooltip-text {
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
-}
+
+
+
 
 /* =========================================================
    7) MODAL TOOLTIP

@@ -366,7 +366,7 @@ const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
     if (!btn) return;
 
     // Mobile: modal; Desktop: zostawiasz hover (brak modala)
-    if (!isTouch) return;
+   // if (!isTouch) return;
 
     const id = btn.getAttribute('aria-describedby');
     if (!id) return;
@@ -486,6 +486,24 @@ const isTouch = window.matchMedia('(hover: none), (pointer: coarse)').matches;
       input.blur();
     }
   });
+})();
+
+// === TOOLTIP MEDIA QUERY FIX (desktop <-> mobile bez refresh) ===
+(() => {
+  const mq = window.matchMedia('(hover: none), (pointer: coarse)');
+
+  function handleTooltipModeChange() {
+    document.documentElement.classList.toggle(
+      'is-touch',
+      mq.matches
+    );
+  }
+
+  // initial run
+  handleTooltipModeChange();
+
+  // react to changes (DevTools, resize, hybrid devices)
+  mq.addEventListener('change', handleTooltipModeChange);
 })();
 
 

@@ -748,3 +748,36 @@ body { overscroll-behavior-x: contain; touch-action: pan-y; }
 }
 
  */
+
+
+/* === FORCE DESKTOP TOOLTIP FIX === */
+/* Nawet jeśli urządzenie zgłasza hover:none,
+   ale szerokość >= 1024px, traktujemy jak desktop */
+
+@media (hover:none) and (min-width:1024px){
+  .tooltip-container .tooltip-text{
+    display:block !important;
+    visibility:hidden;
+    opacity:0;
+  }
+
+  .tooltip-container:hover .tooltip-text,
+  .tooltip-container:focus-within .tooltip-text{
+    visibility:visible;
+    opacity:1;
+  }
+}
+
+/* === TOOLTIP MODE SWITCHED BY JS === */
+
+/* domyślnie desktop */
+.tooltip-container .tooltip-text{
+  display:block;
+}
+
+/* tryb dotykowy (ustawiany przez JS) */
+html.is-touch .tooltip-container .tooltip-text{
+  display:none !important;
+}
+
+ 
